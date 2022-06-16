@@ -10,5 +10,5 @@ export function sessionWire(sessionEntity: SessionEntity): SessionWire {
     ipAddress: sessionEntity.ipAddress,
     geoLocation: sessionEntity.geoLocation,
     operatingSystem: sessionEntity.operatingSystem,
-  }
+  };
 }

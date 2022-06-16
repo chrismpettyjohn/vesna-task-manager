@@ -7,7 +7,6 @@ import {SessionEntity} from '../database/session/session.entity';
 
 @Controller('session')
 export class SessionController {
-
   @Get()
   @HasSession()
   getSession(@GetSession() session: SessionEntity): UserWire {

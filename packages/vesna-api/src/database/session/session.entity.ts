@@ -13,25 +13,25 @@ export class SessionEntity {
   @PrimaryGeneratedColumn()
   id?: number;
 
-  @Column({ name: 'user_id', type: 'int' })
+  @Column({name: 'user_id', type: 'int'})
   userID!: number;
 
   @ManyToOne(() => UserEntity, user => user.sessions)
-  @JoinColumn({ name: 'user_id' })
+  @JoinColumn({name: 'user_id'})
   user?: UserEntity;
 
-  @Column({ name: 'created_at', type: 'timestamp' })
+  @Column({name: 'created_at', type: 'timestamp'})
   createdAt!: Timestamp;
 
-  @Column({ name: 'ended_at', type: 'timestamp' })
+  @Column({name: 'ended_at', type: 'timestamp'})
   endedAt!: Timestamp;
 
-  @Column({ name: 'ip_address' })
+  @Column({name: 'ip_address'})
   ipAddress!: string;
 
-  @Column({ name: 'geo_location' })
+  @Column({name: 'geo_location'})
   geoLocation!: string;
 
-  @Column({ name: 'operating_system' })
+  @Column({name: 'operating_system'})
   operatingSystem!: string;
 }

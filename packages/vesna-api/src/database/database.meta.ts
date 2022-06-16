@@ -6,6 +6,14 @@ import {UserRepository} from './user/user.repository';
 import {SessionEntity} from './session/session.entity';
 import {SessionRepository} from './session/session.repository';
 
-export const databaseEntities: Function[] = [RoleEntity, UserEntity, SessionEntity];
+export const databaseEntities: Function[] = [
+  UserEntity,
+  RoleEntity,
+  SessionEntity,
+];
 
-export const databaseProviders: Provider[] = [UserRepository, RoleRepository, SessionRepository];
+export const databaseProviders: Provider[] = [
+  UserRepository,
+  RoleRepository,
+  SessionRepository,
+];

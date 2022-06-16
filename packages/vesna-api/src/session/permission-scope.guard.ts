@@ -18,7 +18,7 @@ export class PermissionScopeGuard implements CanActivate {
       context.getHandler()
     );
     const request: APISession = context.switchToHttp().getRequest();
-    const hasScope = request?.user?.role?.scopes?.[scope] === true
+    const hasScope = request?.user?.role?.scopes?.[scope] === true;
 
     if (!hasScope) {
       throw new ForbiddenException("You don't have permission to do this");
