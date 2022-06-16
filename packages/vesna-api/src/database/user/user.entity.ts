@@ -27,7 +27,7 @@ export class UserEntity {
   roleID!: number;
 
   @ManyToOne(() => RoleEntity, role => role.users)
-  @JoinColumn({name: 'rank_id'})
+  @JoinColumn({name: 'role_id'})
   role?: RoleEntity;
 
   @OneToMany(() => SessionEntity, session => session.user)

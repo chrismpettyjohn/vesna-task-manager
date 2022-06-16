@@ -7,7 +7,7 @@ export interface RoleWire {
   scopes: RoleScopeWire;
 }
 
-export const roleWire: RoleWire = {
+export const exampleRoleWire: RoleWire = {
   id: 1,
   name: 'Administrator',
   desc: 'Administrators have unlimited access to the website and all its functionality without restriction',

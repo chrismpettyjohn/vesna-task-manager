@@ -1,5 +1,5 @@
 import {Injectable} from '@nestjs/common';
-import {jwtSecret} from '../common/config.const';
+import {JWT_SECRET} from '../common/config.const';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
 import {SessionEntity} from '../database/session/session.entity';
@@ -14,7 +14,7 @@ export class BearerTokenStrategy extends PassportStrategy(
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
-      secretOrKey: jwtSecret,
+      secretOrKey: JWT_SECRET,
     });
   }
 

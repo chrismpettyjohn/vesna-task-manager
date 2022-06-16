@@ -9,11 +9,11 @@ export function getEnvOrFail(key: string): string {
 }
 
 // Database
-export const databaseHost: string = getEnvOrFail('DATABASE_HOST');
-export const databaseUser: string = getEnvOrFail('DATABASE_USER');
-export const databasePass: string = getEnvOrFail('DATABASE_PASS');
-export const databaseName: string = getEnvOrFail('DATABASE_NAME');
+export const DATABASE_HOST: string = getEnvOrFail('DATABASE_HOST');
+export const DATABASE_USER: string = getEnvOrFail('DATABASE_USER');
+export const DATABASE_PASS: string = getEnvOrFail('DATABASE_PASS');
+export const DATABASE_NAME: string = getEnvOrFail('DATABASE_NAME');
 
 // Authentication
-export const jwtSecret: string = getEnvOrFail('JWT_SECRET');
-export const jwtExpires = Number(getEnvOrFail('JWT_EXPIRES'));
+export const JWT_SECRET: string = getEnvOrFail('JWT_SECRET');
+export const JWT_EXPIRATION_IN_HOURS = Number(getEnvOrFail('JWT_EXPIRES'));

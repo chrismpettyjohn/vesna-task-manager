@@ -20,9 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/common/get-timestamp.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/session/CreateSessionDTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/user/CreateUserDTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/api/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/api/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/common/config.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/common/config.const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.wire.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/bearer-token.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/bearer-token.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/role/Role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/role/Role.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/user/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/user/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +107,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="980" y="424" width="600" height="522" key="find.popup" timestamp="1655369710487">
+      <screen x="0" y="25" width="2560" height="1320" />
+    </state>
+    <state x="980" y="424" width="600" height="522" key="find.popup/0.25.2560.1320@0.25.2560.1320" timestamp="1655369710487" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup" timestamp="1655357645509">
       <screen x="0" y="25" width="2560" height="1320" />
     </state>

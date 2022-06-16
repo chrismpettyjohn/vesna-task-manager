@@ -2,10 +2,10 @@ import {Module} from '@nestjs/common';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {VesnaModule} from '@vesna-task-manager/api';
 import {
-  databaseHost,
-  databaseName,
-  databasePass,
-  databaseUser,
+  DATABASE_HOST,
+  DATABASE_NAME,
+  DATABASE_PASS,
+  DATABASE_USER,
   databaseEntities,
 } from '@vesna-task-manager/api';
 
@@ -13,10 +13,10 @@ import {
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: databaseHost,
-      username: databaseUser,
-      password: databasePass,
-      database: databaseName,
+      host: DATABASE_HOST,
+      username: DATABASE_USER,
+      password: DATABASE_PASS,
+      database: DATABASE_NAME,
       entities: [...databaseEntities],
       synchronize: false,
     }),
