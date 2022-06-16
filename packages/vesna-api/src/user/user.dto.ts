@@ -1,7 +1,7 @@
 import {IsString, IsEmail} from 'class-validator';
-import {UserDTOWire} from '@vesna-task-manager/types';
+import {CreateUserDTOWire} from '@vesna-task-manager/types';
 
-export class UserDTO implements UserDTOWire {
+export class UserDTO implements CreateUserDTOWire {
   @IsEmail()
   email!: string;
 

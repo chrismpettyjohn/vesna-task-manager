@@ -5,6 +5,6 @@ import {createParamDecorator, ExecutionContext} from '@nestjs/common';
 export const GetSession = createParamDecorator(
   (data: unknown, ctx: ExecutionContext): APISession => {
     const request: RequestWithSession = ctx.switchToHttp().getRequest();
-    return request.session;
+    return request.user;
   }
 );

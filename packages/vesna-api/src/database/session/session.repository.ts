@@ -11,6 +11,6 @@ export class SessionRepository extends BaseRepository<SessionEntity> {
     private readonly hashService: HashService,
     @InjectRepository(SessionEntity) sessionRepo: Repository<SessionEntity>
   ) {
-    super(sessionRepo, ['user']);
+    super(sessionRepo, ['user', 'user.role']);
   }
 }

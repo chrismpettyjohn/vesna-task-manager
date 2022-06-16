@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/common/hours-to-ms.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/bearer-token.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/session.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/utility/api.axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/session/session.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/session/session.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/get-session.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/get-session.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/user/CreateUserDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/user/CreateUserDTO.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

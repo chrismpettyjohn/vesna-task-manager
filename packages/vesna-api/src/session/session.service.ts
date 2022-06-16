@@ -7,13 +7,15 @@ import {Injectable, BadRequestException} from '@nestjs/common';
 import {UserRepository} from '../database/user/user.repository';
 import {SessionEntity} from '../database/session/session.entity';
 import {SessionRepository} from '../database/session/session.repository';
+import {BearerTokenService} from './bearer-token.service';
 
 @Injectable()
 export class SessionService {
   constructor(
     private readonly sessionRepo: SessionRepository,
     private readonly userRepo: UserRepository,
-    private readonly hashService: HashService
+    private readonly hashService: HashService,
+    private readonly bearerTokenService: BearerTokenService
   ) {}
 
   async loginWithEmailAndPassword(
@@ -52,5 +54,9 @@ export class SessionService {
       geoLocation,
       operatingSystem,
     });
+  }
+
+  convertSessionToJWT(session: SessionEntity): string {
+    return this.bearerTokenService.signToken(session.id!);
   }
 }

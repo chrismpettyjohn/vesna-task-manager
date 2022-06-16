@@ -8,5 +8,5 @@ export interface APISession {
 }
 
 export interface RequestWithSession extends Request {
-  session: APISession;
+  user: APISession;
 }

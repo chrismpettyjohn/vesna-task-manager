@@ -14,13 +14,14 @@ export class SessionController {
   @Post()
   async createSession(@Body() createSessionDTO: CreateSessionDTO) {
     // TODO: Implement support for IP_ADDRESS, GEO_LOCATION, OPERATING_SYSTEM
-    return this.sessionService.loginWithEmailAndPassword(
+    const newSession = await this.sessionService.loginWithEmailAndPassword(
       createSessionDTO.email,
       createSessionDTO.password,
       '',
       '',
       ''
     );
+    return this.sessionService.convertSessionToJWT(newSession);
   }
 
   @Get()
