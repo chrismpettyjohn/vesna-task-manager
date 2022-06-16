@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/bearer-token.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/bearer-token.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/session.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/session.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +53,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo/web/public/css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages" />
     </key>

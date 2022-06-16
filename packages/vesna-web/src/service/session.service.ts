@@ -7,7 +7,7 @@ export class SessionService {
     createSessionDTO: CreateSessionDTO
   ): Promise<SessionWire> {
     const jwtTokenResponse: AxiosResponse<string> = await backendAPI.post(
-      'sessions',
+      'session',
       createSessionDTO
     );
     setAPIToken(jwtTokenResponse.data);
