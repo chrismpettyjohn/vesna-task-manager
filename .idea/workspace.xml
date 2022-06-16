@@ -20,21 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/css/fontawesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-labels-tabs/TaskLabelsTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-labels-tabs/TaskLabelsTabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/public/css/VesnaTheme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/public/css/VesnaTheme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/local-storage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/public/css/VesnaTheme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +75,20 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/vesna-api/src/database/task-label" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/web/public" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/demo/web/public/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo/web/public" />
+      <recent name="$PROJECT_DIR$/demo/web/public/css" />
       <recent name="$PROJECT_DIR$/packages/vesna-api/src/database/task-label" />
       <recent name="$PROJECT_DIR$/packages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo/web/public/css" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -81,7 +101,7 @@
       <updated>1655352493905</updated>
       <workItem from="1655352495153" duration="2854000" />
       <workItem from="1655355510302" duration="8235000" />
-      <workItem from="1655413606827" duration="4780000" />
+      <workItem from="1655413606827" duration="5598000" />
     </task>
     <servers />
   </component>
