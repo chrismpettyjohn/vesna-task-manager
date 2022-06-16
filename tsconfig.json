@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@vesna-task-manager/api": ["packages/vesna-api/src"],
+      "@vesna-task-manager/web": ["packages/vesna-web/src"],
+      "@vesna-task-manager/theme": ["packages/vesna-theme/src"],
+      "@vesna-task-manager/types": ["packages/vesna-types-theme/src"]
+    },
+    "noEmit": true
+  },
+  "include": [
+    "demo",
+    "packages"
+  ]
+}

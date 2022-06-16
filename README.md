@@ -1,1 +1,1 @@
-# simple-task-manager
+# Vesna Task Management
