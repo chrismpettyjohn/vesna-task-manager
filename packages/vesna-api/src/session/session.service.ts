@@ -2,11 +2,11 @@ import DayJS from 'dayjs';
 import {HashService} from '../common/hash.service';
 import {ErrorCode} from '@vesna-task-manager/types';
 import {getTimestamp} from '../common/get-timestamp';
+import {JWT_EXPIRATION_IN_HOURS} from '../common/config.const';
 import {Injectable, BadRequestException} from '@nestjs/common';
 import {UserRepository} from '../database/user/user.repository';
 import {SessionEntity} from '../database/session/session.entity';
 import {SessionRepository} from '../database/session/session.repository';
-import {JWT_EXPIRATION_IN_HOURS} from '@vesna-task-manager/api';
 
 @Injectable()
 export class SessionService {
