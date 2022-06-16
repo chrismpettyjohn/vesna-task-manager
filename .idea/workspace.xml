@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/local-storage.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/session/SessionContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/session/SessionContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/utility/api.axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/utility/api.axios.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

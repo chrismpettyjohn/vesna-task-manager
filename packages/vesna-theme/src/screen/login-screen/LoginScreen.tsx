@@ -2,6 +2,7 @@ import {useLocation} from 'wouter';
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {
   GuestGuard,
+  localStorageService,
   sessionContext,
   sessionService,
 } from '@vesna-task-manager/web';
@@ -29,6 +30,7 @@ export function LoginScreen() {
         email,
         password,
       });
+
       setSession(newUserSession);
       setLocation('/dashboard');
     } catch {
