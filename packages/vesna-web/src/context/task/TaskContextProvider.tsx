@@ -1,8 +1,9 @@
 import {taskContext} from './TaskContext';
+import {taskService} from '../../service/task.service';
 import {sessionContext} from '../session/SessionContext';
 import React, {useContext, useEffect, useState} from 'react';
 import {TaskWire, TaskLabelWire} from '@vesna-task-manager/types';
-import {taskLabelService, taskService} from '@vesna-task-manager/web';
+import {taskLabelService} from '../../service/task-label.service';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
 
 export function TaskContextProvider({children}: SessionContextProviderProps) {

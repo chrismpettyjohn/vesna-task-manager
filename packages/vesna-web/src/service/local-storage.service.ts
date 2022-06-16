@@ -17,8 +17,8 @@ class LocalStorageService {
   }
 
   // Sets a index.ts with its value in localStorage
-  set(index: string, value: string): void {
-    localStorage.setItem(index, value);
+  set(index: string, value?: string): void {
+    localStorage.setItem(index, value as any);
   }
 
   // Removes a value from localStorage by its index.ts if it exists

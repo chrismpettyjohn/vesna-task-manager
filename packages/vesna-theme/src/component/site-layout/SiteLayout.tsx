@@ -1,42 +1,19 @@
 import React from 'react';
 import {SiteLayoutProps} from './SiteLayout.types';
+import {SiteSidebar} from '../site-sidebar/SiteSidebar';
 
 export function SiteLayout({children, sidebar}: SiteLayoutProps) {
   return (
-    <>
-      <div className="task-manager">
-        <div className="left-bar">
-          <div className="left-content">
-            <h2
-              style={{
-                letterSpacing: 10,
-                textTransform: 'uppercase',
-                textAlign: 'center',
-                marginTop: 0,
-              }}
-            >
-              Vesna
-            </h2>
-            {sidebar}
-          </div>
+    <div
+      className="container-fluid h-100 w-100 p-0"
+      style={{position: 'absolute', top: 0, left: 0}}
+    >
+      <div className="row h-100 w-100">
+        <div className="col" style={{maxWidth: 'fit-content'}}>
+          <SiteSidebar children={sidebar} />
         </div>
-        <div className="page-content">{children}</div>
+        <div className="col">{children}</div>
       </div>
-      <div
-        style={{
-          color: 'white',
-          textAlign: 'center',
-          width: '100%',
-          height: 'fit-content',
-          marginTop: 10,
-        }}
-      >
-        <span
-          style={{fontWeight: 'bold', fontSize: '1.4rem', letterSpacing: 3}}
-        >
-          Impending Success LLC
-        </span>
-      </div>
-    </>
+    </div>
   );
 }

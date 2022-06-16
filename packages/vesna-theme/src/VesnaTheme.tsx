@@ -1,4 +1,5 @@
 import React from 'react';
+import './public/css/VesnaTheme.scss';
 import {VesnaThemeProps} from './VesnaTheme.types';
 import {SiteLayout} from './component/site-layout/SiteLayout';
 
