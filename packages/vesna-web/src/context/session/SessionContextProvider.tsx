@@ -2,8 +2,9 @@ import {sessionContext} from './SessionContext';
 import React, {useEffect, useState} from 'react';
 import {setAPIToken} from '../../utility/api.axios';
 import {SessionWire} from '@vesna-task-manager/types';
+import {sessionService} from '../../service/session.service';
 import {SessionContextProviderProps} from './SessionContext.types';
-import {localStorageService, sessionService} from '@vesna-task-manager/web';
+import {localStorageService} from '../../service/local-storage.service';
 
 export function SessionContextProvider({
   children,
