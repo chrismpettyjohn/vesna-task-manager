@@ -38,5 +38,5 @@ export class TaskEntity {
   createdAt!: Timestamp;
 
   @Column({name: 'closed_at', type: 'timestamp'})
-  closedAt!: Timestamp;
+  closedAt?: Timestamp;
 }

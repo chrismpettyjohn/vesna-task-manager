@@ -20,16 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.wire.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.wire.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/Task.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskLabel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.pipe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.pipe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskDTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskLabelDTO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/vesna.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/vesna.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" afterDir="false" />
     </list>
@@ -97,6 +102,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655408292235">
+      <screen x="0" y="25" width="2560" height="1320" />
+    </state>
+    <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1320@0.25.2560.1320" timestamp="1655408292235" />
     <state x="980" y="424" width="600" height="522" key="find.popup" timestamp="1655372423449">
       <screen x="0" y="25" width="2560" height="1320" />
     </state>

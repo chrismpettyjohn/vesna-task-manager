@@ -1,5 +1,13 @@
 import {TaskEntity} from '../task/task.entity';
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {UserEntity} from '../user/user.entity';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+} from 'typeorm';
 
 @Entity('task_labels')
 export class TaskLabelEntity {
@@ -11,6 +19,13 @@ export class TaskLabelEntity {
 
   @Column()
   desc!: string;
+
+  @Column({name: 'user_id', type: 'int'})
+  userID!: number;
+
+  @ManyToOne(() => UserEntity, user => user.taskLabels)
+  @JoinColumn({name: 'user_id'})
+  user?: UserEntity;
 
   @OneToMany(() => TaskEntity, task => task.taskLabel)
   tasks?: TaskEntity[];
