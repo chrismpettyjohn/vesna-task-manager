@@ -12,15 +12,13 @@ import {
 @Module({
   imports: [
     TypeOrmModule.forRoot({
+      type: 'mysql',
       host: databaseHost,
       username: databaseUser,
       password: databasePass,
       database: databaseName,
       entities: [...databaseEntities],
       synchronize: false,
-      cli: {
-        migrationsDir: '../../../packages/vesna-api/src/database/migrations',
-      },
     }),
     VesnaModule,
   ],
