@@ -2,6 +2,7 @@ import {taskContext} from './TaskContext';
 import {sessionContext} from '../session/SessionContext';
 import React, {useContext, useEffect, useState} from 'react';
 import {TaskWire, TaskLabelWire} from '@vesna-task-manager/types';
+import {taskLabelService, taskService} from '@vesna-task-manager/web';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
 
 export function TaskContextProvider({children}: SessionContextProviderProps) {
@@ -18,10 +19,12 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
         setTasks(undefined);
 
         if (session) {
-          // Fetch tasks
-          // Fetch task labels
-          setTasks([]);
-          setTaskLabels([]);
+          const [userTasks, userTaskLabels] = await Promise.all([
+            taskService.getTasks(),
+            taskLabelService.getTaskLabels(),
+          ]);
+          setTasks(userTasks);
+          setTaskLabels(userTaskLabels);
         }
 
         setIsLoading(false);

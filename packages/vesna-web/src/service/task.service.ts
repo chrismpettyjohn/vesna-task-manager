@@ -7,6 +7,11 @@ import {
 } from '@vesna-task-manager/types';
 
 export class TaskService {
+  async getTasks(): Promise<TaskWire[]> {
+    const tasksResponse: AxiosResponse<TaskWire[]> = await backendAPI.get('tasks');
+    retunr tasksResponse.data;
+  }
+
   async create(createTaskDTO: CreateTaskDTOWire): Promise<TaskWire> {
     const newTaskResponse: AxiosResponse<TaskWire> = await backendAPI.post(
       'tasks',

@@ -7,6 +7,13 @@ import {
 } from '@vesna-task-manager/types';
 
 export class TaskLabelService {
+  async getTaskLabels(): Promise<TaskLabelWire[]> {
+    const tasksResponse: AxiosResponse<TaskLabelWire[]> = await backendAPI.get(
+      'task-labels'
+    );
+    return tasksResponse.data;
+  }
+
   async create(
     createTaskLabelDTO: CreateTaskLabelDTOWire
   ): Promise<TaskLabelWire> {

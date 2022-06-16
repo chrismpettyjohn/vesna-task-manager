@@ -11,6 +11,7 @@ import {SessionEntity} from '../database/session/session.entity';
 import {
   Body,
   Controller,
+  Get,
   Delete,
   Param,
   Post,
@@ -21,6 +22,15 @@ import {
 @HasSession()
 export class TaskController {
   constructor(private readonly taskRepo: TaskRepository) {}
+
+  @Get()
+  async getTasks(@GetSession() session: SessionEntity): Promise<TaskWire[]> {
+    const userTasks = await this.taskRepo.find(
+      {userID: session.userID},
+      {id: 'DESC'}
+    );
+    return userTasks.map(_ => taskWire(_));
+  }
 
   @Post()
   async createTask(

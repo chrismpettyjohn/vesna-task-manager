@@ -11,6 +11,7 @@ import {
   Body,
   Controller,
   Delete,
+  Get,
   Param,
   Post,
   UnauthorizedException,
@@ -20,6 +21,17 @@ import {
 @HasSession()
 export class TaskLabelController {
   constructor(private readonly taskLabelRepo: TaskLabelRepository) {}
+
+  @Get()
+  async getTaskLabels(
+    @GetSession() session: SessionEntity
+  ): Promise<TaskLabelWire[]> {
+    const userTaskLabels = await this.taskLabelRepo.find(
+      {userID: session.userID},
+      {id: 'DESC'}
+    );
+    return userTaskLabels.map(_ => taskLabelWire(_));
+  }
 
   @Post()
   async createTaskLabel(
