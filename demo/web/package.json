@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "@vesna-task-manager/web":  "*",
+    "@vesna-task-manager/theme":  "*"
   },
   "devDependencies": {
     "@vesna-task-manager/theme": "*",

@@ -1,5 +1,6 @@
 import React from 'react';
+import {UserGuard} from '@vesna-task-manager/web';
 
 export function DashboardScreen() {
-  return <>Dashboard</>;
+  return <UserGuard>Dashboard</UserGuard>;
 }

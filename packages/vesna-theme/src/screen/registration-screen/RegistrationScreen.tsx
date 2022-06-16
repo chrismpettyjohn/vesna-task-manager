@@ -1,5 +1,6 @@
 import React from 'react';
+import {GuestGuard} from '@vesna-task-manager/web';
 
 export function RegistrationScreen() {
-  return <>Registration</>;
+  return <GuestGuard>Registration</GuestGuard>;
 }
