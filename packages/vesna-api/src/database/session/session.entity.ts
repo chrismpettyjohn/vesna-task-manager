@@ -1,4 +1,5 @@
 import {UserEntity} from '../user/user.entity';
+import {Timestamp} from '@vesna-task-manager/types';
 import {
   Column,
   Entity,
@@ -18,6 +19,12 @@ export class SessionEntity {
   @ManyToOne(() => UserEntity, user => user.sessions)
   @JoinColumn({ name: 'user_id' })
   user?: UserEntity;
+
+  @Column({ name: 'created_at', type: 'timestamp' })
+  createdAt!: Timestamp;
+
+  @Column({ name: 'ended_at', type: 'timestamp' })
+  endedAt!: Timestamp;
 
   @Column({ name: 'ip_address' })
   ipAddress!: string;

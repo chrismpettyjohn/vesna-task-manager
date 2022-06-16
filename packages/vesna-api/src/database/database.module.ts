@@ -6,7 +6,7 @@ import {databaseEntities, databaseProviders} from './database.meta';
 @Module({
   imports: [CommonModule, TypeOrmModule.forFeature(databaseEntities)],
   providers: [...databaseProviders],
-  exports: [BaseDatabaseModule, TypeOrmModule, ...databaseProviders],
+  exports: [TypeOrmModule, ...databaseProviders],
 })
 @Global()
 export class DatabaseModule {}

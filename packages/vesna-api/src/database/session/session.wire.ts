@@ -1,6 +1,5 @@
 import {SessionEntity} from './session.entity';
-import {SessionWire} from '@vesna-task-manager/types/packages/vesna-types';
-import {exampleUserWire} from '@vesna-task-manager/types/packages/vesna-types/src';
+import {SessionWire} from '@vesna-task-manager/types';
 
 export function sessionWire(sessionEntity: SessionEntity): SessionWire {
   return {

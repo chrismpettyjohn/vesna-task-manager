@@ -1,6 +1,6 @@
 import {Reflector} from '@nestjs/core';
 import {APISession} from './session.types';
-import {RoleScopeWire} from '@vesna-task-manager/types/packages/vesna-types';
+import {RoleScopeWire} from '@vesna-task-manager/types';
 import {
   CanActivate,
   ExecutionContext,

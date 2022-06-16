@@ -13,6 +13,7 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "devDependencies": {
+    "@vesna-task-manager/types": "*",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-image": "2.1.1",
     "@rollup/plugin-node-resolve": "13.0.6",
@@ -43,6 +44,7 @@
     "@uiw/react-md-editor": "3.8.1"
   },
   "peerDependencies": {
+    "@vesna-task-manager/types": "*",
     "axios": "0.24.0",
     "query-string": "7.0.1",
     "react": "17.0.1",

@@ -1,17 +1,16 @@
 import {Controller, Get} from '@nestjs/common';
+import {UserWire} from '@vesna-task-manager/types';
+import {HasSession} from './has-session.decorator';
+import {GetSession} from './get-session.decorator';
 import {userWire} from '../database/user/user.wire';
-import {UserEntity} from '../database/user/user.entity';
-import {UserRepository} from '../database/user/user.repository';
-import {UserWire} from '@vesna-task-manager/types/packages/vesna-types';
+import {SessionEntity} from '../database/session/session.entity';
 
 @Controller('session')
 export class SessionController {
-  constructor(private readonly userRepo: UserRepository) {}
 
-  @Get('rp')
+  @Get()
   @HasSession()
-  async getSession(@GetSession() session: UserEntity): Promise<UserWire> {
-    const rpUser = await this.userRepo.findOneOrFail({id: session.id});
+  getSession(@GetSession() session: SessionEntity): UserWire {
     return userWire(session.user!);
   }
 }

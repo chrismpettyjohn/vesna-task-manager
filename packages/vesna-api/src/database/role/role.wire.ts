@@ -1,5 +1,5 @@
 import {RoleEntity} from './role.entity';
-import {RoleWire} from '../../../../vesna-types/src';
+import {RoleWire} from '@vesna-task-manager/types';
 
 export function roleWire(roleEntity: RoleEntity): RoleWire {
   return {
