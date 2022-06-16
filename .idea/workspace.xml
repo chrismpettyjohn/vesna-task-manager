@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/role/Role.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/role/RoleScope.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/session/Session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/user/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/utility/Timestamp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/bounty/bounty.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/bounty/bounty.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/bounty/bounty.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business-position.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business-position.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business-position.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/business.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/business/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/crime/crime.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/crime/crime.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/crime/crime.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/food/food.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/food/food.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/food/food.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gambling-machine/gambling.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gambling-machine/gambling.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gambling-machine/gambling.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang-rank.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang-rank.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/gang.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/gang/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-category.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-category.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-category.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-reaction.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-reaction.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide-reaction.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/guide/guide.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-comment.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-event.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-event.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-vote.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-vote.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law-vote.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/law/law.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/political-party/political-party-member.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/political-party/political-party-member.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/political-party/political-party.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/political-party/political-party.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/political-party/political-party.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/properties/property.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/properties/property.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/properties/property.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-bids/property-bids.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-bids/property-bids.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-bids/property-bids.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-photos/property-photo.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-photos/property-photos.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/property/property-photos/property-photos.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/room/rp-room.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/room/rp-room.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/room/rp-room.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/rp-stats.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/rp-stats.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/rp-stats.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/rp-stats.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/vending-machine/vending-machine.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/vending-machine/vending-machine.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/vending-machine/vending-machine.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/weapon/weapon.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/weapon/weapon.repository.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/weapon/weapon.wire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2AdvtpTSMBneZR5l0SmYh9Taryc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/demo/api/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="" />
+      <created>1655352493905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655352493905</updated>
+      <workItem from="1655352495153" duration="2176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1010" y="577" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1655352800504">
+      <screen x="0" y="25" width="2560" height="1320" />
+    </state>
+    <state x="1010" y="577" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.25.2560.1320@0.25.2560.1320" timestamp="1655352800504" />
+  </component>
+</project>
