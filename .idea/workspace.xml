@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.wire.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.wire.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/Task.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskLabel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/web/public/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +54,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/vesna-api/src/database/task-label" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -55,6 +64,7 @@
       <recent name="$PROJECT_DIR$/demo/web/public/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/vesna-api/src/database/task-label" />
       <recent name="$PROJECT_DIR$/packages" />
     </key>
   </component>

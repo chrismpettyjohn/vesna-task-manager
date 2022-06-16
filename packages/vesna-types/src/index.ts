@@ -1,5 +1,7 @@
 export * from './session/Session';
 export * from './session/CreateSessionDTO';
+export * from './task/Task';
+export * from './task/TaskLabel';
 export * from './role/Role';
 export * from './role/RoleScope';
 export * from './user/User';

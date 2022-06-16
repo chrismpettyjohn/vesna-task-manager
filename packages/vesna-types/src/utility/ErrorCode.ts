@@ -4,4 +4,5 @@ export enum ErrorCode {
   UserCreationEmailIsTaken = 201,
   SessionLoginUserDoesNotExist = 300,
   SessionLoginAuthenticationError = 301,
+  TaskLabelWireMissingTaskRelations = 400,
 }
