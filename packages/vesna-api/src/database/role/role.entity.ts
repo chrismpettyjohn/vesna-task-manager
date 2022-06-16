@@ -2,7 +2,7 @@ import {UserEntity} from '../user/user.entity';
 import {RoleScopeWire} from '@vesna-task-manager/types';
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 
-@Entity('ranks')
+@Entity('roles')
 export class RoleEntity {
   @PrimaryGeneratedColumn()
   id?: number;
