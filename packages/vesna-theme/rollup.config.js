@@ -35,7 +35,7 @@ export default {
 
     // // Bundle CSS and SASS files
     scss({
-      output: './dist/public/css/bobba-rp-theme.css',
+      output: './dist/public/css/vesna-theme.css',
       failOnError: true,
       includePaths: ['node_modules/'],
       sass: require('sass'),

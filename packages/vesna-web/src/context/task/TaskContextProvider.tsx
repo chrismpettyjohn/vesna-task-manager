@@ -1,45 +1,115 @@
-import {sessionContext} from './SessionContext';
-import React, {useEffect, useState} from 'react';
-import {setAPIToken} from '../../utility/api.axios';
-import {SessionWire} from '@vesna-task-manager/types';
-import {sessionService} from '../../service/session.service';
-import {SessionContextProviderProps} from './SessionContext.types';
-import {localStorageService} from '../../service/local-storage.service';
+import {taskContext} from './TaskContext';
+import {sessionContext} from '../session/SessionContext';
+import React, {useContext, useEffect, useState} from 'react';
+import {TaskWire, TaskLabelWire} from '@vesna-task-manager/types';
+import {SessionContextProviderProps} from '../session/SessionContext.types';
 
-export function SessionContextProvider({
-  children,
-}: SessionContextProviderProps) {
+export function TaskContextProvider({children}: SessionContextProviderProps) {
+  const {session} = useContext(sessionContext);
   const [loading, setIsLoading] = useState(true);
-  const [session, setSessionState] = useState<SessionWire>();
+  const [tasks, setTasks] = useState<TaskWire[]>();
+  const [taskLabels, setTaskLabels] = useState<TaskLabelWire[]>();
 
   useEffect(() => {
-    const checkForPreviousSession = async () => {
-      const userAlreadyLoggedIn = localStorageService.exists('SESSION');
+    const fetchTasksForAuthenticatedUSer = async () => {
+      try {
+        setIsLoading(true);
+        setTaskLabels(undefined);
+        setTasks(undefined);
 
-      if (userAlreadyLoggedIn) {
-        const jwt = localStorageService.get('SESSION');
-        try {
-          setAPIToken(jwt);
-          const sessionData = await sessionService.getSession();
-          setSessionState(sessionData);
-          setIsLoading(false);
-        } catch {
-          // Do nothing
+        if (session) {
+          // Fetch tasks
+          // Fetch task labels
+          setTasks([]);
+          setTaskLabels([]);
         }
+
+        setIsLoading(false);
+      } catch {
+        alert('There was a problem fetching tasks');
       }
-      setIsLoading(false);
     };
 
-    checkForPreviousSession();
+    fetchTasksForAuthenticatedUSer();
   }, []);
 
-  const setSession = (newSession?: SessionWire) => {
-    setSessionState(newSession);
+  const addTask = (task: TaskWire) => {
+    setTasks(_ => [..._!, task]);
   };
 
+  const updateTaskByID = (taskID: number, task: Partial<TaskWire>) => {
+    setTasks(_ => {
+      const newTasks = [..._!];
+      const updatedTaskIndex = newTasks.findIndex(_ => _.id === taskID)!;
+
+      newTasks[updatedTaskIndex] = {
+        ...newTasks[updatedTaskIndex],
+        ...task,
+      };
+
+      return newTasks;
+    });
+  };
+
+  const deleteTaskByID = (taskID: number) => {
+    setTasks(_ => {
+      const newTasks = [..._!];
+      const updatedTaskIndex = newTasks.findIndex(_ => _.id === taskID)!;
+      delete newTasks[updatedTaskIndex];
+      return newTasks;
+    });
+  };
+
+  const addTaskLabel = (taskLabel: TaskLabelWire) => {
+    setTaskLabels(_ => [..._!, taskLabel]);
+  };
+
+  const updateTaskLabelByID = (
+    taskLabelID: number,
+    taskLabel: Partial<TaskLabelWire>
+  ) => {
+    setTaskLabels(_ => {
+      const newTaskLabels = [..._!];
+      const updatedTaskLabelIndex = newTaskLabels.findIndex(
+        _ => _.id === taskLabelID
+      )!;
+
+      newTaskLabels[updatedTaskLabelIndex] = {
+        ...newTaskLabels[updatedTaskLabelIndex],
+        ...taskLabel,
+      };
+
+      return newTaskLabels;
+    });
+  };
+
+  const deleteTaskLabelByID = (taskLabelID: number) => {
+    setTaskLabels(_ => {
+      const newTaskLabels = [..._!];
+      const updatedTaskLabelIndex = newTaskLabels.findIndex(
+        _ => _.id === taskLabelID
+      )!;
+      delete newTaskLabels[updatedTaskLabelIndex];
+      return newTaskLabels;
+    });
+  };
+
+  const isValidLoadingState = session && loading;
+
   return (
-    <sessionContext.Provider value={{session, setSession}}>
-      {loading ? '' : children}
-    </sessionContext.Provider>
+    <taskContext.Provider
+      value={{
+        tasks,
+        addTask,
+        updateTaskByID,
+        deleteTaskByID,
+        taskLabels,
+        addTaskLabel,
+        updateTaskLabelByID,
+        deleteTaskLabelByID,
+      }}
+    >
+      {isValidLoadingState ? '' : children}
+    </taskContext.Provider>
   );
 }

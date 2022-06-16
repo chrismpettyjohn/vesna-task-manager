@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import {TaskLabelWire} from '@vesna-task-manager/types';
+import {TaskLabelWire, TaskWire} from '@vesna-task-manager/types';
 
 export interface TaskContext {
   taskLabels?: TaskLabelWire[];
@@ -9,6 +9,10 @@ export interface TaskContext {
     changes: Partial<TaskLabelWire>
   ): void;
   deleteTaskLabelByID(taskLabelID: number): void;
+  tasks?: TaskWire[];
+  addTask(task: TaskWire): void;
+  updateTaskByID(taskID: number, changes: Partial<TaskLabelWire>): void;
+  deleteTaskByID(taskID: number): void;
 }
 
 export const defaultTaskContext: TaskContext = {
@@ -16,6 +20,10 @@ export const defaultTaskContext: TaskContext = {
   addTaskLabel(taskLabel: TaskLabelWire) {},
   updateTaskLabelByID(taskLabelID: number, changes: Partial<TaskLabelWire>) {},
   deleteTaskLabelByID(taskLabelID: number) {},
+  tasks: [],
+  addTask(task: TaskWire) {},
+  updateTaskByID(taskID: number, changes: Partial<TaskLabelWire>) {},
+  deleteTaskByID(taskID: number) {},
 };
 
 export interface TaskContextProviderProps {
