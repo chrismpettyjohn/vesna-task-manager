@@ -3,7 +3,7 @@ import {Controller, Get, CacheTTL} from '@nestjs/common';
 import {HasSession} from '@instinct-api/session';
 import {RPRank} from '@bobba-rp/types';
 import {PermissionStatus} from '@instinct-api/database';
-import {RPRankRepository} from '../database/rank/rank.repository';
+import {RPRankRepository} from '../database/role/role.repository';
 import {TWENTY_MINUTES_IN_MS} from '../time.const';
 
 @Controller('rp-ranks')

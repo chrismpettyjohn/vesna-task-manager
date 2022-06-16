@@ -1,24 +1,14 @@
 import {Module} from '@nestjs/common';
-import {RPUserModule} from '../user/user.module';
+import {UserModule} from '../user/user.module';
 import {SessionController} from './session.controller';
 import {DatabaseModule} from '../database/database.module';
-import {
-  BearerTokenStrategy,
-  SessionModule as BaseSessionModule,
-} from '@instinct-api/session';
-import {RPBearerTokenStrategy} from './bearer-token.strategy';
-import {SessionOfflineGuard} from './session-offline.guard';
+import {BearerTokenStrategy} from './bearer-token.strategy';
+import {PermissionScopeGuard} from './permission-scope.guard';
 
 @Module({
-  imports: [DatabaseModule, BaseSessionModule, RPUserModule],
-  providers: [
-    {
-      provide: BearerTokenStrategy,
-      useClass: RPBearerTokenStrategy,
-    },
-    SessionOfflineGuard,
-  ],
-  exports: [BearerTokenStrategy, SessionOfflineGuard],
+  imports: [DatabaseModule, UserModule],
+  providers: [BearerTokenStrategy, PermissionScopeGuard],
+  exports: [BearerTokenStrategy, PermissionScopeGuard],
   controllers: [SessionController],
 })
 export class SessionModule {}

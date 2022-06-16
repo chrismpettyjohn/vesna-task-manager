@@ -12,4 +12,4 @@ export const roleWire: RoleWire = {
   name: 'Administrator',
   desc: 'Administrators have unlimited access to the website and all its functionality without restriction',
   scopes: exampleRoleScopeWire,
-}
+};

@@ -1,3 +1,4 @@
+import {exampleUserWire} from '../user/User';
 import {Timestamp} from '../utility/Timestamp';
 
 export interface SessionWire {
@@ -10,7 +11,12 @@ export interface SessionWire {
   operatingSystem: string;
 }
 
-export const sessionWire: SessionWire = {
+export const exampleSessionWire: SessionWire = {
   id: 1,
-  userID: exampleUser.id,
-}
+  userID: exampleUserWire.id,
+  createdAt: '',
+  endedAt: '',
+  ipAddress: '',
+  geoLocation: '',
+  operatingSystem: '',
+};

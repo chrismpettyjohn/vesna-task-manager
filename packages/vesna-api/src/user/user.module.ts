@@ -1,11 +1,8 @@
 import {Module} from '@nestjs/common';
-import {RPUserService} from './user.service';
+import {SessionModule} from '../session/session.module';
 import {DatabaseModule} from '../database/database.module';
-import {SessionModule as BaseSessionModule} from '@instinct-api/session';
 
 @Module({
-  imports: [DatabaseModule, BaseSessionModule],
-  providers: [RPUserService],
-  exports: [RPUserService],
+  imports: [DatabaseModule, SessionModule],
 })
-export class RPUserModule {}
+export class UserModule {}

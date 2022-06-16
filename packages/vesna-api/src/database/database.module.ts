@@ -1,17 +1,12 @@
 import {Global, Module} from '@nestjs/common';
 import {TypeOrmModule} from '@nestjs/typeorm';
-import {CommonModule} from '@instinct-api/common';
-import {rpDatabaseEntities, rpDatabaseProviders} from './database.meta';
-import {DatabaseModule as BaseDatabaseModule} from '@instinct-api/database';
+import {CommonModule} from '../common/common.module';
+import {databaseEntities, databaseProviders} from './database.meta';
 
 @Module({
-  imports: [
-    BaseDatabaseModule,
-    TypeOrmModule.forFeature(rpDatabaseEntities),
-    CommonModule,
-  ],
-  providers: [...rpDatabaseProviders],
-  exports: [BaseDatabaseModule, TypeOrmModule, ...rpDatabaseProviders],
+  imports: [CommonModule, TypeOrmModule.forFeature(databaseEntities)],
+  providers: [...databaseProviders],
+  exports: [BaseDatabaseModule, TypeOrmModule, ...databaseProviders],
 })
 @Global()
 export class DatabaseModule {}

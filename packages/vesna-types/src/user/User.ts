@@ -4,5 +4,6 @@ export interface UserWire {
 }
 
 export const exampleUserWire: UserWire = {
-
-}
+  id: 1,
+  username: 'user',
+};

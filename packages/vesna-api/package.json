@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "axios": "0.24.0",
-    "cache-manager": "3.6.0",
-    "randomstring": "1.2.2"
+    "cache-manager": "3.6.0"
   },
   "devDependencies": {
     "@nestjs/common": "7.6.18",

@@ -1,15 +1,9 @@
-import {rpRankWire} from '../rank/rank.wire';
-import {RPUserEntityStruct} from './user.types';
-import {userWire} from '@instinct-api/database';
-import {RPUser, UserRPStats} from '@bobba-rp/types';
+import {UserEntity} from './user.entity';
+import {UserWire} from '@vesna-task-manager/types';
 
-export function rpUserWire(
-  entity: RPUserEntityStruct,
-  rpStats: UserRPStats
-): RPUser {
+export function userWire(entity: UserEntity): UserWire {
   return {
-    ...userWire(entity as any),
-    rank: rpRankWire(entity.rank!),
-    rpStats,
+    id: entity.id!,
+    username: entity.username,
   };
 }

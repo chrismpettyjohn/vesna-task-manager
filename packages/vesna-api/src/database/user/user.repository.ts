@@ -1,49 +1,24 @@
-import Random from 'randomstring';
 import {Repository} from 'typeorm';
 import {Injectable} from '@nestjs/common';
-import {RPUserEntity} from './user.entity';
-import {RPUserEntityStruct} from './user.types';
+import {UserEntity} from './user.entity';
 import {InjectRepository} from '@nestjs/typeorm';
-import {HashService} from '@instinct-api/common';
-import {BaseRepository} from '@instinct-api/database';
-import {UserRPStatRepository} from './rp-stats.repository';
+import {BaseRepository} from '../base.repository';
+import {HashService} from '../../common/hash.service';
 
 @Injectable()
-export class RPUserRepository extends BaseRepository<RPUserEntityStruct> {
+export class UserRepository extends BaseRepository<UserEntity> {
   constructor(
     private readonly hashService: HashService,
-    private readonly rpStatsRepo: UserRPStatRepository,
-    @InjectRepository(RPUserEntity) userRepo: Repository<RPUserEntityStruct>
+    @InjectRepository(UserEntity) userRepo: Repository<UserEntity>
   ) {
-    super(userRepo, [
-      'rank',
-      'bans',
-      'rpStats',
-      'betaCode',
-      'rpStats.politicalParty',
-      'rpStats.politicalParty.politicalParty',
-    ]);
+    super(userRepo, ['role']);
   }
 
-  async create(user: RPUserEntityStruct): Promise<RPUserEntityStruct> {
+  async create(user: UserEntity): Promise<UserEntity> {
     const newUser = await super.create({
       ...user,
-      password: this.hashService.generate(user.password),
+      hashedPassword: this.hashService.generate(user.hashedPassword),
     });
-    await this.rpStatsRepo.create({
-      id: user.id!,
-    } as any);
     return this.findOneOrFail({id: newUser.id!});
-  }
-
-  getAll(): Promise<RPUserEntityStruct[]> {
-    return this.find({}, {id: 'DESC'});
-  }
-
-  async createSSO(userID: number): Promise<string> {
-    const authTicket: string =
-      'instinct_rp' + Random.generate(50) + '_' + userID;
-    await this.update({id: userID}, {authTicket});
-    return authTicket;
   }
 }

@@ -1,16 +1,16 @@
 import {Injectable} from '@nestjs/common';
+import {jwtSecret} from '../common/config.const';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import {jwtSecret} from '@instinct-api/common';
-import {UserEntityStruct} from '@instinct-api/database';
-import {RPUserRepository} from '../database/user/user.repository';
+import {SessionEntity} from '../database/session/session.entity';
+import {SessionRepository} from '../database/session/session.repository';
 
 @Injectable()
-export class RPBearerTokenStrategy extends PassportStrategy(
+export class BearerTokenStrategy extends PassportStrategy(
   Strategy,
   'bearer-token'
 ) {
-  constructor(private readonly userRepo: RPUserRepository) {
+  constructor(private readonly sessionRepo: SessionRepository) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
@@ -19,8 +19,8 @@ export class RPBearerTokenStrategy extends PassportStrategy(
   }
 
   async validate({
-    userID,
-  }: Record<'userID', number>): Promise<UserEntityStruct> {
-    return this.userRepo.findOneOrFail({id: userID});
+    sessionID,
+  }: Record<'sessionID', number>): Promise<SessionEntity> {
+    return this.sessionRepo.findOneOrFail({id: sessionID});
   }
 }

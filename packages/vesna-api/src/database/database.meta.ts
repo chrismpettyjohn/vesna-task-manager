@@ -1,15 +1,11 @@
 import {Provider} from '@nestjs/common';
-import {RPRankEntity} from './rank/rank.entity';
-import {RPUserEntity} from './user/user.entity';
-import {RPRankRepository} from './rank/rank.repository';
-import {RPUserRepository} from './user/user.repository';
+import {RoleEntity} from './role/role.entity';
+import {UserEntity} from './user/user.entity';
+import {RoleRepository} from './role/role.repository';
+import {UserRepository} from './user/user.repository';
+import {SessionEntity} from './session/session.entity';
+import {SessionRepository} from './session/session.repository';
 
-export const rpDatabaseEntities: Function[] = [
-  RPRankEntity,
-  RPUserEntity,
-];
+export const databaseEntities: Function[] = [RoleEntity, UserEntity, SessionEntity];
 
-export const rpDatabaseProviders: Provider[] = [
-  RPUserRepository,
-  RPRankRepository,
-];
+export const databaseProviders: Provider[] = [UserRepository, RoleRepository, SessionRepository];

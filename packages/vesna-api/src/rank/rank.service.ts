@@ -1,10 +1,10 @@
 import {Injectable} from '@nestjs/common';
 import {RPUserService} from '../user/user.service';
 import {rpUserWire} from '../database/user/user.wire';
-import {rpRankWire} from '../database/rank/rank.wire';
+import {rpRankWire} from '../database/role/role.wire';
 import {RPRank} from '@bobba-rp/types';
 import {UserRepository} from '@instinct-api/database';
-import {RPRankEntityStruct} from '../database/rank/rank.types';
+import {RPRankEntityStruct} from '../database/role/rank.types';
 
 @Injectable()
 export class RankService {

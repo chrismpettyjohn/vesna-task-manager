@@ -4,4 +4,4 @@ export interface RoleScopeWire {
 
 export const exampleRoleScopeWire: RoleScopeWire = {
   viewAdminPanel: true,
-}
+};
