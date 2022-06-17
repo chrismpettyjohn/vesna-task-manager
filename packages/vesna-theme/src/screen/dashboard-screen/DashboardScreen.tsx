@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import {TaskList} from '../../component/task-list/TaskList';
-import {sessionContext, taskContext} from '@vesna-task-manager/web';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {SiteHeader} from '../../component/site-header/SiteHeader';
-import {CreateTaskDialog} from '../../component/create-task-dialog/CreateTaskDialog';
+import {sessionContext, taskContext} from '@vesna-task-manager/web';
+import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
 
 export function DashboardScreen() {
   const {session} = useContext(sessionContext);

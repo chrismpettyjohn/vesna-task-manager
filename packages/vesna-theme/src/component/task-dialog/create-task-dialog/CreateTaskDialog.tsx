@@ -15,9 +15,9 @@ export function CreateTaskDialog({
 
   return (
     <TaskDialogEditor
-      defaultTask={{labelID: taskLabelID, name: '', content: ''}}
+      defaultTask={{taskLabelID} as any}
       onSave={onCreateTask}
-      hideTaskLabel
+      hideTaskLabel={!!taskLabelID}
     >
       <i className="fa fa-plus-circle" style={{paddingRight: 4}} />
       Add Task

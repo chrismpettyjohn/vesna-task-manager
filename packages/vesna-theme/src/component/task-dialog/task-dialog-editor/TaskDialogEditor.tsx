@@ -41,6 +41,7 @@ export function TaskDialogEditor({
     try {
       if (!taskName || !taskContent || !taskLabelID) {
         alert('Please provide a task name, description and label');
+        return;
       }
 
       await onSave({
