@@ -15,7 +15,8 @@
   "dependencies": {
     "@mui/material": "5.8.4",
     "@emotion/react": "11.9.3",
-    "@emotion/styled": "^1.9.3"
+    "@emotion/styled": "11.9.3",
+    "react-select": "5.3.2"
   },
   "devDependencies": {
     "wouter": "2.8.0-alpha.2",

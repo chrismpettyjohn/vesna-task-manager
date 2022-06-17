@@ -25,6 +25,12 @@ export class UserEntity {
   @Column({name: 'hashed_password'})
   hashedPassword!: string;
 
+  @Column({name: 'first_name'})
+  firstName!: string;
+
+  @Column({name: 'last_name'})
+  lastName!: string;
+
   @Column({name: 'role_id'})
   roleID!: number;
 

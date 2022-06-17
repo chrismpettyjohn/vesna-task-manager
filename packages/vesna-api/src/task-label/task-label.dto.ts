@@ -6,6 +6,9 @@ import {
 
 export class CreateTaskLabelDTO implements CreateTaskLabelDTOWire {
   @IsString()
+  icon!: string;
+
+  @IsString()
   name!: string;
 
   @IsString()
@@ -13,6 +16,9 @@ export class CreateTaskLabelDTO implements CreateTaskLabelDTOWire {
 }
 
 export class UpdateTaskLabelDTO implements UpdateTaskLabelDTOWire {
+  @IsString()
+  icon!: string;
+
   @IsString()
   @IsOptional()
   name!: string;

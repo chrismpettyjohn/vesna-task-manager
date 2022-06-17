@@ -40,6 +40,7 @@ export class TaskLabelController {
   ): Promise<TaskLabelWire> {
     const newTaskLabel = await this.taskLabelRepo.create({
       userID: session.userID,
+      icon: createTaskLabelDTO.icon,
       name: createTaskLabelDTO.name,
       desc: createTaskLabelDTO.desc,
     });

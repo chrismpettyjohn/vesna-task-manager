@@ -5,11 +5,11 @@ import {
   Button,
   Dialog,
   DialogContent,
-  DialogContentText,
   DialogActions,
   DialogTitle,
   TextField,
 } from '@mui/material';
+import {IconSelector} from '../icon-selector/IconSelector';
 
 export function CreateTaskLabelDialog({
   isOpen,
@@ -17,6 +17,7 @@ export function CreateTaskLabelDialog({
   onClose,
 }: CreateTaskLabelDialogProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [taskLabelIcon, setTaskLabelIcon] = useState('');
   const [taskLabelName, setTaskLabelName] = useState('');
   const [taskLabelDesc, setTaskLabelDesc] = useState('');
 
@@ -24,6 +25,7 @@ export function CreateTaskLabelDialog({
     setIsLoading(true);
     try {
       const newTaskLabel = await taskLabelService.create({
+        icon: taskLabelIcon,
         name: taskLabelName,
         desc: taskLabelDesc,
       });
@@ -42,10 +44,6 @@ export function CreateTaskLabelDialog({
     <Dialog open onClose={onClose}>
       <DialogTitle>Task Label</DialogTitle>
       <DialogContent>
-        <DialogContentText>
-          To subscribe to this website, please enter your email address here. We
-          will send updates occasionally.
-        </DialogContentText>
         <TextField
           autoFocus
           margin="dense"
@@ -68,6 +66,7 @@ export function CreateTaskLabelDialog({
           value={taskLabelDesc}
           onChange={e => setTaskLabelDesc(e.target.value)}
         />
+        <IconSelector icon={taskLabelIcon} onChange={setTaskLabelIcon} />
       </DialogContent>
       <DialogActions>
         <Button color="error" onClick={onClose} variant="text">

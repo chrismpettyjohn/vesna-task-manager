@@ -1,10 +1,4 @@
-import {
-  Paper,
-  MenuList,
-  MenuItem,
-  ListItemText,
-  Typography,
-} from '@mui/material';
+import {MenuList, MenuItem, ListItemText} from '@mui/material';
 import React, {useContext, useState} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {TaskLabelWire} from '@vesna-task-manager/types';
@@ -30,7 +24,7 @@ export function ListTaskLabels() {
       <MenuList>
         {taskLabels?.map(_ => (
           <MenuItem key={`task_label_${_.id}`}>
-            <i className="fa fa-circle" style={{marginRight: 10}} />
+            <i className={_.icon} style={{marginRight: 10}} />
             <ListItemText>{_.name}</ListItemText>
           </MenuItem>
         ))}

@@ -10,4 +10,10 @@ export class UserDTO implements CreateUserDTOWire {
 
   @IsString()
   password!: string;
+
+  @IsString()
+  firstName!: string;
+
+  @IsString()
+  lastName!: string;
 }

@@ -1,10 +1,10 @@
 import {SessionService} from './session.service';
-import {UserWire} from '@vesna-task-manager/types';
 import {HasSession} from './has-session.decorator';
 import {GetSession} from './get-session.decorator';
-import {userWire} from '../database/user/user.wire';
+import {SessionWire} from '@vesna-task-manager/types';
 import {Body, Controller, Get, Post} from '@nestjs/common';
 import {CreateSessionDTO} from '@vesna-task-manager/types';
+import {sessionWire} from '../database/session/session.wire';
 import {SessionEntity} from '../database/session/session.entity';
 
 @Controller('session')
@@ -26,7 +26,7 @@ export class SessionController {
 
   @Get()
   @HasSession()
-  getSession(@GetSession() session: SessionEntity): UserWire {
-    return userWire(session.user!);
+  getSession(@GetSession() session: SessionEntity): SessionWire {
+    return sessionWire(session);
   }
 }

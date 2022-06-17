@@ -15,7 +15,10 @@ export class SessionService {
   }
 
   async getSession(): Promise<SessionWire> {
-    return backendAPI.get('session');
+    const sessionResponse: AxiosResponse<SessionWire> = await backendAPI.get(
+      'session'
+    );
+    return sessionResponse.data;
   }
 }
 

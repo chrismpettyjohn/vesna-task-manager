@@ -15,6 +15,9 @@ export class TaskLabelEntity {
   id?: number;
 
   @Column()
+  icon!: string;
+
+  @Column()
   name!: string;
 
   @Column()

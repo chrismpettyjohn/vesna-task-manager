@@ -26,6 +26,8 @@ export class UserController {
     const newUser = await this.userRepo.create({
       email: userDTO.email,
       username: userDTO.username,
+      firstName: userDTO.firstName,
+      lastName: userDTO.lastName,
       hashedPassword: userDTO.password,
       roleID: 1,
     });
