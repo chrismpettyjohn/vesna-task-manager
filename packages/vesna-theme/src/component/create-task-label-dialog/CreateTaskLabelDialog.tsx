@@ -70,8 +70,10 @@ export function CreateTaskLabelDialog({
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cancel</Button>
-        <Button onClick={onSaveTaskLabel}>
+        <Button color="error" onClick={onClose} variant="text">
+          Cancel
+        </Button>
+        <Button color="success" onClick={onSaveTaskLabel} variant="contained">
           {isLoading ? (
             <>
               <i className="fa fa-spinner fa-spin" style={{marginRight: 4}} />{' '}

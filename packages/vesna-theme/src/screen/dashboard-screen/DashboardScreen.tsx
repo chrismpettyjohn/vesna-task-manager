@@ -1,6 +1,6 @@
 import React from 'react';
 import {UserLayout} from '../../component/user-layout/UserLayout';
-import {TaskLabelTabs} from '../../component/task-labels-tabs/TaskLabelsTabs';
+import {SiteHeader} from '../../component/site-header/SiteHeader';
 
 export function DashboardScreen() {
   return (
@@ -12,7 +12,7 @@ export function DashboardScreen() {
       </div>
       <div className="row">
         <div className="col-12">
-          <TaskLabelTabs />
+          <SiteHeader />
         </div>
       </div>
     </UserLayout>
