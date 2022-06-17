@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SketchPicker} from 'react-color';
+import {CirclePicker} from 'react-color';
 import {IconSelector} from '../../icon-selector/IconSelector';
 import {TaskLabelDialogEditorProps} from './TaskLabelDialogEditor.types';
 import {
@@ -71,7 +71,7 @@ export function TaskLabelDialogEditor({
         <Dialog open onClose={toggleIsOpen}>
           <DialogTitle>Task Label</DialogTitle>
           <DialogContent style={{width: 500}}>
-            <div style={{marginBottom: 10}}>
+            <div style={{marginBottom: 20}}>
               <TextField
                 margin="dense"
                 id="name"
@@ -83,7 +83,7 @@ export function TaskLabelDialogEditor({
                 onChange={e => setTaskLabelName(e?.target?.value ?? '')}
               />
             </div>
-            <div style={{marginBottom: 10}}>
+            <div style={{marginBottom: 20}}>
               <TextField
                 margin="dense"
                 id="name"
@@ -96,13 +96,16 @@ export function TaskLabelDialogEditor({
                 onChange={e => setTaskLabelDesc(e?.target?.value ?? '')}
               />
             </div>
-            <div style={{marginBottom: 10}}>
-              <SketchPicker
+            <div style={{marginBottom: 20, width: '100%'}}>
+              <b>Color</b>
+              <CirclePicker
                 color={taskLabelColor}
                 onChange={e => setTaskLabelColor(e.hex)}
+                width="100%"
               />
             </div>
-            <div style={{marginBottom: 10}}>
+            <div style={{marginBottom: 20}}>
+              <b>Icon</b>
               <IconSelector icon={taskLabelIcon} onChange={setTaskLabelIcon} />
             </div>
           </DialogContent>

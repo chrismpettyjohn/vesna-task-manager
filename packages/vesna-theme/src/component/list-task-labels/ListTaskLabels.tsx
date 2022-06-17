@@ -1,22 +1,14 @@
 import {Link} from 'wouter';
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {TaskLabelWire} from '@vesna-task-manager/types';
 import {MenuList, MenuItem, ListItemText} from '@mui/material';
-import {CreateTaskLabelDialog} from '../create-task-label-dialog/CreateTaskLabelDialog';
+import {CreateTaskLabelDialog} from '../task-label-dialog/create-task-label-dialog/CreateTaskLabelDialog';
 
 export function ListTaskLabels() {
-  const [isCreateTaskLabelDialogOpen, setIsCreateTaskLabelDialogOpen] =
-    useState(false);
   const {taskLabels, addTaskLabel} = useContext(taskContext);
-
-  const toggleCreateTaskLabelDialog = () => {
-    setIsCreateTaskLabelDialogOpen(_ => !_);
-  };
-
   const onCreateTaskLabel = (newTaskLabel: TaskLabelWire) => {
     addTaskLabel(newTaskLabel);
-    setIsCreateTaskLabelDialogOpen(false);
   };
 
   return (
@@ -30,15 +22,9 @@ export function ListTaskLabels() {
             </MenuItem>
           </Link>
         ))}
-        <MenuItem onClick={toggleCreateTaskLabelDialog}>
-          <i className="fa fa-plus-circle" style={{marginRight: 10}} />
-          <ListItemText style={{textAlign: 'left'}}>Add Label</ListItemText>
-        </MenuItem>
-        <CreateTaskLabelDialog
-          isOpen={isCreateTaskLabelDialogOpen}
-          onCreation={onCreateTaskLabel}
-          onClose={toggleCreateTaskLabelDialog}
-        />
+        <div style={{marginLeft: -10}}>
+          <CreateTaskLabelDialog onCreation={onCreateTaskLabel} />
+        </div>
       </MenuList>
     </div>
   );
