@@ -12,7 +12,6 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
         value={icon}
         onChange={(e: any) => onChange(e.value)}
       />
-      />
     </div>
   );
 }

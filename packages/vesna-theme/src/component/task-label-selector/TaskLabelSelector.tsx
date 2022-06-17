@@ -1,6 +1,6 @@
-import Select from 'react-select';
 import React, {useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
+import {Autocomplete, TextField} from '@mui/material';
 import {TaskLabelSelectorProps} from './TaskLabelSelector.types';
 
 export function TaskLabelSelector({
@@ -14,11 +14,12 @@ export function TaskLabelSelector({
   }));
   return (
     <>
-      <label>Task Label</label>
-      <Select
-        options={taskLabelOptions}
-        value={taskLabelOptions?.find(_ => _.value === taskLabelID)}
-        onChange={(e: any) => onChange(e.value)}
+      <Autocomplete
+        disablePortal
+        id="task-label-selector"
+        options={taskLabelOptions as any}
+        sx={{width: '100%'}}
+        renderInput={params => <TextField {...params} label="Task Label" />}
       />
     </>
   );

@@ -59,24 +59,22 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
           <DialogTitle>Task</DialogTitle>
           <DialogContent>
             <TextField
-              autoFocus
               margin="dense"
               id="name"
               label="Name"
               type="text"
               fullWidth
-              variant="standard"
+              variant="filled"
               value={taskName}
               onChange={e => setTaskName(e.target.value)}
             />
             <TextField
-              autoFocus
-              margin="dense"
               id="content"
               label="Content"
-              type="textarea"
+              multiline
+              rows={4}
               fullWidth
-              variant="standard"
+              variant="filled"
               value={taskContent}
               onChange={e => setTaskContent(e.target.value)}
             />

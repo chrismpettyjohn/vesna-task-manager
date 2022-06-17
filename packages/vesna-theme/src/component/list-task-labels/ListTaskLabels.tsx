@@ -1,14 +1,13 @@
-import {MenuList, MenuItem, ListItemText} from '@mui/material';
 import React, {useContext, useState} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {TaskLabelWire} from '@vesna-task-manager/types';
+import {MenuList, MenuItem, ListItemText} from '@mui/material';
 import {CreateTaskLabelDialog} from '../create-task-label-dialog/CreateTaskLabelDialog';
 
 export function ListTaskLabels() {
   const [isCreateTaskLabelDialogOpen, setIsCreateTaskLabelDialogOpen] =
     useState(false);
   const {taskLabels, addTaskLabel} = useContext(taskContext);
-  const [activeTab, setActiveTab] = useState(taskLabels?.[0]?.id);
 
   const toggleCreateTaskLabelDialog = () => {
     setIsCreateTaskLabelDialogOpen(_ => !_);
