@@ -5,6 +5,7 @@ export interface TaskLabelWire {
   icon: string;
   name: string;
   desc: string;
+  color: string;
   tasks: TaskWire[];
 }
 
@@ -13,5 +14,6 @@ export const exampleTaskLabelWire: TaskLabelWire = {
   icon: '',
   name: 'Chores',
   desc: 'Things I gotta do around the house',
+  color: '',
   tasks: [exampleTaskWire],
 };

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {SketchPicker} from 'react-color';
 import {taskLabelService} from '@vesna-task-manager/web';
 import {CreateTaskLabelDialogProps} from './CreateTaskLabelDialog.types';
 import {
@@ -20,6 +21,7 @@ export function CreateTaskLabelDialog({
   const [taskLabelIcon, setTaskLabelIcon] = useState('');
   const [taskLabelName, setTaskLabelName] = useState('');
   const [taskLabelDesc, setTaskLabelDesc] = useState('');
+  const [taskLabelColor, setTaskLabelColor] = useState('');
 
   const onSaveTaskLabel = async () => {
     setIsLoading(true);
@@ -28,6 +30,7 @@ export function CreateTaskLabelDialog({
         icon: taskLabelIcon,
         name: taskLabelName,
         desc: taskLabelDesc,
+        color: taskLabelColor,
       });
       onCreation(newTaskLabel);
     } catch {
@@ -66,6 +69,12 @@ export function CreateTaskLabelDialog({
             variant="filled"
             value={taskLabelDesc}
             onChange={e => setTaskLabelDesc(e.target.value)}
+          />
+        </div>
+        <div style={{marginBottom: 10}}>
+          <SketchPicker
+            color={taskLabelColor}
+            onChange={e => setTaskLabelColor(e.hex)}
           />
         </div>
         <div style={{marginBottom: 10}}>

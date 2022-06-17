@@ -23,6 +23,9 @@ export class TaskLabelEntity {
   @Column()
   desc!: string;
 
+  @Column()
+  color!: string;
+
   @Column({name: 'user_id', type: 'int'})
   userID!: number;
 

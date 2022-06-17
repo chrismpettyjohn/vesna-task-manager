@@ -25,7 +25,7 @@ export function ListTaskLabels() {
         {taskLabels?.map(_ => (
           <Link to={`/tasks-list/${_.id}`}>
             <MenuItem key={`task_label_${_.id}`}>
-              <i className={_.icon} style={{marginRight: 10}} />
+              <i className={_.icon} style={{color: _.color, marginRight: 10}} />
               <ListItemText style={{textAlign: 'left'}}>{_.name}</ListItemText>
             </MenuItem>
           </Link>

@@ -15,6 +15,7 @@ export function taskLabelWire(taskLabelEntity: TaskLabelEntity): TaskLabelWire {
     icon: taskLabelEntity.icon,
     name: taskLabelEntity.name,
     desc: taskLabelEntity.desc,
+    color: taskLabelEntity.color,
     tasks: taskLabelEntity.tasks.map(_ => taskWire(_)),
   };
 }

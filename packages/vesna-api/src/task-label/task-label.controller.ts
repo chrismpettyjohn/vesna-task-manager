@@ -43,6 +43,7 @@ export class TaskLabelController {
       icon: createTaskLabelDTO.icon,
       name: createTaskLabelDTO.name,
       desc: createTaskLabelDTO.desc,
+      color: createTaskLabelDTO.color,
     });
     return taskLabelWire(newTaskLabel);
   }

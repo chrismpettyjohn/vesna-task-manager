@@ -13,6 +13,9 @@ export class CreateTaskLabelDTO implements CreateTaskLabelDTOWire {
 
   @IsString()
   desc!: string;
+
+  @IsString()
+  color!: string;
 }
 
 export class UpdateTaskLabelDTO implements UpdateTaskLabelDTOWire {
@@ -26,4 +29,8 @@ export class UpdateTaskLabelDTO implements UpdateTaskLabelDTOWire {
   @IsString()
   @IsOptional()
   desc!: string;
+
+  @IsString()
+  @IsOptional()
+  color!: string;
 }
