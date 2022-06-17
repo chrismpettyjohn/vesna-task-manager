@@ -11,7 +11,7 @@ export function VesnaTheme({children}: VesnaThemeProps) {
       },
     },
     typography: {
-      fontSize: 20,
+      fontSize: 16,
     },
   });
 

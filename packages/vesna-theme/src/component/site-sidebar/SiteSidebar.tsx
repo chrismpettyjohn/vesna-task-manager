@@ -10,6 +10,7 @@ export function SiteSidebar({children}: SiteSidebarProps) {
       <div className="p-4">
         <h2
           style={{
+            marginTop: 5,
             letterSpacing: 10,
             textTransform: 'uppercase',
             textAlign: 'center',
@@ -17,7 +18,9 @@ export function SiteSidebar({children}: SiteSidebarProps) {
         >
           Vesna
         </h2>
-        <div style={{marginTop: 10}}>{children}</div>
+        <div style={{marginTop: 65, borderTop: '1px solid #e3e7f7'}}>
+          {children}
+        </div>
       </div>
     </div>
   );

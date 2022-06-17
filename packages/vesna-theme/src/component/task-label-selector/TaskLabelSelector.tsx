@@ -13,14 +13,14 @@ export function TaskLabelSelector({
     value: _.id as any,
   }));
   return (
-    <>
-      <Autocomplete
-        disablePortal
-        id="task-label-selector"
-        options={taskLabelOptions as any}
-        sx={{width: '100%'}}
-        renderInput={params => <TextField {...params} label="Task Label" />}
-      />
-    </>
+    <Autocomplete
+      disablePortal
+      id="task-label-selector"
+      options={taskLabelOptions as any}
+      sx={{width: '100%'}}
+      renderInput={params => <TextField {...params} label="Task Label" />}
+      value={taskLabelOptions?.find(_ => _.value == taskLabelID)}
+      onChange={(e: any) => onChange(e.value)}
+    />
   );
 }

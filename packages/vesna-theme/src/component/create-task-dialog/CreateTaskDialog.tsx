@@ -57,31 +57,37 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
       {isOpen && (
         <Dialog open onClose={onToggleDialog}>
           <DialogTitle>Task</DialogTitle>
-          <DialogContent>
-            <TextField
-              margin="dense"
-              id="name"
-              label="Name"
-              type="text"
-              fullWidth
-              variant="filled"
-              value={taskName}
-              onChange={e => setTaskName(e.target.value)}
-            />
-            <TextField
-              id="content"
-              label="Content"
-              multiline
-              rows={4}
-              fullWidth
-              variant="filled"
-              value={taskContent}
-              onChange={e => setTaskContent(e.target.value)}
-            />
-            <TaskLabelSelector
-              taskLabelID={taskLabelID}
-              onChange={setTaskLabelID}
-            />
+          <DialogContent style={{width: 500}}>
+            <div style={{marginBottom: 10}}>
+              <TextField
+                margin="dense"
+                id="name"
+                label="Name"
+                type="text"
+                fullWidth
+                variant="filled"
+                value={taskName}
+                onChange={e => setTaskName(e.target.value)}
+              />
+            </div>
+            <div style={{marginBottom: 10}}>
+              <TextField
+                id="content"
+                label="Content"
+                multiline
+                rows={4}
+                fullWidth
+                variant="filled"
+                value={taskContent}
+                onChange={e => setTaskContent(e.target.value)}
+              />
+            </div>
+            <div style={{marginBottom: 10}}>
+              <TaskLabelSelector
+                taskLabelID={taskLabelID}
+                onChange={setTaskLabelID}
+              />
+            </div>
           </DialogContent>
           <DialogActions>
             <Button color="error" onClick={onToggleDialog} variant="text">

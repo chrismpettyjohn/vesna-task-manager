@@ -1,17 +1,27 @@
 import React from 'react';
-import Select from 'react-select';
+import {Autocomplete, TextField} from '@mui/material';
 import {IconSelectorProps} from './IconSelector.types';
 import {FONT_AWESOME_ICONS} from './IconSelector.const';
 
 export function IconSelector({icon, onChange}: IconSelectorProps) {
+  const iconOptions = FONT_AWESOME_ICONS.map(_ => ({label: _, value: _}));
+  console.log(icon);
   return (
-    <div style={{padding: 4, overflow: 'visible'}}>
-      <Select
-        className="h-100 w-100"
-        options={FONT_AWESOME_ICONS.map(_ => ({label: _, value: _})) as any}
-        value={icon}
-        onChange={(e: any) => onChange(e.value)}
-      />
+    <div className="row">
+      <div className="col p-2" style={{maxWidth: 'fit-content'}}>
+        <i className={`${icon} fa-3x`} />
+      </div>
+      <div className="col">
+        <Autocomplete
+          disablePortal
+          id="task-label-selector"
+          options={iconOptions as any}
+          sx={{width: '100%'}}
+          renderInput={params => <TextField {...params} label="Task Label" />}
+          value={iconOptions?.find((_: any) => _.value === icon)}
+          onChange={(e, target) => onChange(target.value)}
+        />
+      </div>
     </div>
   );
 }

@@ -43,30 +43,34 @@ export function CreateTaskLabelDialog({
   return (
     <Dialog open onClose={onClose}>
       <DialogTitle>Task Label</DialogTitle>
-      <DialogContent>
-        <TextField
-          autoFocus
-          margin="dense"
-          id="name"
-          label="Name"
-          type="text"
-          fullWidth
-          variant="standard"
-          value={taskLabelName}
-          onChange={e => setTaskLabelName(e.target.value)}
-        />
-        <TextField
-          autoFocus
-          margin="dense"
-          id="name"
-          label="Desc"
-          type="text"
-          fullWidth
-          variant="standard"
-          value={taskLabelDesc}
-          onChange={e => setTaskLabelDesc(e.target.value)}
-        />
-        <IconSelector icon={taskLabelIcon} onChange={setTaskLabelIcon} />
+      <DialogContent style={{width: 500}}>
+        <div style={{marginBottom: 10}}>
+          <TextField
+            margin="dense"
+            id="name"
+            label="Name"
+            type="text"
+            fullWidth
+            variant="filled"
+            value={taskLabelName}
+            onChange={e => setTaskLabelName(e.target.value)}
+          />
+        </div>
+        <div style={{marginBottom: 10}}>
+          <TextField
+            margin="dense"
+            id="name"
+            label="Desc"
+            type="text"
+            fullWidth
+            variant="filled"
+            value={taskLabelDesc}
+            onChange={e => setTaskLabelDesc(e.target.value)}
+          />
+        </div>
+        <div style={{marginBottom: 10}}>
+          <IconSelector icon={taskLabelIcon} onChange={setTaskLabelIcon} />
+        </div>
       </DialogContent>
       <DialogActions>
         <Button color="error" onClick={onClose} variant="text">
