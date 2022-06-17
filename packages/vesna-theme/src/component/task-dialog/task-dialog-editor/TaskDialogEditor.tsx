@@ -60,7 +60,7 @@ export function TaskDialogEditor({
 
   return (
     <>
-      <IconButton edge="end" onClick={onToggleDialog}>
+      <IconButton color="secondary" edge="end" onClick={onToggleDialog}>
         {children}
       </IconButton>
       {isOpen && (

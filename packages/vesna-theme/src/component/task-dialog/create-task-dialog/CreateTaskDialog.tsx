@@ -20,7 +20,6 @@ export function CreateTaskDialog({
       hideTaskLabel={!!taskLabelID}
     >
       <i className="fa fa-plus-circle" style={{paddingRight: 4}} />
-      Add Task
     </TaskDialogEditor>
   );
 }
