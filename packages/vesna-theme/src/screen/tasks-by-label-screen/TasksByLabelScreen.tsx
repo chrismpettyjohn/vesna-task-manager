@@ -27,7 +27,13 @@ export function TasksByLabelScreen() {
     <UserLayout>
       <div className="row">
         <div className="col-6">
-          <h1>{taskLabel?.name}</h1>
+          <h1>
+            <i
+              className={taskLabel?.icon}
+              style={{color: taskLabel?.color, marginRight: 10}}
+            />
+            {taskLabel?.name}
+          </h1>
         </div>
         <div className="col-6">
           <div style={{float: 'right'}}>

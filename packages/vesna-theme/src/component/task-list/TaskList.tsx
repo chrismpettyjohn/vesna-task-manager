@@ -29,14 +29,11 @@ export function TaskList({tasks}: TaskListProps) {
           ))}
         </TableBody>
       </Table>
+      {tasks?.length === 0 && (
+        <h4 style={{textAlign: 'center', marginTop: 10}}>
+          You don't have any tasks created yet.
+        </h4>
+      )}
     </TableContainer>
   );
-
-  // return (
-  //   <List sx={{width: '100%', bgcolor: 'background.paper'}}>
-  //     {tasks?.map(_ => (
-  //       <TaskListItem key={`task_${_.id}`} task={_} />
-  //     ))}
-  //   </List>
-  // );
 }
