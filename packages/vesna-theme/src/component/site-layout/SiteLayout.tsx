@@ -9,10 +9,10 @@ export function SiteLayout({children, sidebar}: SiteLayoutProps) {
       style={{position: 'absolute', top: 0, left: 0}}
     >
       <div className="row h-100 w-100">
-        <div className="col" style={{maxWidth: 'fit-content'}}>
+        <div className="col" style={{maxWidth: 250}}>
           <SiteSidebar children={sidebar} />
         </div>
-        <div className="col">{children}</div>
+        <div className="col p-4">{children}</div>
       </div>
     </div>
   );

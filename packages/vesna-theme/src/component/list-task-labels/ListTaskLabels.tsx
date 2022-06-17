@@ -24,12 +24,12 @@ export function ListTaskLabels() {
         {taskLabels?.map(_ => (
           <MenuItem key={`task_label_${_.id}`}>
             <i className={_.icon} style={{marginRight: 10}} />
-            <ListItemText>{_.name}</ListItemText>
+            <ListItemText style={{textAlign: 'left'}}>{_.name}</ListItemText>
           </MenuItem>
         ))}
         <MenuItem onClick={toggleCreateTaskLabelDialog}>
           <i className="fa fa-plus-circle" style={{marginRight: 10}} />
-          <ListItemText>Add Label</ListItemText>
+          <ListItemText style={{textAlign: 'left'}}>Add Label</ListItemText>
         </MenuItem>
         <CreateTaskLabelDialog
           isOpen={isCreateTaskLabelDialogOpen}

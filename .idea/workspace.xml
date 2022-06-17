@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/list-task-labels/ListTaskLabels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/list-task-labels/ListTaskLabels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
       <updated>1655352493905</updated>
       <workItem from="1655352495153" duration="2854000" />
       <workItem from="1655355510302" duration="8235000" />
-      <workItem from="1655413606827" duration="16028000" />
+      <workItem from="1655413606827" duration="16636000" />
     </task>
     <servers />
   </component>
@@ -95,10 +98,10 @@
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
     <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1320@0.25.2560.1320" timestamp="1655408292235" />
-    <state x="980" y="424" width="600" height="522" key="find.popup" timestamp="1655372423449">
+    <state x="980" y="424" width="600" height="522" key="find.popup" timestamp="1655441771674">
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
-    <state x="980" y="424" width="600" height="522" key="find.popup/0.25.2560.1320@0.25.2560.1320" timestamp="1655372423449" />
+    <state x="980" y="424" width="600" height="522" key="find.popup/0.25.2560.1320@0.25.2560.1320" timestamp="1655441771674" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup" timestamp="1655357645509">
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
