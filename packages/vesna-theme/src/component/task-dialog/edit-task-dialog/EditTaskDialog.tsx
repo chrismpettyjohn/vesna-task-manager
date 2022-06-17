@@ -12,7 +12,7 @@ export function EditTaskDialog({task, onSave}: EditTaskDialogProps) {
 
   return (
     <TaskDialogEditor defaultTask={task} onSave={onUpdateTask}>
-      <i className="fa fa-pencil" /> {task.name}
+      <i className="fa fa-pencil" />
     </TaskDialogEditor>
   );
 }

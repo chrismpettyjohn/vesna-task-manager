@@ -15,7 +15,7 @@ export function CreateTaskDialog({
 
   return (
     <TaskDialogEditor
-      defaultTask={{taskLabelID} as any}
+      defaultTask={{labelID: taskLabelID} as any}
       onSave={onCreateTask}
       hideTaskLabel={!!taskLabelID}
     >

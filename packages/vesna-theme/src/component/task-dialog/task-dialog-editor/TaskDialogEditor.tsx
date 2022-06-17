@@ -8,6 +8,7 @@ import {
   DialogActions,
   DialogTitle,
   TextField,
+  IconButton,
 } from '@mui/material';
 
 export function TaskDialogEditor({
@@ -16,6 +17,7 @@ export function TaskDialogEditor({
   onSave,
   hideTaskLabel = false,
 }: TaskDialogEditorProps) {
+  console.log(defaultTask);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [taskLabelID, setTaskLabelID] = useState<number | undefined>(
@@ -58,14 +60,9 @@ export function TaskDialogEditor({
 
   return (
     <>
-      <Button
-        color="success"
-        onClick={onToggleDialog}
-        variant="contained"
-        size="large"
-      >
+      <IconButton edge="end" onClick={onToggleDialog}>
         {children}
-      </Button>
+      </IconButton>
       {isOpen && (
         <Dialog open onClose={onToggleDialog}>
           <DialogTitle>Task</DialogTitle>
