@@ -5,7 +5,6 @@ import {FONT_AWESOME_ICONS} from './IconSelector.const';
 
 export function IconSelector({icon, onChange}: IconSelectorProps) {
   const iconOptions = FONT_AWESOME_ICONS.map(_ => ({label: _, value: _}));
-  console.log(icon);
   return (
     <div className="row">
       <div className="col p-2" style={{maxWidth: 'fit-content'}}>
@@ -19,7 +18,7 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
           sx={{width: '100%'}}
           renderInput={params => <TextField {...params} label="Task Label" />}
           value={iconOptions?.find((_: any) => _.value === icon)}
-          onChange={(e, target) => onChange(target.value)}
+          onChange={(e: any, target: any) => onChange(target.value)}
         />
       </div>
     </div>
