@@ -1,3 +1,4 @@
+import {Link} from 'wouter';
 import React, {useContext, useState} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {TaskLabelWire} from '@vesna-task-manager/types';
@@ -22,10 +23,12 @@ export function ListTaskLabels() {
     <div style={{width: '100%'}}>
       <MenuList>
         {taskLabels?.map(_ => (
-          <MenuItem key={`task_label_${_.id}`}>
-            <i className={_.icon} style={{marginRight: 10}} />
-            <ListItemText style={{textAlign: 'left'}}>{_.name}</ListItemText>
-          </MenuItem>
+          <Link to={`/tasks-list/${_.id}`}>
+            <MenuItem key={`task_label_${_.id}`}>
+              <i className={_.icon} style={{marginRight: 10}} />
+              <ListItemText style={{textAlign: 'left'}}>{_.name}</ListItemText>
+            </MenuItem>
+          </Link>
         ))}
         <MenuItem onClick={toggleCreateTaskLabelDialog}>
           <i className="fa fa-plus-circle" style={{marginRight: 10}} />

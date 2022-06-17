@@ -4,10 +4,12 @@ import {LoginScreen} from './login-screen/LoginScreen';
 import {IndexScreen} from './index-screen/IndexScreen';
 import {DashboardScreen} from './dashboard-screen/DashboardScreen';
 import {RegistrationScreen} from './registration-screen/RegistrationScreen';
+import {TasksByLabelScreen} from './tasks-by-label-screen/TasksByLabelScreen';
 
 export function loadScreens() {
   setURL('', <IndexScreen />);
   setURL('login', <LoginScreen />);
   setURL('registration', <RegistrationScreen />);
   setURL('dashboard', <DashboardScreen />);
+  setURL('tasks-list/:taskListID', <TasksByLabelScreen />);
 }
