@@ -5,7 +5,7 @@ import {SiteLayout} from '../site-layout/SiteLayout';
 export function UserLayout({children}: UserLayoutProps) {
   return (
     <SiteLayout>
-      <div className="container-fluid p-4">
+      <div className="container-fluid p-4 h-100">
         <div className="row h-100">
           <div className="col-8">{children}</div>
           <div className="col-4">

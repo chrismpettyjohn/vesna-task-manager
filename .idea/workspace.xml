@@ -20,39 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/web/public/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-duotone-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-light-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/web/public/fonts/fontawesome/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/create-task-label-dialog/CreateTaskLabelDialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/create-task-label-dialog/CreateTaskLabelDialog.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-labels-tabs/TaskLabelsTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-labels-tabs/TaskLabelsTabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/public/css/VesnaTheme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +73,7 @@
       <updated>1655352493905</updated>
       <workItem from="1655352495153" duration="2854000" />
       <workItem from="1655355510302" duration="8235000" />
-      <workItem from="1655413606827" duration="5598000" />
+      <workItem from="1655413606827" duration="7143000" />
     </task>
     <servers />
   </component>
