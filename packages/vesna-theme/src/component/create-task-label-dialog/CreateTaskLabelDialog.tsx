@@ -23,6 +23,14 @@ export function CreateTaskLabelDialog({
   const [taskLabelDesc, setTaskLabelDesc] = useState('');
   const [taskLabelColor, setTaskLabelColor] = useState('');
 
+  const resetState = () => {
+    setIsLoading(false);
+    setTaskLabelIcon('');
+    setTaskLabelName('');
+    setTaskLabelDesc('');
+    setTaskLabelColor('');
+  };
+
   const onSaveTaskLabel = async () => {
     setIsLoading(true);
     try {
@@ -33,10 +41,11 @@ export function CreateTaskLabelDialog({
         color: taskLabelColor,
       });
       onCreation(newTaskLabel);
+      resetState();
     } catch {
       alert('There was a problem creating your task label');
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   if (!isOpen) {
@@ -56,7 +65,7 @@ export function CreateTaskLabelDialog({
             fullWidth
             variant="filled"
             value={taskLabelName}
-            onChange={e => setTaskLabelName(e.target.value)}
+            onChange={e => setTaskLabelName(e?.target?.value ?? '')}
           />
         </div>
         <div style={{marginBottom: 10}}>
@@ -64,11 +73,12 @@ export function CreateTaskLabelDialog({
             margin="dense"
             id="name"
             label="Desc"
-            type="text"
             fullWidth
+            multiline
+            rows={4}
             variant="filled"
             value={taskLabelDesc}
-            onChange={e => setTaskLabelDesc(e.target.value)}
+            onChange={e => setTaskLabelDesc(e?.target?.value ?? '')}
           />
         </div>
         <div style={{marginBottom: 10}}>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {taskService} from '@vesna-task-manager/web';
-import {CreateTaskDialogProps} from './CreateTaskDialog.types';
+import {TaskDialogEditorProps} from './TaskDialogEditor.types';
+import {TaskLabelSelector} from '../../task-label-selector/TaskLabelSelector';
 import {
   Button,
   Dialog,
@@ -9,14 +9,28 @@ import {
   DialogTitle,
   TextField,
 } from '@mui/material';
-import {TaskLabelSelector} from '../task-label-selector/TaskLabelSelector';
 
-export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
+export function TaskDialogEditor({
+  children,
+  defaultTask,
+  onSave,
+  hideTaskLabel = false,
+}: TaskDialogEditorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [taskLabelID, setTaskLabelID] = useState<number>();
-  const [taskName, setTaskName] = useState('');
-  const [taskContent, setTaskContent] = useState('');
+  const [taskLabelID, setTaskLabelID] = useState<number | undefined>(
+    defaultTask?.labelID
+  );
+  const [taskName, setTaskName] = useState(defaultTask?.name ?? '');
+  const [taskContent, setTaskContent] = useState(defaultTask?.content ?? '');
+
+  const resetState = () => {
+    setTaskLabelID(undefined);
+    setTaskName('');
+    setTaskContent('');
+    setIsOpen(false);
+    setIsLoading(false);
+  };
 
   const onToggleDialog = () => {
     setIsOpen(_ => !_);
@@ -25,22 +39,20 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
   const onSaveTaskLabel = async () => {
     setIsLoading(true);
     try {
-      if (!taskLabelID || !taskName || !taskContent) {
-        alert('You must provide a task label, name and content');
-        return;
+      if (!taskName || !taskContent || !taskLabelID) {
+        alert('Please provide a task name, description and label');
       }
 
-      const newTaskLabel = await taskService.create({
-        taskLabelID: taskLabelID,
+      await onSave({
         name: taskName,
         content: taskContent,
+        taskLabelID: taskLabelID!,
       });
-      onCreation(newTaskLabel);
-      setIsOpen(false);
+      resetState();
     } catch {
       alert('There was a problem creating your task label');
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   return (
@@ -51,8 +63,7 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
         variant="contained"
         size="large"
       >
-        <i className="fa fa-plus-circle" style={{paddingRight: 4}} />
-        Add Task
+        {children}
       </Button>
       {isOpen && (
         <Dialog open onClose={onToggleDialog}>
@@ -67,7 +78,7 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
                 fullWidth
                 variant="filled"
                 value={taskName}
-                onChange={e => setTaskName(e.target.value)}
+                onChange={e => setTaskName(e?.target?.value ?? '')}
               />
             </div>
             <div style={{marginBottom: 10}}>
@@ -79,15 +90,17 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
                 fullWidth
                 variant="filled"
                 value={taskContent}
-                onChange={e => setTaskContent(e.target.value)}
+                onChange={e => setTaskContent(e?.target?.value ?? '')}
               />
             </div>
-            <div style={{marginBottom: 10}}>
-              <TaskLabelSelector
-                taskLabelID={taskLabelID}
-                onChange={setTaskLabelID}
-              />
-            </div>
+            {!hideTaskLabel && (
+              <div style={{marginBottom: 10}}>
+                <TaskLabelSelector
+                  taskLabelID={taskLabelID}
+                  onChange={setTaskLabelID}
+                />
+              </div>
+            )}
           </DialogContent>
           <DialogActions>
             <Button color="error" onClick={onToggleDialog} variant="text">

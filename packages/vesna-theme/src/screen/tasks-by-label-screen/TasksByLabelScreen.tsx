@@ -4,7 +4,7 @@ import {TaskList} from '../../component/task-list/TaskList';
 import {SiteHeader} from '../../component/site-header/SiteHeader';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {sessionContext, taskContext} from '@vesna-task-manager/web';
-import {CreateTaskDialog} from '../../component/create-task-dialog/CreateTaskDialog';
+import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
 
 export function TasksByLabelScreen() {
   const [match, params] = useRoute<{taskLabelID: string}>(
@@ -31,7 +31,10 @@ export function TasksByLabelScreen() {
         </div>
         <div className="col-6">
           <div style={{float: 'right'}}>
-            <CreateTaskDialog onCreation={addTask} />
+            <CreateTaskDialog
+              onCreation={addTask}
+              taskLabelID={taskLabel?.id!}
+            />
           </div>
         </div>
       </div>
