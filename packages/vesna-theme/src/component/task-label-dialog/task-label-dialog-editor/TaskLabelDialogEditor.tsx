@@ -18,10 +18,18 @@ export function TaskLabelDialogEditor({
 }: TaskLabelDialogEditorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [taskLabelIcon, setTaskLabelIcon] = useState('');
-  const [taskLabelName, setTaskLabelName] = useState('');
-  const [taskLabelDesc, setTaskLabelDesc] = useState('');
-  const [taskLabelColor, setTaskLabelColor] = useState('');
+  const [taskLabelIcon, setTaskLabelIcon] = useState(
+    defaultTaskLabel?.icon ?? ''
+  );
+  const [taskLabelName, setTaskLabelName] = useState(
+    defaultTaskLabel?.name ?? ''
+  );
+  const [taskLabelDesc, setTaskLabelDesc] = useState(
+    defaultTaskLabel?.desc ?? ''
+  );
+  const [taskLabelColor, setTaskLabelColor] = useState(
+    defaultTaskLabel?.color ?? ''
+  );
 
   const toggleIsOpen = () => {
     setIsOpen(_ => !_);
