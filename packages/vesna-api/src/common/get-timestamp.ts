@@ -1,3 +1,5 @@
+import DayJS from 'dayjs';
+
 export function getTimestamp() {
-  return new Date().toISOString();
+  return DayJS().toISOString();
 }
