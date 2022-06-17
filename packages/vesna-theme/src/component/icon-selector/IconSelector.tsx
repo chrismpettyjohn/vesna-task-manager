@@ -10,8 +10,8 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
         className="h-100 w-100"
         options={FONT_AWESOME_ICONS.map(_ => ({label: _, value: _})) as any}
         value={icon}
-        onChange={onChange as any}
-        menuPortalTarget={document.body}
+        onChange={(e: any) => onChange(e.value)}
+      />
       />
     </div>
   );

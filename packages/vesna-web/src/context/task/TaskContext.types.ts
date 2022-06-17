@@ -11,7 +11,7 @@ export interface TaskContext {
   deleteTaskLabelByID(taskLabelID: number): void;
   tasks?: TaskWire[];
   addTask(task: TaskWire): void;
-  updateTaskByID(taskID: number, changes: Partial<TaskLabelWire>): void;
+  updateTaskByID(taskID: number, changes: Partial<TaskWire>): void;
   deleteTaskByID(taskID: number): void;
 }
 

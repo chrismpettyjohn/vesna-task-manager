@@ -13,10 +13,13 @@ export function TaskLabelSelector({
     value: _.id as any,
   }));
   return (
-    <Select
-      options={taskLabelOptions}
-      value={taskLabelOptions?.find(_ => _.value === taskLabelID)}
-      onChange={onChange as any}
-    />
+    <>
+      <label>Task Label</label>
+      <Select
+        options={taskLabelOptions}
+        value={taskLabelOptions?.find(_ => _.value === taskLabelID)}
+        onChange={(e: any) => onChange(e.value)}
+      />
+    </>
   );
 }

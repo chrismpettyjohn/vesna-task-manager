@@ -36,21 +36,23 @@ export function CreateTaskDialog({onCreation}: CreateTaskDialogProps) {
         content: taskContent,
       });
       onCreation(newTaskLabel);
+      setIsOpen(false);
     } catch {
       alert('There was a problem creating your task label');
     }
     setIsLoading(false);
   };
 
-  if (!isOpen) {
-    return null;
-  }
-
   return (
     <>
-      <Button color="success" onClick={onToggleDialog} variant="contained">
+      <Button
+        color="success"
+        onClick={onToggleDialog}
+        variant="contained"
+        size="large"
+      >
         <i className="fa fa-plus-circle" style={{paddingRight: 4}} />
-        Create
+        Add Task
       </Button>
       {isOpen && (
         <Dialog open onClose={onToggleDialog}>

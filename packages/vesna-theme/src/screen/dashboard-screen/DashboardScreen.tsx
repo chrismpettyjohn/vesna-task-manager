@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import {TaskList} from '../../component/task-list/TaskList';
 import {sessionContext, taskContext} from '@vesna-task-manager/web';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {SiteHeader} from '../../component/site-header/SiteHeader';
@@ -14,13 +15,20 @@ export function DashboardScreen() {
         <div className="col-6">
           <h1>Hey {session?.privateUser?.firstName}!</h1>
         </div>
-        <div className="col-6 text-right">
-          <CreateTaskDialog onCreation={addTask} />
+        <div className="col-6">
+          <div style={{float: 'right'}}>
+            <CreateTaskDialog onCreation={addTask} />
+          </div>
         </div>
       </div>
       <div className="row">
         <div className="col-12">
           <SiteHeader />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <TaskList />
         </div>
       </div>
     </UserLayout>
