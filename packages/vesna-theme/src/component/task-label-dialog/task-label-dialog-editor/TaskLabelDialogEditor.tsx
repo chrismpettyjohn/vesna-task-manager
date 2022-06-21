@@ -89,7 +89,6 @@ export function TaskLabelDialogEditor({
         color: taskLabelColor,
       });
       resetState();
-      toast.success(`${taskLabelName} has been created successfully`);
     } catch {
       toast.error(
         `Failed to create task label ${taskLabelName} due to an unexpected error`

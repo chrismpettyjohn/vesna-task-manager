@@ -1,15 +1,8 @@
-import {Link} from 'wouter';
+import {List} from '@mui/material';
 import React, {useContext} from 'react';
 import {TaskLabelWire} from '@vesna-task-manager/types';
 import {taskContext, UserGuard} from '@vesna-task-manager/web';
-import {
-  List,
-  ListItemIcon,
-  ListItemButton,
-  ListItemText,
-  Tooltip,
-  Badge,
-} from '@mui/material';
+import {SidebarMenuItem} from '../sidebar-menu-item/SidebarMenuItem';
 import {CreateTaskLabelDialog} from '../../task-label-dialog/create-task-label-dialog/CreateTaskLabelDialog';
 
 export function SidebarTaskLabels() {
@@ -22,66 +15,18 @@ export function SidebarTaskLabels() {
   return (
     <UserGuard redirect={false}>
       <List dense={true}>
+        <SidebarMenuItem link="/dashboard" icon="fa fa-home">
+          Home
+        </SidebarMenuItem>
         {taskLabels?.map(label => (
-          <Tooltip
-            title={label.name}
-            placement="right"
-            componentsProps={{
-              tooltip: {
-                sx: {
-                  backgroundColor: 'gray',
-                  color: 'white',
-                  marginLeft: '22px !important',
-                  boxShadow: '0px 0px 22px -2px rgba(0,0,0,0.20)',
-                },
-              },
-            }}
+          <SidebarMenuItem
+            key={`task_labels_link_${label.id}`}
+            link={`/tasks-list/${label.id}`}
+            icon={label.icon}
+            iconColor={label.color}
           >
-            <Link to={`/tasks-list/${label.id}`}>
-              <ListItemButton
-                sx={{
-                  margin: '6px 14px',
-                  padding: '10px',
-                  borderRadius: '8px',
-                  '&:hover': {
-                    backgroundColor: '#26284687',
-                  },
-                }}
-              >
-                <ListItemIcon sx={{minWidth: '46px'}}>
-                  <Badge
-                    badgeContent=""
-                    color="secondary"
-                    variant="dot"
-                    sx={{
-                      '& .MuiBadge-badge': {
-                        backgroundColor: label.color,
-                      },
-                    }}
-                  >
-                    <i
-                      className={label.icon}
-                      style={{fontSize: 20, color: 'lightgray'}}
-                    />
-                  </Badge>
-                </ListItemIcon>
-                <ListItemText
-                  primary={label.name}
-                  primaryTypographyProps={{
-                    variant: 'body2',
-                  }}
-                  sx={{
-                    display: 'inline',
-                    margin: '0px',
-                    overflowX: 'hidden',
-                    color: 'lightgray',
-                    whiteSpace: 'nowrap',
-                    minWidth: '126px',
-                  }}
-                />
-              </ListItemButton>
-            </Link>
-          </Tooltip>
+            {label.name}
+          </SidebarMenuItem>
         ))}
         <CreateTaskLabelDialog onCreation={onCreateTaskLabel} />
       </List>

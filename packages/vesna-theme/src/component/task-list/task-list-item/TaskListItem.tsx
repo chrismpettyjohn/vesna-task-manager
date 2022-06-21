@@ -1,3 +1,4 @@
+import {Link} from 'wouter';
 import React, {useContext} from 'react';
 import {TaskWire} from '@vesna-task-manager/types';
 import {taskContext} from '@vesna-task-manager/web';
@@ -26,13 +27,15 @@ export function TaskListItem({task}: TaskListItemProps) {
         />
       </TableCell>
       <TableCell key="task">{task.name}</TableCell>
-      <TableCell key="taskGroup">
-        <Badge
-          style={{background: taskLabel!.color, color: 'white', padding: 4}}
-        >
-          {taskLabel!.name}
-        </Badge>
-      </TableCell>
+      <Link to={`/tasks-list/${taskLabel.id}`}>
+        <TableCell key="taskGroup">
+          <Badge
+            style={{background: taskLabel!.color, color: 'white', padding: 4}}
+          >
+            {taskLabel!.name}
+          </Badge>
+        </TableCell>
+      </Link>
       <TableCell key="taskActions">
         <div style={{display: 'flex'}}>
           <div style={{marginRight: 10}}>
