@@ -1,17 +1,9 @@
 import React, {useState} from 'react';
-import {SiteSidebarProps} from './SiteSidebar.types';
-import {
-  Avatar,
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  Typography,
-  useTheme,
-} from '@mui/material';
 import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
+import {Box, Button, Drawer, Typography, useTheme} from '@mui/material';
+import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
 
-export function SiteSidebar({children}: SiteSidebarProps) {
+export function SiteSidebar() {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,32 +37,19 @@ export function SiteSidebar({children}: SiteSidebarProps) {
           sx={{
             flexShrink: 0,
             display: isOpen ? 'none' : {xs: 'none', sm: 'initial'},
-            marginBottom: '9px',
+            marginBottom: '-5px',
           }}
         >
-          <Typography variant="h2" style={{textTransform: 'lowercase'}}>
+          <Typography
+            variant="h4"
+            style={{color: 'white', textTransform: 'lowercase'}}
+          >
             Vesna
           </Typography>
         </Box>
-        <Typography
-          variant="h1"
-          noWrap={true}
-          gutterBottom
-          sx={{
-            display: {xs: 'none', sm: 'initial'},
-            fontSize: '18px',
-            fontWeight: 600,
-            color: 'lightgray',
-            width: '154px',
-            marginLeft: isOpen ? '0px' : '8px',
-            paddingBottom: '3px',
-          }}
-        >
-          MuiMakeStyles
-        </Typography>
-
         <Button
           onClick={toggleSidebar}
+          // @ts-ignore
           sx={{
             minWidth: 'initial',
             padding: '10px',
@@ -83,12 +62,15 @@ export function SiteSidebar({children}: SiteSidebarProps) {
           }}
         >
           <i
-            className="fa fa-drawer"
+            className="fa fa-bars"
             style={{color: isOpen ? 'black' : 'lightgray'}}
           />
         </Button>
       </Box>
-
+      <SidebarTaskLabels
+        onToggleSidebar={toggleSidebar}
+        isSidebarOpen={isOpen}
+      />
       <SidebarUserInfo />
     </>
   );
