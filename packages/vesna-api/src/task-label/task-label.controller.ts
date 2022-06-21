@@ -1,8 +1,13 @@
 import {TaskLabelPipe} from './task-label.pipe';
 import {HasSession} from '../session/has-session.decorator';
 import {GetSession} from '../session/get-session.decorator';
+import {ActivityService} from '../activity/activity.service';
 import {SessionEntity} from '../database/session/session.entity';
-import {ErrorCode, TaskLabelWire} from '@vesna-task-manager/types';
+import {
+  ActivityResource,
+  ErrorCode,
+  TaskLabelWire,
+} from '@vesna-task-manager/types';
 import {taskLabelWire} from '../database/task-label/task-label.wire';
 import {CreateTaskLabelDTO, UpdateTaskLabelDTO} from './task-label.dto';
 import {TaskLabelEntity} from '../database/task-label/task-label.entity';
@@ -21,7 +26,10 @@ import {
 @Controller('task-labels')
 @HasSession()
 export class TaskLabelController {
-  constructor(private readonly taskLabelRepo: TaskLabelRepository) {}
+  constructor(
+    private readonly taskLabelRepo: TaskLabelRepository,
+    private readonly activityService: ActivityService
+  ) {}
 
   @Get()
   async getTaskLabels(
@@ -46,6 +54,15 @@ export class TaskLabelController {
       desc: createTaskLabelDTO.desc,
       color: createTaskLabelDTO.color,
     });
+
+    await this.activityService.recordAction(
+      session.userID,
+      newTaskLabel.id!,
+      ActivityResource.TaskLabel,
+      'Created task label',
+      createTaskLabelDTO
+    );
+
     return taskLabelWire(newTaskLabel);
   }
 
@@ -59,6 +76,14 @@ export class TaskLabelController {
       throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
     }
 
+    await this.activityService.recordAction(
+      session.userID,
+      taskLabel.id!,
+      ActivityResource.TaskLabel,
+      'Updated task label',
+      updateTaskLabelDTO
+    );
+
     await this.taskLabelRepo.update({id: taskLabel.id!}, updateTaskLabelDTO);
   }
 
@@ -70,6 +95,15 @@ export class TaskLabelController {
     if (taskLabel.userID !== session.userID) {
       throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
     }
+
+    await this.activityService.recordAction(
+      session.userID,
+      taskLabel.id!,
+      ActivityResource.TaskLabel,
+      'Deleted task label',
+      taskLabel
+    );
+
     await this.taskLabelRepo.delete({id: taskLabel.id!});
   }
 }

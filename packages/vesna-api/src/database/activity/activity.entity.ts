@@ -23,6 +23,9 @@ export class ActivityEntity {
   @Column({type: 'text'})
   action!: string;
 
+  @Column({type: 'json'})
+  changes?: object;
+
   @Column({name: 'resource_type'})
   resourceType!: ActivityResource;
 

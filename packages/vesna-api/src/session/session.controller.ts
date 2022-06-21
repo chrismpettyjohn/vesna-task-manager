@@ -1,15 +1,22 @@
 import {SessionService} from './session.service';
 import {HasSession} from './has-session.decorator';
 import {GetSession} from './get-session.decorator';
-import {SessionWire} from '@vesna-task-manager/types';
 import {Body, Controller, Get, Post} from '@nestjs/common';
-import {CreateSessionDTO} from '@vesna-task-manager/types';
 import {sessionWire} from '../database/session/session.wire';
+import {ActivityService} from '../activity/activity.service';
 import {SessionEntity} from '../database/session/session.entity';
+import {
+  ActivityResource,
+  CreateSessionDTO,
+  SessionWire,
+} from '@vesna-task-manager/types';
 
 @Controller('session')
 export class SessionController {
-  constructor(private readonly sessionService: SessionService) {}
+  constructor(
+    private readonly sessionService: SessionService,
+    private readonly activityService: ActivityService
+  ) {}
 
   @Post()
   async createSession(@Body() createSessionDTO: CreateSessionDTO) {
@@ -21,6 +28,14 @@ export class SessionController {
       '',
       ''
     );
+
+    await this.activityService.recordAction(
+      newSession.userID,
+      newSession.id!,
+      ActivityResource.Session,
+      'Session created'
+    );
+
     return this.sessionService.convertSessionToJWT(newSession);
   }
 

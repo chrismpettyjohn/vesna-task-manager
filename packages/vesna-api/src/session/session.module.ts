@@ -6,9 +6,10 @@ import {BearerTokenService} from './bearer-token.service';
 import {DatabaseModule} from '../database/database.module';
 import {BearerTokenStrategy} from './bearer-token.strategy';
 import {PermissionScopeGuard} from './permission-scope.guard';
+import {ActivityModule} from '../activity/activity.module';
 
 @Module({
-  imports: [CommonModule, DatabaseModule],
+  imports: [CommonModule, DatabaseModule, ActivityModule],
   providers: [
     BearerTokenStrategy,
     PermissionScopeGuard,

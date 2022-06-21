@@ -5,14 +5,15 @@ import {TaskEntity} from '../database/task/task.entity';
 import {CreateTaskDTO, UpdateTaskDTO} from './task.dto';
 import {HasSession} from '../session/has-session.decorator';
 import {GetSession} from '../session/get-session.decorator';
-import {ErrorCode, TaskWire} from '@vesna-task-manager/types';
+import {ActivityService} from '../activity/activity.service';
+import {ActivityResource, ErrorCode, TaskWire} from '@vesna-task-manager/types';
 import {TaskRepository} from '../database/task/task.repository';
 import {SessionEntity} from '../database/session/session.entity';
 import {
   Body,
   Controller,
-  Get,
   Delete,
+  Get,
   Param,
   Patch,
   Post,
@@ -22,7 +23,10 @@ import {
 @Controller('tasks')
 @HasSession()
 export class TaskController {
-  constructor(private readonly taskRepo: TaskRepository) {}
+  constructor(
+    private readonly taskRepo: TaskRepository,
+    private readonly activityService: ActivityService
+  ) {}
 
   @Get()
   async getTasks(@GetSession() session: SessionEntity): Promise<TaskWire[]> {
@@ -45,6 +49,15 @@ export class TaskController {
       name: createTaskDTO.name,
       content: createTaskDTO.content,
     });
+
+    await this.activityService.recordAction(
+      session.userID,
+      newTask.id!,
+      ActivityResource.Task,
+      'Task created',
+      createTaskDTO
+    );
+
     return taskWire(newTask);
   }
 
@@ -58,6 +71,14 @@ export class TaskController {
       throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
     }
 
+    await this.activityService.recordAction(
+      session.userID,
+      task.id!,
+      ActivityResource.Task,
+      'Task updated',
+      updateTaskDTO
+    );
+
     await this.taskRepo.update({id: task.id!}, updateTaskDTO);
   }
 
@@ -69,6 +90,15 @@ export class TaskController {
     if (task.userID !== session.userID) {
       throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
     }
+
+    await this.activityService.recordAction(
+      session.userID,
+      task.id!,
+      ActivityResource.Task,
+      'Task deleted',
+      task
+    );
+
     await this.taskRepo.delete({id: task.id!});
   }
 }

@@ -12,11 +12,13 @@ export class ActivityService {
     userID: number,
     resourceID: number,
     resourceType: ActivityResource,
-    action: string
+    action: string,
+    changes?: object
   ): Promise<ActivityEntity> {
     return this.activityRepo.create({
       userID,
       action,
+      changes,
       resourceID,
       resourceType,
       createdAt: getTimestamp(),
