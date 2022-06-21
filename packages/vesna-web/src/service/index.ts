@@ -1,3 +1,4 @@
+export * from './activity.service';
 export * from './local-storage.service';
 export * from './session.service';
 export * from './task.service';

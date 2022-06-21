@@ -6,6 +6,7 @@ import {SignOutScreen} from './sign-out-screen/SignOutScreen';
 import {DashboardScreen} from './dashboard-screen/DashboardScreen';
 import {RegistrationScreen} from './registration-screen/RegistrationScreen';
 import {TasksByLabelScreen} from './tasks-by-label-screen/TasksByLabelScreen';
+import {ActivityOverviewScreen} from './activity-overview-screen/ActivityOverviewScreen';
 
 export function loadScreens() {
   setURL('', <IndexScreen />);
@@ -14,4 +15,5 @@ export function loadScreens() {
   setURL('register', <RegistrationScreen />);
   setURL('dashboard', <DashboardScreen />);
   setURL('tasks-list/:taskListID', <TasksByLabelScreen />);
+  setURL('activity-overview', <ActivityOverviewScreen />);
 }

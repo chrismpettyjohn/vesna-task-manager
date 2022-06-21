@@ -1,3 +1,4 @@
+export * from './activity/Activity';
 export * from './session/Session';
 export * from './session/CreateSessionDTO';
 export * from './task/Task';

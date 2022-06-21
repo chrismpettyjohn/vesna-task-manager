@@ -4,13 +4,16 @@ import {UserEntity} from './user/user.entity';
 import {TaskEntity} from './task/task.entity';
 import {RoleRepository} from './role/role.repository';
 import {UserRepository} from './user/user.repository';
-import {SessionEntity} from './session/session.entity';
-import {SessionRepository} from './session/session.repository';
-import {TaskLabelEntity} from './task-label/task-label.entity';
 import {TaskRepository} from './task/task.repository';
+import {SessionEntity} from './session/session.entity';
+import {ActivityEntity} from './activity/activity.entity';
+import {TaskLabelEntity} from './task-label/task-label.entity';
+import {SessionRepository} from './session/session.repository';
+import {ActivityRepository} from './activity/activity.repository';
 import {TaskLabelRepository} from './task-label/task-label.repository';
 
 export const databaseEntities: Function[] = [
+  ActivityEntity,
   UserEntity,
   RoleEntity,
   SessionEntity,
@@ -19,6 +22,7 @@ export const databaseEntities: Function[] = [
 ];
 
 export const databaseProviders: Provider[] = [
+  ActivityRepository,
   UserRepository,
   RoleRepository,
   SessionRepository,

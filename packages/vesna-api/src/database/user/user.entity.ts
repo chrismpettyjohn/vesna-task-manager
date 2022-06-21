@@ -10,6 +10,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import {ActivityEntity} from '../activity/activity.entity';
 
 @Entity('users')
 export class UserEntity {
@@ -46,4 +47,7 @@ export class UserEntity {
 
   @OneToMany(() => TaskLabelEntity, taskLabel => taskLabel.user)
   taskLabels?: TaskLabelEntity[];
+
+  @OneToMany(() => ActivityEntity, activity => activity.user)
+  activity?: ActivityEntity[];
 }

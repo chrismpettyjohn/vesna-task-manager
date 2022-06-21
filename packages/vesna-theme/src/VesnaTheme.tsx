@@ -2,7 +2,6 @@ import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify';
 import {VesnaThemeProps} from './VesnaTheme.types';
-import {} from './component/site-layout/SiteLayout';
 import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
 
 export function VesnaTheme({children}: VesnaThemeProps) {
@@ -13,9 +12,6 @@ export function VesnaTheme({children}: VesnaThemeProps) {
       },
     },
     typography: {
-      allVariants: {
-        // color: 'white',
-      },
       fontSize: 16,
     },
   });

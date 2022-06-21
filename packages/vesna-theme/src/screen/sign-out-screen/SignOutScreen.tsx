@@ -1,13 +1,17 @@
-import {Redirect} from 'wouter';
 import React, {useContext, useEffect} from 'react';
-import {sessionContext} from '@vesna-task-manager/web';
+import {
+  localStorageService,
+  sessionContext,
+  UserGuard,
+} from '@vesna-task-manager/web';
 
 export function SignOutScreen() {
   const {setSession} = useContext(sessionContext);
 
   useEffect(() => {
     setSession(undefined);
+    localStorageService.delete('SESSION');
   }, []);
 
-  return <Redirect to="/login" />;
+  return <UserGuard>&nbsp;</UserGuard>;
 }

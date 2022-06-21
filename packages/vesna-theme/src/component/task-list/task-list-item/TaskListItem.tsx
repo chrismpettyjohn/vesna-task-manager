@@ -4,7 +4,7 @@ import React, {useContext} from 'react';
 import {TaskWire} from '@vesna-task-manager/types';
 import {taskContext, taskService} from '@vesna-task-manager/web';
 import {TaskListItemProps} from './TaskListItem.types';
-import {Badge, Checkbox, TableRow, TableCell} from '@mui/material';
+import {Chip, Checkbox, TableRow, TableCell} from '@mui/material';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
 import {DeleteTaskDialog} from '../../task-dialog/delete-task-dialog/DeleteTaskDialog';
 
@@ -45,11 +45,14 @@ export function TaskListItem({task}: TaskListItemProps) {
       <TableCell key="task">{task.name}</TableCell>
       <Link to={`/tasks-list/${taskLabel.id}`}>
         <TableCell key="taskGroup">
-          <Badge
-            style={{background: taskLabel!.color, color: 'white', padding: 4}}
-          >
-            {taskLabel!.name}
-          </Badge>
+          <Chip
+            style={{
+              background: taskLabel!.color,
+              cursor: 'pointer',
+              color: 'white',
+            }}
+            label={taskLabel.name}
+          />
         </TableCell>
       </Link>
       <TableCell key="taskActions">
