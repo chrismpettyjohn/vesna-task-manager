@@ -12,6 +12,6 @@ export class TaskLabelRepository extends BaseRepository<TaskLabelEntity> {
     @InjectRepository(TaskLabelEntity)
     taskLabelRepo: Repository<TaskLabelEntity>
   ) {
-    super(taskLabelRepo, ['tasks']);
+    super(taskLabelRepo, []);
   }
 }

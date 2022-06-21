@@ -1,4 +1,5 @@
 import {TaskEntity} from './task.entity';
+import {UserEntity} from '../user/user.entity';
 import {Timestamp} from '@vesna-task-manager/types';
 import {
   Column,
@@ -19,6 +20,13 @@ export class TaskTimeSpentEntity {
   @ManyToOne(() => TaskEntity, task => task.timeSpent)
   @JoinColumn({name: 'task_id'})
   task?: TaskEntity;
+
+  @Column({name: 'user_id', type: 'int'})
+  userID!: number;
+
+  @ManyToOne(() => UserEntity)
+  @JoinColumn({name: 'user_id'})
+  user?: UserEntity;
 
   @Column({name: 'started_at', type: 'timestamp'})
   startedAt!: Timestamp;

@@ -7,10 +7,10 @@ import {GetSession} from '../session/get-session.decorator';
 import {CreateTaskTimeSpentDTO} from './task-time-spent.dto';
 import {ActivityService} from '../activity/activity.service';
 import {SessionEntity} from '../database/session/session.entity';
+import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import {taskTimeSpentWire} from '../database/task/task-time-spent.wire';
 import {ActivityResource, TaskTimeSpentWire} from '@vesna-task-manager/types';
 import {TaskTimeSpentRepository} from '../database/task/task-time-spent.repository';
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 
 @Controller('tasks/:taskID/time-spent')
 @HasSession()
@@ -36,6 +36,7 @@ export class TaskTimeSpentController {
   ): Promise<TaskTimeSpentWire> {
     const taskTimeSpent = await this.taskTimeSpentRepo.create({
       taskID: task.id!,
+      userID: session.userID,
       startedAt: createTimeSpentDTO.startedAt,
       endedAt: createTimeSpentDTO.endedAt,
       durationInSeconds: DayJS(createTimeSpentDTO.endedAt).diff(

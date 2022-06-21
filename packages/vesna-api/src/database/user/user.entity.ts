@@ -1,6 +1,7 @@
 import {RoleEntity} from '../role/role.entity';
 import {TaskEntity} from '../task/task.entity';
 import {SessionEntity} from '../session/session.entity';
+import {ActivityEntity} from '../activity/activity.entity';
 import {TaskLabelEntity} from '../task-label/task-label.entity';
 import {
   Column,
@@ -10,7 +11,6 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import {ActivityEntity} from '../activity/activity.entity';
 
 @Entity('users')
 export class UserEntity {
