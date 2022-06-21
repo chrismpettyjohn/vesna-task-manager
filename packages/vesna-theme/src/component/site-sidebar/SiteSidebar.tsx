@@ -1,33 +1,131 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SiteSidebarProps} from './SiteSidebar.types';
+import {
+  Avatar,
+  Box,
+  Button,
+  Drawer,
+  IconButton,
+  Typography,
+  useTheme,
+} from '@mui/material';
+import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 
 export function SiteSidebar({children}: SiteSidebarProps) {
-  return (
-    <div
-      className="bg-primary h-100 w-100"
-      style={{
-        borderRight: '1px solid #e3e7f7',
-        position: 'relative',
-        textAlign: 'center',
-      }}
-    >
-      <div className="p-4">
-        <h2
-          style={{
-            marginTop: 5,
-            letterSpacing: 10,
-            textTransform: 'uppercase',
+  const theme = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const drawerWidthOpen = 240;
+  const paddingIconButton = 10;
+  const marginIconButton = 14;
+  const iconFontSize = 20;
+  const drawerWidthClose =
+    (paddingIconButton + marginIconButton) * 2 + iconFontSize;
+
+  const toggleSidebar = () => {
+    setIsOpen(_ => !_);
+  };
+
+  const drawerContent = (
+    <>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          height: '42px',
+          width: 'auto',
+          backgroundColor: 'transparent',
+          margin: '14px 14px',
+          padding: '12px 0px',
+          borderBottom: '1px solid lightgray',
+          alignItems: 'flex-end',
+        }}
+      >
+        <Box
+          sx={{
+            flexShrink: 0,
+            display: isOpen ? 'none' : {xs: 'none', sm: 'initial'},
+            marginBottom: '9px',
           }}
         >
-          Vesna
-        </h2>
-        <div style={{marginTop: 65, borderTop: '1px solid #e3e7f7'}}>
-          {children}
-        </div>
-        <div style={{position: 'absolute', bottom: 0}}>
-          <b>Impending Success LLC</b>
-        </div>
-      </div>
-    </div>
+          <Typography variant="h2" style={{textTransform: 'lowercase'}}>
+            Vesna
+          </Typography>
+        </Box>
+        <Typography
+          variant="h1"
+          noWrap={true}
+          gutterBottom
+          sx={{
+            display: {xs: 'none', sm: 'initial'},
+            fontSize: '18px',
+            fontWeight: 600,
+            color: 'lightgray',
+            width: '154px',
+            marginLeft: isOpen ? '0px' : '8px',
+            paddingBottom: '3px',
+          }}
+        >
+          MuiMakeStyles
+        </Typography>
+
+        <Button
+          onClick={toggleSidebar}
+          sx={{
+            minWidth: 'initial',
+            padding: '10px',
+            color: 'gray',
+            borderRadius: '8px',
+            backgroundColor: isOpen,
+            '&:hover': {
+              backgroundColor: '#26284687',
+            },
+          }}
+        >
+          <i
+            className="fa fa-drawer"
+            style={{color: isOpen ? 'black' : 'lightgray'}}
+          />
+        </Button>
+      </Box>
+
+      <SidebarUserInfo />
+    </>
+  );
+
+  return (
+    <Drawer
+      variant="permanent"
+      open={isOpen}
+      sx={{
+        width: isOpen
+          ? {xs: '0px', sm: drawerWidthClose}
+          : {xs: drawerWidthClose, sm: drawerWidthOpen},
+        transition: theme.transitions.create('width', {
+          easing: theme.transitions.easing.sharp,
+          duration: isOpen
+            ? theme.transitions.duration.leavingScreen
+            : theme.transitions.duration.enteringScreen,
+        }),
+        '& .MuiDrawer-paper': {
+          justifyContent: 'space-between',
+          overflowX: 'hidden',
+          width: isOpen
+            ? {xs: '0px', sm: drawerWidthClose}
+            : {xs: drawerWidthClose, sm: drawerWidthOpen},
+          borderRight: '0px',
+          boxShadow: theme.shadows[8],
+          backgroundColor: isOpen ? '#11101D' : '#11101D',
+          transition: theme.transitions.create('width', {
+            easing: theme.transitions.easing.sharp,
+            duration: isOpen
+              ? theme.transitions.duration.leavingScreen
+              : theme.transitions.duration.enteringScreen,
+          }),
+        },
+      }}
+    >
+      {drawerContent}
+    </Drawer>
   );
 }
