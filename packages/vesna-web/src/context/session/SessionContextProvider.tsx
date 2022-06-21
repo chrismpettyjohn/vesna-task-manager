@@ -27,6 +27,7 @@ export function SessionContextProvider({
           // Do nothing
         }
       }
+
       setIsLoading(false);
     };
 
