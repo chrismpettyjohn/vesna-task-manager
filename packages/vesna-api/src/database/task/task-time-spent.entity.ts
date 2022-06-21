@@ -28,6 +28,9 @@ export class TaskTimeSpentEntity {
   @JoinColumn({name: 'user_id'})
   user?: UserEntity;
 
+  @Column({type: 'text'})
+  notes!: string;
+
   @Column({name: 'started_at', type: 'timestamp'})
   startedAt!: Timestamp;
 

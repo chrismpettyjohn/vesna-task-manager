@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task-label/task-label.wire.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/user/user.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskLabel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskLabel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.wire.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +83,7 @@
       <workItem from="1655355510302" duration="8235000" />
       <workItem from="1655413606827" duration="26484000" />
       <workItem from="1655772517080" duration="20768000" />
+      <workItem from="1655848093819" duration="1024000" />
     </task>
     <servers />
   </component>

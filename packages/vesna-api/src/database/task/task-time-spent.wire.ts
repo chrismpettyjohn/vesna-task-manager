@@ -7,6 +7,7 @@ export function taskTimeSpentWire(
   return {
     id: taskTimeSpentEntity.id!,
     taskID: taskTimeSpentEntity.taskID,
+    notes: taskTimeSpentEntity.notes,
     startedAt: taskTimeSpentEntity.startedAt,
     endedAt: taskTimeSpentEntity.endedAt,
     durationInSeconds: taskTimeSpentEntity.durationInSeconds,
