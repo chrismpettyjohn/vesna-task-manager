@@ -1,8 +1,7 @@
 import {Link} from 'wouter';
 import React, {useContext} from 'react';
-import {taskContext, UserGuard} from '@vesna-task-manager/web';
 import {TaskLabelWire} from '@vesna-task-manager/types';
-import {SidebarTaskLabelsProps} from './SidebarTaskLabels.types';
+import {taskContext, UserGuard} from '@vesna-task-manager/web';
 import {
   List,
   ListItemIcon,
@@ -13,10 +12,7 @@ import {
 } from '@mui/material';
 import {CreateTaskLabelDialog} from '../../task-label-dialog/create-task-label-dialog/CreateTaskLabelDialog';
 
-export function SidebarTaskLabels({
-  onToggleSidebar,
-  isSidebarOpen,
-}: SidebarTaskLabelsProps) {
+export function SidebarTaskLabels() {
   const {taskLabels, addTaskLabel} = useContext(taskContext);
 
   const onCreateTaskLabel = (newTaskLabel: TaskLabelWire) => {
@@ -26,9 +22,9 @@ export function SidebarTaskLabels({
   return (
     <UserGuard redirect={false}>
       <List dense={true}>
-        {taskLabels?.map((label, index) => (
+        {taskLabels?.map(label => (
           <Tooltip
-            title={isSidebarOpen ? label.name : ''}
+            title={label.name}
             placement="right"
             componentsProps={{
               tooltip: {
