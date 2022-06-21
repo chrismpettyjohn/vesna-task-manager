@@ -11,7 +11,7 @@ export function SiteLayout({children}: SiteLayoutProps) {
           <SiteSidebar />
         </Grid>
         <Grid item xs={12} md={10}>
-          <div style={{paddingLeft: '2%', paddingRight: '2%'}}>{children}</div>
+          <Container maxWidth={false}>{children}</Container>
         </Grid>
       </Grid>
     </Container>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 import {Box, Button, Drawer, Typography, useTheme} from '@mui/material';
 import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
+import {SiteLogo} from '../site-logo/SiteLogo';
 
 export function SiteSidebar() {
   const theme = useTheme();
@@ -40,12 +41,7 @@ export function SiteSidebar() {
             marginBottom: '-5px',
           }}
         >
-          <Typography
-            variant="h4"
-            style={{color: 'white', textTransform: 'lowercase'}}
-          >
-            Vesna
-          </Typography>
+          <SiteLogo />
         </Box>
         <Button
           onClick={toggleSidebar}
@@ -64,10 +60,7 @@ export function SiteSidebar() {
           <i className="fa fa-bars" style={{color: 'white'}} />
         </Button>
       </Box>
-      <SidebarTaskLabels
-        onToggleSidebar={toggleSidebar}
-        isSidebarOpen={isOpen}
-      />
+      <SidebarTaskLabels />
       <SidebarUserInfo />
     </>
   );

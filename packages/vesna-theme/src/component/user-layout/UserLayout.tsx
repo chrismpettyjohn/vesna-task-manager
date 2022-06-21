@@ -5,8 +5,8 @@ import {SiteLayout} from '../site-layout/SiteLayout';
 
 export function UserLayout({children}: UserLayoutProps) {
   return (
-    <UserGuard>
-      <SiteLayout>{children}</SiteLayout>
-    </UserGuard>
+    <SiteLayout>
+      <UserGuard>{children}</UserGuard>
+    </SiteLayout>
   );
 }

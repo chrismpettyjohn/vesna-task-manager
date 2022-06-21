@@ -10,5 +10,5 @@ export function UserGuard({children, redirect = true}: GuardProps) {
     return redirect ? <Redirect to="/login" /> : null;
   }
 
-  return children;
+  return <>{children}</>;
 }

@@ -3,8 +3,8 @@ import {taskContext} from '@vesna-task-manager/web';
 import {useRoute, useLocation, Redirect} from 'wouter';
 import {TaskLabelWire} from '@vesna-task-manager/types';
 import {TaskList} from '../../component/task-list/TaskList';
-import {SiteHeader} from '../../component/site-header/SiteHeader';
 import {UserLayout} from '../../component/user-layout/UserLayout';
+import {SiteHeader} from '../../component/site-header/SiteHeader';
 import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
 import {EditTaskLabelDialog} from '../../component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog';
 

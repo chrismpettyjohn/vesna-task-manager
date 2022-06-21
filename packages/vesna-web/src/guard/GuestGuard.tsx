@@ -10,5 +10,5 @@ export function GuestGuard({children, redirect = true}: GuardProps) {
     return redirect ? <Redirect to="/dashboard" /> : null;
   }
 
-  return children;
+  return <>{children}</>;
 }
