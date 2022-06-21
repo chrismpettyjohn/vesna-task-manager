@@ -1,7 +1,8 @@
 import {Link} from 'wouter';
+import {toast} from 'react-toastify';
 import React, {useContext} from 'react';
 import {TaskWire} from '@vesna-task-manager/types';
-import {taskContext} from '@vesna-task-manager/web';
+import {taskContext, taskService} from '@vesna-task-manager/web';
 import {TaskListItemProps} from './TaskListItem.types';
 import {Badge, Checkbox, TableRow, TableCell} from '@mui/material';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
@@ -11,6 +12,20 @@ export function TaskListItem({task}: TaskListItemProps) {
   const {updateTaskByID, deleteTaskByID, taskLabels} = useContext(taskContext);
 
   const taskLabel = taskLabels!.find(_ => _.id === task.labelID);
+
+  if (!taskLabel) {
+    return null;
+  }
+
+  const onUpdateTaskClosed = async () => {
+    const closedAt = task.closedAt ? null : new Date().toISOString();
+    await taskService.updateByID(task.id, {closedAt} as any);
+    updateTaskByID(task.id, {closedAt});
+
+    return closedAt
+      ? toast.success(`Task #${task.id} has been marked as completed`)
+      : toast.warning(`Task #${task.id} has been marked as pending`);
+  };
 
   const onUpdateTask = (updatedTask: TaskWire) => {
     updateTaskByID(task.id, updatedTask);
@@ -24,6 +39,7 @@ export function TaskListItem({task}: TaskListItemProps) {
           checked={!!task.closedAt}
           tabIndex={-1}
           disableRipple
+          onClick={onUpdateTaskClosed}
         />
       </TableCell>
       <TableCell key="task">{task.name}</TableCell>
