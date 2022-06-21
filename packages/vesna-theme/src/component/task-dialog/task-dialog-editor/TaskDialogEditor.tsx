@@ -1,5 +1,6 @@
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
+import {dialogMaxWidth} from '../../../utility/theme.const';
 import {TaskDialogEditorProps} from './TaskDialogEditor.types';
 import {TaskLabelSelector} from '../../task-label-selector/TaskLabelSelector';
 import {
@@ -77,7 +78,7 @@ export function TaskDialogEditor({
       {isOpen && (
         <Dialog open onClose={onToggleDialog} maxWidth="lg">
           <DialogTitle>Task</DialogTitle>
-          <DialogContent style={{width: 500}}>
+          <DialogContent style={{width: dialogMaxWidth}}>
             <div style={{marginBottom: 10}}>
               <TextField
                 margin="dense"

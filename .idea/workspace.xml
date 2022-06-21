@@ -20,22 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task-time-spent.wire.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/utility/theme.const.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/database.meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/task/task.wire.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/activity-table/activity-table-resource-view/ActivityTableResourceView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/activity-table/activity-table-resource-view/ActivityTableResourceView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/Task.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/Task.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

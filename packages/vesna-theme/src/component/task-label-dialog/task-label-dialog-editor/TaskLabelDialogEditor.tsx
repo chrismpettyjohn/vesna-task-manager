@@ -1,6 +1,7 @@
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {CirclePicker} from 'react-color';
+import {dialogMaxWidth} from '../../../utility/theme.const';
 import {IconSelector} from '../../icon-selector/IconSelector';
 import {TaskLabelDialogEditorProps} from './TaskLabelDialogEditor.types';
 import {
@@ -104,7 +105,7 @@ export function TaskLabelDialogEditor({
       {isOpen && (
         <Dialog open onClose={toggleIsOpen} maxWidth="lg">
           <DialogTitle>Task Label</DialogTitle>
-          <DialogContent style={{width: 500}}>
+          <DialogContent style={{width: dialogMaxWidth}}>
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <TextField

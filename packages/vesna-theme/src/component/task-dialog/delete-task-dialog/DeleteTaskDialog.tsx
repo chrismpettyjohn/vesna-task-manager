@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {taskService} from '@vesna-task-manager/web';
+import {dialogMaxWidth} from '../../../utility/theme.const';
 import {DeleteTaskDialogProps} from './DeleteTaskDialog.types';
 import {
   Button,
@@ -58,7 +59,7 @@ export function DeleteTaskDialog({task, onDeletion}: DeleteTaskDialogProps) {
           <DialogTitle id="alert-dialog-title">
             Deleting Task "{task.name}"
           </DialogTitle>
-          <DialogContent style={{width: 500}}>
+          <DialogContent style={{width: dialogMaxWidth}}>
             <DialogContentText id="alert-dialog-description">
               Are you sure you want to delete this task? Once deleted, it will
               be lost forever.

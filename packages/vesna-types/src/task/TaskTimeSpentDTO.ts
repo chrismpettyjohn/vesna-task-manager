@@ -1,6 +1,6 @@
 import {Timestamp} from '../utility/Timestamp';
 
-export interface TaskTimeSpentDTO {
+export interface CreateTaskTimeSpentDTOWire {
   startedAt: Timestamp;
   endedAt: Timestamp;
 }

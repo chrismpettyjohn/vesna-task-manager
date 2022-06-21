@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {dialogMaxWidth} from '../../../utility/theme.const';
 import {formatTimestamp} from '../../../utility/format-timestamp';
 import {ActivityTableResourceViewProps} from './ActivityTableResourceView.types';
 import {
@@ -30,7 +31,7 @@ export function ActivityTableResourceView({
           <DialogTitle>
             Viewing {activity.resource} #{activity.resourceID}
           </DialogTitle>
-          <DialogContent style={{width: 500}}>
+          <DialogContent style={{width: dialogMaxWidth}}>
             <div style={{marginBottom: 10}}>
               <Typography variant="h5">Action</Typography>
               <Typography>{activity.action}</Typography>
