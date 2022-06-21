@@ -39,6 +39,7 @@ export function TaskLabelDialogEditor({
   };
 
   const resetState = () => {
+    setIsOpen(false);
     setIsLoading(false);
     setTaskLabelIcon(defaultTaskLabel?.icon ?? '');
     setTaskLabelName(defaultTaskLabel?.name ?? '');
@@ -93,9 +94,9 @@ export function TaskLabelDialogEditor({
       toast.error(
         `Failed to create task label ${taskLabelName} due to an unexpected error`
       );
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
   };
 
   return (

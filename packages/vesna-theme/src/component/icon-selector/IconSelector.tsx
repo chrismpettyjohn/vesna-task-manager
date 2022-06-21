@@ -17,8 +17,8 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
           options={iconOptions as any}
           sx={{width: '100%'}}
           renderInput={params => <TextField {...params} label="Task Label" />}
-          value={iconOptions?.find((_: any) => _.value === icon)}
-          onChange={(e: any, target: any) => onChange(target.value)}
+          value={iconOptions?.find((_: any) => _.value === icon) ?? null}
+          onChange={(e: any, target: any) => onChange(target?.value)}
         />
       </Grid>
     </Grid>
