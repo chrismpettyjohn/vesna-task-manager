@@ -1,3 +1,4 @@
+import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {TaskDialogEditorProps} from './TaskDialogEditor.types';
 import {TaskLabelSelector} from '../../task-label-selector/TaskLabelSelector';
@@ -17,7 +18,6 @@ export function TaskDialogEditor({
   onSave,
   hideTaskLabel = false,
 }: TaskDialogEditorProps) {
-  console.log(defaultTask);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [taskLabelID, setTaskLabelID] = useState<number | undefined>(
@@ -41,8 +41,18 @@ export function TaskDialogEditor({
   const onSaveTaskLabel = async () => {
     setIsLoading(true);
     try {
-      if (!taskName || !taskContent || !taskLabelID) {
-        alert('Please provide a task name, description and label');
+      if (!taskName) {
+        toast.error('Task name is required');
+        return;
+      }
+
+      if (!taskContent) {
+        toast.error('Task content is required');
+        return;
+      }
+
+      if (!taskLabelID) {
+        toast.error('Task label is required');
         return;
       }
 
@@ -53,7 +63,8 @@ export function TaskDialogEditor({
       });
       resetState();
     } catch {
-      alert('There was a problem creating your task label');
+      toast.error('Failed to save changes to task due to an unexpected error');
+    } finally {
       setIsLoading(false);
     }
   };
