@@ -28,8 +28,7 @@ export function TaskListItem({task}: TaskListItemProps) {
       <TableCell key="task">{task.name}</TableCell>
       <TableCell key="taskGroup">
         <Badge
-          className="p-2"
-          style={{background: taskLabel!.color, color: 'white'}}
+          style={{background: taskLabel!.color, color: 'white', padding: 4}}
         >
           {taskLabel!.name}
         </Badge>

@@ -8,7 +8,7 @@ import {
   TableBody,
 } from '@mui/material';
 import {TaskListProps} from './TaskList.types';
-import {TaskListItem} from './task-llist-item/TaskListItem';
+import {TaskListItem} from './task-list-item/TaskListItem';
 
 export function TaskList({tasks}: TaskListProps) {
   return (
