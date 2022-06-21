@@ -35,7 +35,7 @@ export function TaskListItem({task}: TaskListItemProps) {
         </Badge>
       </TableCell>
       <TableCell key="taskActions">
-        <div className="d-flex">
+        <div style={{display: 'flex'}}>
           <div style={{marginRight: 10}}>
             <EditTaskDialog task={task} onSave={onUpdateTask} />
           </div>

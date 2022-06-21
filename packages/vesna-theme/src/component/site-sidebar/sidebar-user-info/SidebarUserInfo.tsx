@@ -1,14 +1,7 @@
+import {Link} from 'wouter';
 import React, {useContext} from 'react';
 import {sessionContext} from '@vesna-task-manager/web';
-import {
-  Avatar,
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import {Avatar, Box, IconButton, Typography} from '@mui/material';
 
 export function SidebarUserInfo() {
   const {session} = useContext(sessionContext);
@@ -69,9 +62,11 @@ export function SidebarUserInfo() {
           @{session.privateUser.username}
         </Typography>
       </Box>
-      <IconButton sx={{color: 'lightGray'}}>
-        <i className="fa fa-sign-out-alt" />
-      </IconButton>
+      <Link to="/sign-out">
+        <IconButton sx={{color: 'lightGray'}}>
+          <i className="fa fa-sign-out-alt" />
+        </IconButton>
+      </Link>
     </Box>
   );
 }
