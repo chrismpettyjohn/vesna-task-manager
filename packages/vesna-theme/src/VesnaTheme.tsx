@@ -14,7 +14,7 @@ export function VesnaTheme({children}: VesnaThemeProps) {
     },
     typography: {
       allVariants: {
-        color: 'white',
+        // color: 'white',
       },
       fontSize: 16,
     },

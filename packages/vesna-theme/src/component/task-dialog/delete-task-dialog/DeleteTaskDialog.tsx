@@ -38,47 +38,46 @@ export function DeleteTaskDialog({task, onDeletion}: DeleteTaskDialogProps) {
     setIsDeleting(false);
   };
 
-  if (showDeletionWarning) {
-    return (
-      <Dialog
-        open
-        onClose={() => setShowDeletionWarning(false)}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          Deleting Task "{task.name}"
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this task? Once deleted, it will be
-            lost forever.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            color="secondary"
-            onClick={() => setShowDeletionWarning(false)}
-          >
-            Cancel
-          </Button>
-          <Button color="error" onClick={onDeleteTaskListItem} autoFocus>
-            Delete Task
-          </Button>
-        </DialogActions>
-      </Dialog>
-    );
-  }
-
   return (
-    <IconButton
-      edge="end"
-      aria-label="comments"
-      onClick={onDeleteTaskListItem}
-      disabled={isDeleting}
-      style={{color: 'red'}}
-    >
-      <i className={isDeleting ? 'fa fa-spinner fa-spin' : 'fa fa-trash'} />
-    </IconButton>
+    <>
+      <IconButton
+        edge="end"
+        aria-label="comments"
+        onClick={onDeleteTaskListItem}
+        disabled={isDeleting}
+        style={{color: 'red'}}
+      >
+        <i className={isDeleting ? 'fa fa-spinner fa-spin' : 'fa fa-trash'} />
+      </IconButton>
+      {showDeletionWarning && (
+        <Dialog
+          open
+          onClose={() => setShowDeletionWarning(false)}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">
+            Deleting Task "{task.name}"
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              Are you sure you want to delete this task? Once deleted, it will
+              be lost forever.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              color="secondary"
+              onClick={() => setShowDeletionWarning(false)}
+            >
+              Cancel
+            </Button>
+            <Button color="error" onClick={onDeleteTaskListItem} autoFocus>
+              Delete Task
+            </Button>
+          </DialogActions>
+        </Dialog>
+      )}
+    </>
   );
 }
