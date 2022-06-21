@@ -11,7 +11,7 @@ export function loadScreens() {
   setURL('', <IndexScreen />);
   setURL('login', <LoginScreen />);
   setURL('sign-out', <SignOutScreen />);
-  setURL('registration', <RegistrationScreen />);
+  setURL('register', <RegistrationScreen />);
   setURL('dashboard', <DashboardScreen />);
   setURL('tasks-list/:taskListID', <TasksByLabelScreen />);
 }

@@ -1,5 +1,5 @@
 import {useLocation} from 'wouter';
-import {Box, Button, Grid, TextField} from '@mui/material';
+import {Box, Button, Typography, TextField} from '@mui/material';
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {
   GuestGuard,
