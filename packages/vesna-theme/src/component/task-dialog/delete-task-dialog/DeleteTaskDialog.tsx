@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {taskService} from '@vesna-task-manager/web';
-import {DeleteTaskButtonProps} from './DeleteTaskButton.types';
+import {DeleteTaskDialogProps} from './DeleteTaskDialog.types';
 import {
   Button,
   IconButton,
@@ -11,7 +11,7 @@ import {
   DialogActions,
 } from '@mui/material';
 
-export function DeleteTaskButton({task, onDeletion}: DeleteTaskButtonProps) {
+export function DeleteTaskDialog({task, onDeletion}: DeleteTaskDialogProps) {
   const [isDeleting, setIsDeleting] = useState(false);
   const [showDeletionWarning, setShowDeletionWarning] = useState(false);
 

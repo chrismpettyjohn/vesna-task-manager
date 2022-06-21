@@ -61,10 +61,7 @@ export function SiteSidebar() {
             },
           }}
         >
-          <i
-            className="fa fa-bars"
-            style={{color: isOpen ? 'black' : 'lightgray'}}
-          />
+          <i className="fa fa-bars" style={{color: 'white'}} />
         </Button>
       </Box>
       <SidebarTaskLabels

@@ -13,6 +13,7 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -48,7 +49,7 @@ export class TaskLabelController {
     return taskLabelWire(newTaskLabel);
   }
 
-  @Post(':taskLabelID')
+  @Patch(':taskLabelID')
   async updateTaskLabelByID(
     @Body() updateTaskLabelDTO: UpdateTaskLabelDTO,
     @GetSession() session: SessionEntity,

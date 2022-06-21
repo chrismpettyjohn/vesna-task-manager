@@ -3,7 +3,12 @@ import React, {useContext} from 'react';
 import {GuardProps} from './guard.types';
 import {sessionContext} from '../context/session/SessionContext';
 
-export function UserGuard({children}: GuardProps) {
+export function UserGuard({children, redirect = true}: GuardProps) {
   const {session} = useContext(sessionContext);
-  return <>{session ? children : <Redirect to="/login" />}</>;
+
+  if (!session) {
+    return redirect ? <Redirect to="/login" /> : null;
+  }
+
+  return children;
 }

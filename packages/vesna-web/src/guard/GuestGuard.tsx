@@ -3,7 +3,12 @@ import React, {useContext} from 'react';
 import {GuardProps} from './guard.types';
 import {sessionContext} from '../context/session/SessionContext';
 
-export function GuestGuard({children}: GuardProps) {
+export function GuestGuard({children, redirect = true}: GuardProps) {
   const {session} = useContext(sessionContext);
-  return <>{session ? <Redirect to="/dashboard" /> : children}</>;
+
+  if (!session) {
+    return redirect ? <Redirect to="/dashboard" /> : null;
+  }
+
+  return children;
 }

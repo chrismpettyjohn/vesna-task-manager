@@ -14,6 +14,7 @@ import {
   Get,
   Delete,
   Param,
+  Patch,
   Post,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -47,7 +48,7 @@ export class TaskController {
     return taskWire(newTask);
   }
 
-  @Post(':taskID')
+  @Patch(':taskID')
   async updateTaskByID(
     @Body() updateTaskDTO: UpdateTaskDTO,
     @GetSession() session: SessionEntity,

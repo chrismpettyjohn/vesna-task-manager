@@ -1,4 +1,5 @@
 import React from 'react';
+import {toast} from 'react-toastify';
 import {taskService} from '@vesna-task-manager/web';
 import {CreateTaskDTOWire} from '@vesna-task-manager/types';
 import {CreateTaskDialogProps} from './CreateTaskDialog.types';
@@ -8,9 +9,10 @@ export function CreateTaskDialog({
   taskLabelID,
   onCreation,
 }: CreateTaskDialogProps) {
-  const onCreateTask = async (newTask: CreateTaskDTOWire) => {
-    const newTaskLabel = await taskService.create(newTask);
-    onCreation(newTaskLabel);
+  const onCreateTask = async (newTaskDTO: CreateTaskDTOWire) => {
+    const newTask = await taskService.create(newTaskDTO);
+    onCreation(newTask);
+    toast.success(`You have successfully created a new task #${newTask.id}`);
   };
 
   return (

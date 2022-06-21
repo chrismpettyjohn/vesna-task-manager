@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import {useRoute, Redirect} from 'wouter';
 import {taskContext} from '@vesna-task-manager/web';
+import {useRoute, useLocation, Redirect} from 'wouter';
 import {TaskLabelWire} from '@vesna-task-manager/types';
 import {TaskList} from '../../component/task-list/TaskList';
 import {SiteHeader} from '../../component/site-header/SiteHeader';
@@ -9,10 +9,11 @@ import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/C
 import {EditTaskLabelDialog} from '../../component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog';
 
 export function TasksByLabelScreen() {
+  const [location, setLocation] = useLocation();
   const [match, params] = useRoute<{taskLabelID: string}>(
     '/tasks-list/:taskLabelID'
   );
-  const {addTask, tasks, taskLabels, updateTaskLabelByID} =
+  const {addTask, tasks, taskLabels, updateTaskLabelByID, deleteTaskLabelByID} =
     useContext(taskContext);
 
   if (!match) {
@@ -29,29 +30,37 @@ export function TasksByLabelScreen() {
     updateTaskLabelByID(taskLabel?.id!, updatedTaskLabel);
   };
 
+  const onDeleteTaskLabel = (taskLabelID: number) => {
+    deleteTaskLabelByID(taskLabelID);
+    setLocation('/dashboard');
+  };
+
+  if (!taskLabel) {
+    return <Redirect to="/dashboard" />;
+  }
+
   return (
     <UserLayout>
       <div className="row">
         <div className="col-6">
           <h1>
             <i
-              className={taskLabel?.icon}
+              className={taskLabel.icon}
               style={{color: taskLabel?.color, marginRight: 10}}
             />
-            {taskLabel?.name}
-            {taskLabel && (
-              <EditTaskLabelDialog
-                taskLabel={taskLabel}
-                onCreation={onUpdateTaskLabel}
-              />
-            )}
+            {taskLabel.name}
+            <EditTaskLabelDialog
+              taskLabel={taskLabel}
+              onUpdate={onUpdateTaskLabel}
+              onDelete={onDeleteTaskLabel}
+            />
           </h1>
         </div>
         <div className="col-6">
           <div style={{float: 'right'}}>
             <CreateTaskDialog
               onCreation={addTask}
-              taskLabelID={taskLabel?.id!}
+              taskLabelID={taskLabel.id!}
             />
           </div>
         </div>

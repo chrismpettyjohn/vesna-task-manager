@@ -20,14 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/delete-button/DeleteButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/delete-button/DeleteButton.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/delete-task-label-button/DeleteTaskLabelButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/delete-task-label-button/DeleteTaskLabelButton.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/list-task-labels/ListTaskLabels.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/delete-task-button/DeleteTaskButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/delete-task-button/DeleteTaskButton.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.types.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-task-labels/SidebarTaskLabels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-task-labels/SidebarTaskLabels.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/edit-task-dialog/EditTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/edit-task-dialog/EditTaskDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/create-task-label-dialog/CreateTaskLabelDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/create-task-label-dialog/CreateTaskLabelDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-llist-item/TaskListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-llist-item/TaskListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/tasks-by-label-screen/TasksByLabelScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/tasks-by-label-screen/TasksByLabelScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/guard/GuestGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/guard/GuestGuard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/guard/UserGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/guard/UserGuard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/guard/guard.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/guard/guard.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +70,21 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/vesna-theme/src/component" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog" />
+      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
       <recent name="$PROJECT_DIR$/demo/web/public/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component" />
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog" />
-      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component" />
       <recent name="$PROJECT_DIR$/demo/web/public" />
       <recent name="$PROJECT_DIR$/demo/web/public/css" />
     </key>
@@ -80,7 +100,7 @@
       <workItem from="1655352495153" duration="2854000" />
       <workItem from="1655355510302" duration="8235000" />
       <workItem from="1655413606827" duration="26484000" />
-      <workItem from="1655772517080" duration="9449000" />
+      <workItem from="1655772517080" duration="15639000" />
     </task>
     <servers />
   </component>

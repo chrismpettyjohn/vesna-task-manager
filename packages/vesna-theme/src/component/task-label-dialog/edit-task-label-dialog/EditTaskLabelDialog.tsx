@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from '@mui/material';
+import {toast} from 'react-toastify';
 import {taskLabelService} from '@vesna-task-manager/web';
 import {CreateTaskLabelDTOWire} from '@vesna-task-manager/types';
 import {EditTaskLabelDialogProps} from './EditTaskLabelDialog.types';
@@ -6,20 +8,27 @@ import {TaskLabelDialogEditor} from '../task-label-dialog-editor/TaskLabelDialog
 
 export function EditTaskLabelDialog({
   taskLabel,
-  onCreation,
+  onUpdate,
+  onDelete,
 }: EditTaskLabelDialogProps) {
-  const onCreateTaskLabel = async (
+  const onEditTaskLabel = async (
     createTaskLabelDTO: CreateTaskLabelDTOWire
   ) => {
-    const newTaskLabel = await taskLabelService.create(createTaskLabelDTO);
-    onCreation(newTaskLabel);
+    await taskLabelService.updateByID(taskLabel.id, createTaskLabelDTO);
+    onUpdate({...taskLabel, ...createTaskLabelDTO});
+    toast.success(
+      `Your changes to task label #${taskLabel.name} have been saved succesfully!`
+    );
   };
   return (
     <TaskLabelDialogEditor
       defaultTaskLabel={taskLabel}
-      onSave={onCreateTaskLabel}
+      onSave={onEditTaskLabel}
+      onDelete={onDelete}
     >
-      <i className="fa fa-pencil" />
+      <Button color="secondary" size="large">
+        <i className="fa fa-pencil" />
+      </Button>
     </TaskLabelDialogEditor>
   );
 }

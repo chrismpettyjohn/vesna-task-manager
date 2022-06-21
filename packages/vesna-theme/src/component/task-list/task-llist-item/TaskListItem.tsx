@@ -4,7 +4,7 @@ import {taskContext} from '@vesna-task-manager/web';
 import {TaskListItemProps} from './TaskListItem.types';
 import {Badge, Checkbox, TableRow, TableCell} from '@mui/material';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
-import {DeleteTaskButton} from '../../delete-task-button/DeleteTaskButton';
+import {DeleteTaskDialog} from '../../task-dialog/delete-task-dialog/DeleteTaskDialog';
 
 export function TaskListItem({task}: TaskListItemProps) {
   const {updateTaskByID, deleteTaskByID, taskLabels} = useContext(taskContext);
@@ -40,7 +40,7 @@ export function TaskListItem({task}: TaskListItemProps) {
             <EditTaskDialog task={task} onSave={onUpdateTask} />
           </div>
           <div style={{marginRight: 10}}>
-            <DeleteTaskButton
+            <DeleteTaskDialog
               task={task}
               onDeletion={() => deleteTaskByID(task.id)}
             />
