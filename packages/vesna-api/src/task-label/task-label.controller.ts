@@ -57,6 +57,7 @@ export class TaskLabelController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       newTaskLabel.id!,
       ActivityResource.TaskLabel,
       'Created task label',
@@ -78,6 +79,7 @@ export class TaskLabelController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       taskLabel.id!,
       ActivityResource.TaskLabel,
       'Updated task label',
@@ -98,6 +100,7 @@ export class TaskLabelController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       taskLabel.id!,
       ActivityResource.TaskLabel,
       'Deleted task label',

@@ -3,6 +3,7 @@ import {Timestamp} from '../utility/Timestamp';
 export interface ActivityWire {
   id: number;
   userID: number;
+  sessionID: number;
   action: string;
   changes?: object;
   resource: ActivityResource;
@@ -21,6 +22,7 @@ export enum ActivityResource {
 export const exampleActivityWire: ActivityWire = {
   id: 1,
   userID: 1,
+  sessionID: 1,
   action: 'Closed task #11',
   changes: undefined,
   resource: ActivityResource.Task,

@@ -7,6 +7,7 @@ import {TaskListItemProps} from './TaskListItem.types';
 import {Chip, Checkbox, TableRow, TableCell} from '@mui/material';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
 import {DeleteTaskDialog} from '../../task-dialog/delete-task-dialog/DeleteTaskDialog';
+import {TaskTimeSpentDialog} from '../../task-dialog/task-time-spent-dialog/TaskTimeSpentDialog';
 
 export function TaskListItem({task}: TaskListItemProps) {
   const {updateTaskByID, deleteTaskByID, taskLabels} = useContext(taskContext);
@@ -59,6 +60,9 @@ export function TaskListItem({task}: TaskListItemProps) {
         <div style={{display: 'flex'}}>
           <div style={{marginRight: 10}}>
             <EditTaskDialog task={task} onSave={onUpdateTask} />
+          </div>
+          <div style={{marginRight: 10}}>
+            <TaskTimeSpentDialog task={task} />
           </div>
           <div style={{marginRight: 10}}>
             <DeleteTaskDialog

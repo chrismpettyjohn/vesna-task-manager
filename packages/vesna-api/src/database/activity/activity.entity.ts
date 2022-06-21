@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
   ManyToOne,
 } from 'typeorm';
+import {SessionEntity} from '../session/session.entity';
 
 @Entity('activity')
 export class ActivityEntity {
@@ -19,6 +20,13 @@ export class ActivityEntity {
   @ManyToOne(() => UserEntity, user => user.activity)
   @JoinColumn({name: 'user_id'})
   user?: UserEntity;
+
+  @Column({name: 'session_id'})
+  sessionID!: number;
+
+  @ManyToOne(() => SessionEntity, session => session.activity)
+  @JoinColumn({name: 'session_id'})
+  session?: SessionEntity;
 
   @Column({type: 'text'})
   action!: string;

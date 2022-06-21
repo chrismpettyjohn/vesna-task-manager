@@ -10,6 +10,7 @@ export class ActivityService {
 
   recordAction(
     userID: number,
+    sessionID: number,
     resourceID: number,
     resourceType: ActivityResource,
     action: string,
@@ -17,6 +18,7 @@ export class ActivityService {
   ): Promise<ActivityEntity> {
     return this.activityRepo.create({
       userID,
+      sessionID,
       action,
       changes,
       resourceID,

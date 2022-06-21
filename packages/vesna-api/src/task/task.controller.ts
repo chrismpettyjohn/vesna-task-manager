@@ -52,6 +52,7 @@ export class TaskController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       newTask.id!,
       ActivityResource.Task,
       'Task created',
@@ -73,6 +74,7 @@ export class TaskController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       task.id!,
       ActivityResource.Task,
       'Task updated',
@@ -93,6 +95,7 @@ export class TaskController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       task.id!,
       ActivityResource.Task,
       'Task deleted',

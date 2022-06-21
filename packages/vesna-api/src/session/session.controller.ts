@@ -32,6 +32,7 @@ export class SessionController {
     await this.activityService.recordAction(
       newSession.userID,
       newSession.id!,
+      newSession.id!,
       ActivityResource.Session,
       'Session created'
     );

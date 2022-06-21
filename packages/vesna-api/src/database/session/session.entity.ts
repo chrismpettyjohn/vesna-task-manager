@@ -1,10 +1,12 @@
 import {UserEntity} from '../user/user.entity';
 import {Timestamp} from '@vesna-task-manager/types';
+import {ActivityEntity} from '../activity/activity.entity';
 import {
   Column,
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -34,4 +36,7 @@ export class SessionEntity {
 
   @Column({name: 'operating_system'})
   operatingSystem!: string;
+
+  @OneToMany(() => ActivityEntity, activity => activity.session)
+  activity?: ActivityEntity[];
 }

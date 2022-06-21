@@ -46,6 +46,7 @@ export class TaskTimeSpentController {
 
     await this.activityService.recordAction(
       session.userID,
+      session.id!,
       taskTimeSpent.id!,
       ActivityResource.Task,
       'Task Activity Recorded',

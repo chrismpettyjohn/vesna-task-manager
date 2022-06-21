@@ -20,17 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/utility/theme.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/record-time-spent/RecordTimeSpent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/record-time-spent/RecordTimeSpent.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/activity-table/activity-table-resource-view/ActivityTableResourceView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/activity-table/activity-table-resource-view/ActivityTableResourceView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/task.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.wire.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/session/session.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/session/session.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/activity/Activity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/activity/Activity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,9 +115,10 @@
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
     <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1320@0.25.2560.1320" timestamp="1655408292235" />
-    <state x="980" y="424" width="600" height="522" key="find.popup" timestamp="1655777715320">
-      <screen x="0" y="25" width="2560" height="1320" />
+    <state x="551" y="261" width="567" height="522" key="find.popup" timestamp="1655845053594">
+      <screen x="0" y="25" width="1440" height="780" />
     </state>
+    <state x="551" y="261" width="567" height="522" key="find.popup/0.25.1440.780/1440.-315.2560.1415@0.25.1440.780" timestamp="1655845053594" />
     <state x="980" y="424" width="600" height="522" key="find.popup/0.25.2560.1320@0.25.2560.1320" timestamp="1655777715320" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup" timestamp="1655357645509">
       <screen x="0" y="25" width="2560" height="1320" />
