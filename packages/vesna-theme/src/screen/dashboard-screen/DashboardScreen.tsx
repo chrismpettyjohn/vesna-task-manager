@@ -1,5 +1,5 @@
-import {Grid} from '@mui/material';
 import React, {useContext} from 'react';
+import {Grid, Typography} from '@mui/material';
 import {TaskList} from '../../component/task-list/TaskList';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {sessionContext, taskContext} from '@vesna-task-manager/web';
@@ -15,7 +15,9 @@ export function DashboardScreen() {
         <Grid item xs={12}>
           <Grid container>
             <Grid item xs={6}>
-              <h1>Hey {session?.privateUser?.firstName}!</h1>
+              <Typography variant="h4">
+                Hey {session?.privateUser?.firstName}!
+              </Typography>
             </Grid>
             <Grid item xs={6}>
               <div style={{float: 'right'}}>

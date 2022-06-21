@@ -37,9 +37,9 @@ export function ActivityOverviewScreen() {
 
   return (
     <UserLayout>
-      <Grid container>
+      <Grid container spacing={4}>
         <Grid item xs={12}>
-          <Typography variant="h2">User Activity</Typography>
+          <Typography variant="h4">User Activity</Typography>
         </Grid>
         <Grid item xs={12}>
           {!isLoading ? (

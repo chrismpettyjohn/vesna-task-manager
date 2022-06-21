@@ -1,5 +1,5 @@
-import {List} from '@mui/material';
 import React, {useContext} from 'react';
+import {List, Divider} from '@mui/material';
 import {TaskLabelWire} from '@vesna-task-manager/types';
 import {taskContext, UserGuard} from '@vesna-task-manager/web';
 import {SidebarMenuItem} from '../sidebar-menu-item/SidebarMenuItem';
@@ -14,10 +14,7 @@ export function SidebarTaskLabels() {
 
   return (
     <UserGuard redirect={false}>
-      <List dense={true}>
-        <SidebarMenuItem link="/dashboard" icon="fa fa-home">
-          Home
-        </SidebarMenuItem>
+      <List dense={true} subheader={<Divider style={{background: 'white'}} />}>
         {taskLabels?.map(label => (
           <SidebarMenuItem
             key={`task_labels_link_${label.id}`}

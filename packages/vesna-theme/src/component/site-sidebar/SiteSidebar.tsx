@@ -3,6 +3,7 @@ import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 import {Box, Button, Drawer, Typography, useTheme} from '@mui/material';
 import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
 import {SiteLogo} from '../site-logo/SiteLogo';
+import {SidebarNavigation} from './sidebar-navigation/SidebarNavigation';
 
 export function SiteSidebar() {
   const theme = useTheme();
@@ -60,7 +61,10 @@ export function SiteSidebar() {
           <i className="fa fa-bars" style={{color: 'white'}} />
         </Button>
       </Box>
-      <SidebarTaskLabels />
+      <div>
+        <SidebarNavigation />
+        <SidebarTaskLabels />
+      </div>
       <SidebarUserInfo />
     </>
   );

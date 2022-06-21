@@ -20,19 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-navigation/SidebarNavigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/activity/activity.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.wire.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task-label/task-label.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/user/user.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/activity/Activity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/activity/Activity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-task-labels/SidebarTaskLabels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-task-labels/SidebarTaskLabels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/activity-overview-screen/ActivityOverviewScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/activity-overview-screen/ActivityOverviewScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
