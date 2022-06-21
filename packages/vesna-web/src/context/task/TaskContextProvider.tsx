@@ -57,10 +57,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
 
   const deleteTaskByID = (taskID: number) => {
     setTasks(_ => {
-      const newTasks = [..._!];
-      const updatedTaskIndex = newTasks.findIndex(_ => _.id === taskID)!;
-      delete newTasks[updatedTaskIndex];
-      return newTasks;
+      return _.filter(task => task.id !== taskID);
     });
   };
 
@@ -89,12 +86,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
 
   const deleteTaskLabelByID = (taskLabelID: number) => {
     setTaskLabels(_ => {
-      const newTaskLabels = [..._!];
-      const updatedTaskLabelIndex = newTaskLabels.findIndex(
-        _ => _.id === taskLabelID
-      )!;
-      delete newTaskLabels[updatedTaskLabelIndex];
-      return newTaskLabels;
+      return _.filter(taskLabel => taskLabel.id !== taskLabelID);
     });
   };
 
