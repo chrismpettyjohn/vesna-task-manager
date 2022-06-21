@@ -12,11 +12,12 @@ import {
 
 export function ActivityTable({activity}: ActivityTableProps) {
   return (
-    <TableContainer sx={{maxHeight: 440}}>
+    <TableContainer>
       <Table stickyHeader aria-label="sticky table">
         <TableHead>
           <TableRow>
             <TableCell key="action">Action</TableCell>
+            <TableCell key="createdAt">Timestamp</TableCell>
             <TableCell key="resource">Resource</TableCell>
           </TableRow>
         </TableHead>

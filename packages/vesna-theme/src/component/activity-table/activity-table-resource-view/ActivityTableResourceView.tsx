@@ -1,12 +1,13 @@
-import React, {ReactNode, useState} from 'react';
-import {ActivityResource} from '@vesna-task-manager/types';
-import {Dialog, DialogContent, DialogTitle} from '@mui/material';
+import React, {useState} from 'react';
+import {formatTimestamp} from '../../../utility/format-timestamp';
 import {ActivityTableResourceViewProps} from './ActivityTableResourceView.types';
-import {UserActivityResourceView} from './resource-views/UserActivityResourceView';
-import {RoleActivityResourceView} from './resource-views/RoleActivityResourceView';
-import {TaskActivityResourceView} from './resource-views/TaskActivityResourceView';
-import {SessionActivityResourceView} from './resource-views/SessionActivityResourceView';
-import {TaskLabelActivityResourceView} from './resource-views/TaskLabelActivityResourceView';
+import {
+  Box,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Typography,
+} from '@mui/material';
 
 export function ActivityTableResourceView({
   activity,
@@ -15,24 +16,6 @@ export function ActivityTableResourceView({
 
   const toggleResourceViewDialog = () => {
     setIsOpen(_ => !_);
-  };
-
-  const resourceTypeToViewMap: Record<ActivityResource, () => ReactNode> = {
-    [ActivityResource.User]: () => (
-      <UserActivityResourceView activity={activity} />
-    ),
-    [ActivityResource.Role]: () => (
-      <RoleActivityResourceView activity={activity} />
-    ),
-    [ActivityResource.Session]: () => (
-      <SessionActivityResourceView activity={activity} />
-    ),
-    [ActivityResource.Task]: () => (
-      <TaskActivityResourceView activity={activity} />
-    ),
-    [ActivityResource.TaskLabel]: () => (
-      <TaskLabelActivityResourceView activity={activity} />
-    ),
   };
 
   return (
@@ -45,10 +28,39 @@ export function ActivityTableResourceView({
       {isOpen && (
         <Dialog open onClose={toggleResourceViewDialog}>
           <DialogTitle>
-            Viewing {activity.resource.toUpperCase()} #{activity.resourceID}
+            Viewing {activity.resource} #{activity.resourceID}
           </DialogTitle>
           <DialogContent style={{width: 500}}>
-            {resourceTypeToViewMap[activity.resource]()}
+            <div style={{marginBottom: 10}}>
+              <Typography variant="h5">Action</Typography>
+              <Typography>{activity.action}</Typography>
+            </div>
+            {activity.changes && (
+              <div style={{marginBottom: 10}}>
+                <Typography variant="h5">Changes</Typography>
+                <Box
+                  sx={{
+                    backgroundColor: 'primary.main',
+                    color: 'white',
+                    padding: 4,
+                  }}
+                >
+                  <Typography>
+                    <pre>
+                      <code>
+                        {activity.changes
+                          ? JSON.stringify(activity.changes, null, 4)
+                          : ''}
+                      </code>
+                    </pre>
+                  </Typography>
+                </Box>
+              </div>
+            )}
+            <div style={{marginBottom: 10}}>
+              <Typography variant="h5">Timestamp</Typography>
+              <Typography>{formatTimestamp(activity.createdAt)}</Typography>
+            </div>
           </DialogContent>
         </Dialog>
       )}
