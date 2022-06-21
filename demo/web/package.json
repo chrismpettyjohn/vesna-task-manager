@@ -14,7 +14,9 @@
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@vesna-task-manager/web":  "*",
-    "@vesna-task-manager/theme":  "*"
+    "@vesna-task-manager/theme":  "*",
+    "dayjs": "1.11.3",
+    "react-toastify": "9.0.3"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.2",

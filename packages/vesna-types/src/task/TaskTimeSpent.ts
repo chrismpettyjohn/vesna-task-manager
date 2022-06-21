@@ -1,4 +1,4 @@
-import {Timestamp} from '@vesna-task-manager/types';
+import {Timestamp} from '../utility/Timestamp';
 
 export interface TaskTimeSpentWire {
   id: number;

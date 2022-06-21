@@ -13,6 +13,8 @@
     "compile:types": "tsc -d -p tsconfig.build.json --emitDeclarationOnly --declarationDir dist/types"
   },
   "devDependencies": {
+    "dayjs": "1.11.3",
+    "react-toastify": "9.0.3",
     "wouter": "2.8.0-alpha.2",
     "@vesna-task-manager/types": "*",
     "@rollup/plugin-commonjs": "21.0.1",
@@ -44,6 +46,8 @@
     "@uiw/react-md-editor": "3.8.1"
   },
   "peerDependencies": {
+    "dayjs": "1.11.3",
+    "react-toastify": "9.0.3",
     "wouter": "2.8.0-alpha.2",
     "@vesna-task-manager/types": "*",
     "axios": "0.24.0",

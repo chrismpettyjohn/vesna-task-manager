@@ -27,7 +27,7 @@ export function TasksByLabelScreen() {
   );
 
   const onUpdateTaskLabel = (updatedTaskLabel: TaskLabelWire) => {
-    updateTaskLabelByID(taskLabel?.id!, updatedTaskLabel);
+    updateTaskLabelByID(taskLabel!.id, updatedTaskLabel);
   };
 
   const onDeleteTaskLabel = (taskLabelID: number) => {

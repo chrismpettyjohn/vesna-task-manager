@@ -39,6 +39,7 @@ export class TaskTimeSpentController {
       userID: session.userID,
       startedAt: createTimeSpentDTO.startedAt,
       endedAt: createTimeSpentDTO.endedAt,
+      notes: createTimeSpentDTO.notes,
       durationInSeconds: DayJS(createTimeSpentDTO.endedAt).diff(
         createTimeSpentDTO.startedAt,
         'second'
