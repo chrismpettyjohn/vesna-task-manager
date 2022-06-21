@@ -75,7 +75,7 @@ export function TaskDialogEditor({
         {children}
       </IconButton>
       {isOpen && (
-        <Dialog open onClose={onToggleDialog}>
+        <Dialog open onClose={onToggleDialog} maxWidth="lg">
           <DialogTitle>Task</DialogTitle>
           <DialogContent style={{width: 500}}>
             <div style={{marginBottom: 10}}>

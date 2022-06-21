@@ -18,6 +18,6 @@ export class ActivityController {
     const activity = await this.activityRepo.find({
       userID: session.userID,
     });
-    return activity.map(_ => activityWire(_));
+    return activity.map(_ => activityWire(_)).reverse();
   }
 }

@@ -102,7 +102,7 @@ export function TaskLabelDialogEditor({
     <>
       <span onClick={toggleIsOpen}> {children}</span>
       {isOpen && (
-        <Dialog open onClose={toggleIsOpen}>
+        <Dialog open onClose={toggleIsOpen} maxWidth="lg">
           <DialogTitle>Task Label</DialogTitle>
           <DialogContent style={{width: 500}}>
             <Grid container spacing={4}>

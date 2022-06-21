@@ -9,8 +9,10 @@ import {SessionEntity} from './session/session.entity';
 import {ActivityEntity} from './activity/activity.entity';
 import {TaskLabelEntity} from './task-label/task-label.entity';
 import {SessionRepository} from './session/session.repository';
+import {TaskTimeSpentEntity} from './task/task-time-spent.entity';
 import {ActivityRepository} from './activity/activity.repository';
 import {TaskLabelRepository} from './task-label/task-label.repository';
+import {TaskTimeSpentRepository} from './task/task-time-spent.repository';
 
 export const databaseEntities: Function[] = [
   ActivityEntity,
@@ -19,6 +21,7 @@ export const databaseEntities: Function[] = [
   SessionEntity,
   TaskEntity,
   TaskLabelEntity,
+  TaskTimeSpentEntity,
 ];
 
 export const databaseProviders: Provider[] = [
@@ -28,4 +31,5 @@ export const databaseProviders: Provider[] = [
   SessionRepository,
   TaskRepository,
   TaskLabelRepository,
+  TaskTimeSpentRepository,
 ];

@@ -11,6 +11,6 @@ export class TaskRepository extends BaseRepository<TaskEntity> {
     private readonly hashService: HashService,
     @InjectRepository(TaskEntity) taskRepo: Repository<TaskEntity>
   ) {
-    super(taskRepo, []);
+    super(taskRepo, ['timeSpent']);
   }
 }

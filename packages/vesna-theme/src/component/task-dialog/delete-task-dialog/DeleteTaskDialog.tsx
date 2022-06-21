@@ -53,13 +53,12 @@ export function DeleteTaskDialog({task, onDeletion}: DeleteTaskDialogProps) {
         <Dialog
           open
           onClose={() => setShowDeletionWarning(false)}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
+          maxWidth="lg"
         >
           <DialogTitle id="alert-dialog-title">
             Deleting Task "{task.name}"
           </DialogTitle>
-          <DialogContent>
+          <DialogContent style={{width: 500}}>
             <DialogContentText id="alert-dialog-description">
               Are you sure you want to delete this task? Once deleted, it will
               be lost forever.

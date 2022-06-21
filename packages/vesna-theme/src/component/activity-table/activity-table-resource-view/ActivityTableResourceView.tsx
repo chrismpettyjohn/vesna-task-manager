@@ -26,7 +26,7 @@ export function ActivityTableResourceView({
         onClick={toggleResourceViewDialog}
       />
       {isOpen && (
-        <Dialog open onClose={toggleResourceViewDialog}>
+        <Dialog open onClose={toggleResourceViewDialog} maxWidth="lg">
           <DialogTitle>
             Viewing {activity.resource} #{activity.resourceID}
           </DialogTitle>

@@ -5,6 +5,8 @@ export * from './task/Task';
 export * from './task/TaskDTO';
 export * from './task/TaskLabel';
 export * from './task/TaskLabelDTO';
+export * from './task/TaskTimeSpent';
+export * from './task/TaskTimeSpentDTO';
 export * from './role/Role';
 export * from './role/RoleScope';
 export * from './user/User';

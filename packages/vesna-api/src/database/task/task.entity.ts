@@ -5,9 +5,11 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import {TaskLabelEntity} from '../task-label/task-label.entity';
+import {TaskTimeSpentEntity} from './task-time-spent.entity';
 
 @Entity('tasks')
 export class TaskEntity {
@@ -39,4 +41,7 @@ export class TaskEntity {
 
   @Column({name: 'closed_at', type: 'timestamp'})
   closedAt?: Timestamp;
+
+  @OneToMany(() => TaskTimeSpentEntity, taskTimeSpent => taskTimeSpent.task)
+  timeSpent?: TaskTimeSpentEntity[];
 }
