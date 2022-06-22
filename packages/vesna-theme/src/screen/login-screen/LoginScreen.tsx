@@ -1,3 +1,4 @@
+import {toast} from 'react-toastify';
 import {Link, useLocation} from 'wouter';
 import {Box, Button, TextField} from '@mui/material';
 import {SiteLogo} from '../../component/site-logo/SiteLogo';
@@ -39,10 +40,14 @@ export function LoginScreen() {
         password,
       });
 
+      toast.success(`Welcome back, ${newUserSession.privateUser.firstName}!`);
+
       setSession(newUserSession);
       setLocation('/dashboard');
     } catch {
-      alert('There was a problem creating your account');
+      toast.error(
+        "There was a problem and you couldn't be signed in at this time"
+      );
       return;
     }
 
