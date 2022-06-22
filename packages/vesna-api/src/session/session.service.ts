@@ -42,7 +42,7 @@ export class SessionService {
 
     const sessionCreated = getTimestamp();
 
-    const sessionExpiration = DayJS(sessionCreated)
+    const sessionExpiration = DayJS(new Date(sessionCreated))
       .add(JWT_EXPIRATION_IN_HOURS, 'hours')
       .toISOString();
 
