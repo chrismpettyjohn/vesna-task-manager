@@ -65,7 +65,6 @@ export function RegistrationScreen() {
       toast.error(
         "Your account couldn't be created due to an unexpected error"
       );
-      return;
     }
 
     setIsLoading(false);

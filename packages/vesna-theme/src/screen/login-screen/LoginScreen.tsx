@@ -48,7 +48,6 @@ export function LoginScreen() {
       toast.error(
         "There was a problem and you couldn't be signed in at this time"
       );
-      return;
     }
 
     setIsLoading(false);
