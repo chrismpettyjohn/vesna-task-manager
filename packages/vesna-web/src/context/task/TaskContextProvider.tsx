@@ -57,7 +57,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
 
   const deleteTaskByID = (taskID: number) => {
     setTasks(_ => {
-      return _.filter(task => task.id !== taskID);
+      return _!.filter(task => task.id !== taskID);
     });
   };
 
@@ -86,7 +86,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
 
   const deleteTaskLabelByID = (taskLabelID: number) => {
     setTaskLabels(_ => {
-      return _.filter(taskLabel => taskLabel.id !== taskLabelID);
+      return _!.filter(taskLabel => taskLabel.id !== taskLabelID);
     });
   };
 
