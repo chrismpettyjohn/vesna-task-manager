@@ -1,12 +1,12 @@
-import {useLocation} from 'wouter';
+import {Link, useLocation} from 'wouter';
 import {Box, Button, TextField} from '@mui/material';
+import {SiteLogo} from '../../component/site-logo/SiteLogo';
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {
   GuestGuard,
   sessionContext,
   sessionService,
 } from '@vesna-task-manager/web';
-import {SiteLogo} from '../../component/site-logo/SiteLogo';
 
 export function LoginScreen() {
   const [location, setLocation] = useLocation();
@@ -82,6 +82,7 @@ export function LoginScreen() {
                 fullWidth
                 variant="filled"
                 value={password}
+                type="password"
                 onChange={e => setPassword(e?.target?.value ?? '')}
               />
             </div>
@@ -91,6 +92,7 @@ export function LoginScreen() {
                 onClick={onLogin}
                 variant="contained"
                 style={{float: 'right'}}
+                type="submit"
               >
                 {isLoading ? (
                   <>
@@ -98,12 +100,21 @@ export function LoginScreen() {
                       className="fa fa-spinner fa-spin"
                       style={{marginRight: 4}}
                     />{' '}
-                    Saving...
+                    Signing in...
                   </>
                 ) : (
-                  'Save'
+                  'Sign In'
                 )}
               </Button>
+              <Link to="/register">
+                <Button
+                  color="primary"
+                  variant="contained"
+                  style={{float: 'right'}}
+                >
+                  Create an Account
+                </Button>
+              </Link>
             </div>
           </form>
         </Box>

@@ -1,7 +1,8 @@
-import {useLocation} from 'wouter';
 import {toast} from 'react-toastify';
-import {Box, Button, Typography, TextField} from '@mui/material';
+import {Link, useLocation} from 'wouter';
 import {CreateUserDTOWire} from '@vesna-task-manager/types';
+import {SiteLogo} from '../../component/site-logo/SiteLogo';
+import {Box, Button, Typography, TextField} from '@mui/material';
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {
   GuestGuard,
@@ -9,7 +10,6 @@ import {
   sessionService,
   userService,
 } from '@vesna-task-manager/web';
-import {SiteLogo} from '../../component/site-logo/SiteLogo';
 
 export function RegistrationScreen() {
   const [location, setLocation] = useLocation();
@@ -30,7 +30,7 @@ export function RegistrationScreen() {
     }));
   };
 
-  const onLogin = async (event: SyntheticEvent) => {
+  const onRegister = async (event: SyntheticEvent) => {
     event.preventDefault();
     try {
       if (isLoading) {
@@ -83,7 +83,7 @@ export function RegistrationScreen() {
         <Box
           sx={{backgroundColor: 'primary.main', padding: '2%', width: '40%'}}
         >
-          <form onSubmit={onLogin}>
+          <form onSubmit={onRegister}>
             <div style={{marginBottom: 10}}>
               <SiteLogo />
             </div>
@@ -121,6 +121,7 @@ export function RegistrationScreen() {
                 fullWidth
                 variant="filled"
                 value={newUserDTO.password}
+                type="password"
                 onChange={e =>
                   updateNewUserDTO({password: e?.target?.value ?? ''})
                 }
@@ -144,7 +145,7 @@ export function RegistrationScreen() {
                 label="Last Name"
                 fullWidth
                 variant="filled"
-                value={newUserDTO.firstName}
+                value={newUserDTO.lastName}
                 onChange={e =>
                   updateNewUserDTO({lastName: e?.target?.value ?? ''})
                 }
@@ -153,9 +154,10 @@ export function RegistrationScreen() {
             <div style={{marginBottom: 10}}>
               <Button
                 color="success"
-                onClick={onLogin}
+                onClick={onRegister}
                 variant="contained"
                 style={{float: 'right'}}
+                type="submit"
               >
                 {isLoading ? (
                   <>
@@ -163,12 +165,21 @@ export function RegistrationScreen() {
                       className="fa fa-spinner fa-spin"
                       style={{marginRight: 4}}
                     />{' '}
-                    Saving...
+                    Creating Account...
                   </>
                 ) : (
-                  'Save'
+                  'Create Account'
                 )}
               </Button>
+              <Link to="/register">
+                <Button
+                  color="primary"
+                  variant="contained"
+                  style={{float: 'right'}}
+                >
+                  Create an Account
+                </Button>
+              </Link>
             </div>
           </form>
         </Box>

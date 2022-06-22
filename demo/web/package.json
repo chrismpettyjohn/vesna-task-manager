@@ -11,6 +11,7 @@
     "wouter": "2.8.0-alpha.2",
     "@mui/lab": "^5.0.0-alpha.86",
     "@mui/material": "5.8.4",
+    "@mui/styles": "5.8.4",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
     "@vesna-task-manager/web":  "*",
