@@ -40,15 +40,15 @@ export class SessionService {
       throw new BadRequestException(ErrorCode.SessionLoginAuthenticationError);
     }
 
-    const sessionCreated = getTimestamp();
+    const sessionCreated = DayJS();
 
-    const sessionExpiration = DayJS(new Date(sessionCreated))
+    const sessionExpiration = DayJS(sessionCreated)
       .add(JWT_EXPIRATION_IN_HOURS, 'hours')
       .toISOString();
 
     return this.sessionRepo.create({
       userID: userByEmail.id!,
-      createdAt: sessionCreated,
+      createdAt: sessionCreated.toISOString(),
       endedAt: sessionExpiration,
       ipAddress,
       geoLocation,
