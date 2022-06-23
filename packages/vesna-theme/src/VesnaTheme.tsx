@@ -15,10 +15,39 @@ export function VesnaTheme({children}: VesnaThemeProps) {
       fontSize: 16,
     },
     components: {
-      MuiTextField: {
+      MuiDialog: {
         styleOverrides: {
           root: {
+            '.MuiDialog-paper': {
+              background: '#11101D',
+              color: 'white',
+            },
+          },
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: {
+            '&.Mui-focused': {
+              color: 'white',
+            },
+          },
+        },
+      },
+      MuiTextField: {
+        defaultProps: {
+          variant: 'standard',
+        },
+        styleOverrides: {
+          root: {
+            color: 'white',
+            input: {
+              color: 'white',
+            },
             '& label': {
+              color: 'white',
+            },
+            '& .Mui-focused': {
               color: 'white',
             },
             '& label.Mui-focused': {
@@ -26,6 +55,11 @@ export function VesnaTheme({children}: VesnaThemeProps) {
             },
             '& .MuiInputBase-input': {
               background: '#2c387e',
+              color: 'white',
+            },
+            '& .MuiFormControl-input': {
+              background: '#2c387e',
+              color: 'white',
             },
           },
         },

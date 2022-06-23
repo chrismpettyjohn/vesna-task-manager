@@ -1,11 +1,10 @@
 import {toast} from 'react-toastify';
 import {Link, useLocation} from 'wouter';
+import {Button, TextField} from '@mui/material';
+import React, {useContext, useState} from 'react';
 import {CreateUserDTOWire} from '@vesna-task-manager/types';
-import {SiteLogo} from '../../component/site-logo/SiteLogo';
-import {Box, Button, Typography, TextField} from '@mui/material';
-import React, {SyntheticEvent, useContext, useState} from 'react';
+import {GuestLayout} from '../../component/guest-layout/GuestLayout';
 import {
-  GuestGuard,
   sessionContext,
   sessionService,
   userService,
@@ -30,8 +29,7 @@ export function RegistrationScreen() {
     }));
   };
 
-  const onRegister = async (event: SyntheticEvent) => {
-    event.preventDefault();
+  const onRegister = async () => {
     try {
       if (isLoading) {
         return;
@@ -71,118 +69,71 @@ export function RegistrationScreen() {
   };
 
   return (
-    <GuestGuard>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        minWidth="100vw"
-      >
-        <Box
-          sx={{backgroundColor: 'primary.main', padding: '2%', width: '40%'}}
+    <GuestLayout onSubmit={onRegister}>
+      <TextField
+        id="email"
+        label="Email"
+        fullWidth
+        variant="filled"
+        value={newUserDTO.email}
+        onChange={e => updateNewUserDTO({email: e?.target?.value ?? ''})}
+      />
+      <TextField
+        id="username"
+        label="Username"
+        fullWidth
+        variant="filled"
+        value={newUserDTO.username}
+        onChange={e => updateNewUserDTO({username: e?.target?.value ?? ''})}
+      />
+      <TextField
+        id="password"
+        label="Password"
+        fullWidth
+        variant="filled"
+        value={newUserDTO.password}
+        type="password"
+        onChange={e => updateNewUserDTO({password: e?.target?.value ?? ''})}
+      />
+      <TextField
+        id="firstName"
+        label="First Name"
+        fullWidth
+        variant="filled"
+        value={newUserDTO.firstName}
+        onChange={e => updateNewUserDTO({firstName: e?.target?.value ?? ''})}
+      />
+      <TextField
+        id="lastName"
+        label="Last Name"
+        fullWidth
+        variant="filled"
+        value={newUserDTO.lastName}
+        onChange={e => updateNewUserDTO({lastName: e?.target?.value ?? ''})}
+      />
+      <div style={{width: '100%'}}>
+        <Button
+          color="success"
+          onClick={onRegister}
+          variant="contained"
+          style={{float: 'right'}}
+          type="submit"
         >
-          <form onSubmit={onRegister}>
-            <div style={{marginBottom: 10}}>
-              <SiteLogo />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <Typography variant="h4">Sign In</Typography>
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="email"
-                label="Email"
-                fullWidth
-                variant="filled"
-                value={newUserDTO.email}
-                onChange={e =>
-                  updateNewUserDTO({email: e?.target?.value ?? ''})
-                }
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="username"
-                label="Username"
-                fullWidth
-                variant="filled"
-                value={newUserDTO.username}
-                onChange={e =>
-                  updateNewUserDTO({username: e?.target?.value ?? ''})
-                }
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="password"
-                label="Password"
-                fullWidth
-                variant="filled"
-                value={newUserDTO.password}
-                type="password"
-                onChange={e =>
-                  updateNewUserDTO({password: e?.target?.value ?? ''})
-                }
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="firstName"
-                label="First Name"
-                fullWidth
-                variant="filled"
-                value={newUserDTO.firstName}
-                onChange={e =>
-                  updateNewUserDTO({firstName: e?.target?.value ?? ''})
-                }
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="lastName"
-                label="Last Name"
-                fullWidth
-                variant="filled"
-                value={newUserDTO.lastName}
-                onChange={e =>
-                  updateNewUserDTO({lastName: e?.target?.value ?? ''})
-                }
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <Button
-                color="success"
-                onClick={onRegister}
-                variant="contained"
-                style={{float: 'right'}}
-                type="submit"
-              >
-                {isLoading ? (
-                  <>
-                    <i
-                      className="fa fa-spinner fa-spin"
-                      style={{marginRight: 4}}
-                    />{' '}
-                    Creating Account...
-                  </>
-                ) : (
-                  'Create Account'
-                )}
-              </Button>
-              <Link to="/register">
-                <Button
-                  color="primary"
-                  variant="contained"
-                  style={{float: 'right'}}
-                >
-                  Create an Account
-                </Button>
-              </Link>
-            </div>
-          </form>
-        </Box>
-      </Box>
-    </GuestGuard>
+          {isLoading ? (
+            <>
+              <i className="fa fa-spinner fa-spin" style={{marginRight: 4}} />{' '}
+              Creating Account...
+            </>
+          ) : (
+            'Create Account'
+          )}
+        </Button>
+        <Link to="/login">
+          <Button color="primary" variant="contained" style={{float: 'left'}}>
+            Cancel
+          </Button>
+        </Link>
+      </div>
+    </GuestLayout>
   );
 }

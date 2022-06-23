@@ -1,13 +1,9 @@
 import {toast} from 'react-toastify';
 import {Link, useLocation} from 'wouter';
-import {Box, Button, TextField} from '@mui/material';
-import {SiteLogo} from '../../component/site-logo/SiteLogo';
-import React, {SyntheticEvent, useContext, useState} from 'react';
-import {
-  GuestGuard,
-  sessionContext,
-  sessionService,
-} from '@vesna-task-manager/web';
+import {Button, TextField} from '@mui/material';
+import React, {useContext, useState} from 'react';
+import {GuestLayout} from '../../component/guest-layout/GuestLayout';
+import {sessionContext, sessionService} from '@vesna-task-manager/web';
 
 export function LoginScreen() {
   const [location, setLocation] = useLocation();
@@ -16,20 +12,19 @@ export function LoginScreen() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const onLogin = async (event: SyntheticEvent) => {
-    event.preventDefault();
+  const onLogin = async () => {
     try {
       if (isLoading) {
         return;
       }
 
       if (!email) {
-        alert('Email is required');
+        toast.error('Email is required');
         return;
       }
 
       if (!password) {
-        alert('Password is required');
+        toast.error('Password is required');
         return;
       }
 
@@ -54,75 +49,47 @@ export function LoginScreen() {
   };
 
   return (
-    <GuestGuard>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        minWidth="100vw"
-      >
-        <Box
-          sx={{backgroundColor: 'primary.main', padding: '2%', width: '40%'}}
+    <GuestLayout onSubmit={onLogin}>
+      <TextField
+        id="email"
+        label="Email"
+        fullWidth
+        variant="filled"
+        value={email}
+        onChange={e => setEmail(e?.target?.value ?? '')}
+      />
+      <TextField
+        id="password"
+        label="Password"
+        fullWidth
+        variant="filled"
+        value={password}
+        type="password"
+        onChange={e => setPassword(e?.target?.value ?? '')}
+      />
+      <div style={{width: '100%'}}>
+        <Link to="/register">
+          <Button color="primary" variant="contained" style={{float: 'left'}}>
+            Register
+          </Button>
+        </Link>
+        <Button
+          color="success"
+          onClick={onLogin}
+          variant="contained"
+          style={{float: 'right'}}
+          type="submit"
         >
-          <form onSubmit={onLogin}>
-            <div style={{marginBottom: 10}}>
-              <SiteLogo />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="email"
-                label="Email"
-                fullWidth
-                variant="filled"
-                value={email}
-                onChange={e => setEmail(e?.target?.value ?? '')}
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="password"
-                label="Password"
-                fullWidth
-                variant="filled"
-                value={password}
-                type="password"
-                onChange={e => setPassword(e?.target?.value ?? '')}
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <Button
-                color="success"
-                onClick={onLogin}
-                variant="contained"
-                style={{float: 'right'}}
-                type="submit"
-              >
-                {isLoading ? (
-                  <>
-                    <i
-                      className="fa fa-spinner fa-spin"
-                      style={{marginRight: 4}}
-                    />{' '}
-                    Signing in...
-                  </>
-                ) : (
-                  'Sign In'
-                )}
-              </Button>
-              <Link to="/register">
-                <Button
-                  color="primary"
-                  variant="contained"
-                  style={{float: 'right'}}
-                >
-                  Create an Account
-                </Button>
-              </Link>
-            </div>
-          </form>
-        </Box>
-      </Box>
-    </GuestGuard>
+          {isLoading ? (
+            <>
+              <i className="fa fa-spinner fa-spin" style={{marginRight: 4}} />{' '}
+              Signing in...
+            </>
+          ) : (
+            'Sign In'
+          )}
+        </Button>
+      </div>
+    </GuestLayout>
   );
 }

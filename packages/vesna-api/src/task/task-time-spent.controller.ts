@@ -42,7 +42,9 @@ export class TaskTimeSpentController {
       startedAt: createTimeSpentDTO.startedAt,
       endedAt: createTimeSpentDTO.endedAt,
       notes: createTimeSpentDTO.notes,
-      durationInSeconds: Moment.duration(taskEndedAt.diff(taskStartedAt)).asHours(),
+      durationInSeconds: Moment.duration(
+        taskEndedAt.diff(taskStartedAt)
+      ).asHours(),
     });
 
     await this.activityService.recordAction(

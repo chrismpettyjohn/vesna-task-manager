@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/web/public/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/guest-layout/GuestLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/guest-layout/GuestLayout.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/activity/activity.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/session/session.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/session/session.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,16 +56,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog" />
+      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
+      <recent name="$PROJECT_DIR$/demo/web/public/css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component" />
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
       <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog" />
       <recent name="$PROJECT_DIR$/demo/web/public" />
-      <recent name="$PROJECT_DIR$/demo/web/public/css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog" />
-      <recent name="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog" />
       <recent name="$PROJECT_DIR$/demo/web/public/css" />
     </key>
   </component>
@@ -80,7 +82,7 @@
       <workItem from="1655413606827" duration="26484000" />
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
-      <workItem from="1655957585690" duration="1294000" />
+      <workItem from="1655957585690" duration="6338000" />
     </task>
     <servers />
   </component>
@@ -104,11 +106,11 @@
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
     <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1320@0.25.2560.1320" timestamp="1655408292235" />
-    <state x="551" y="261" width="567" height="522" key="find.popup" timestamp="1655958362085">
+    <state x="551" y="261" width="567" height="522" key="find.popup" timestamp="1655958897477">
       <screen x="0" y="25" width="1440" height="780" />
     </state>
     <state x="551" y="261" width="567" height="522" key="find.popup/0.25.1440.780/1440.-315.2560.1415@0.25.1440.780" timestamp="1655845053594" />
-    <state x="551" y="261" width="567" height="522" key="find.popup/0.25.1440.780@0.25.1440.780" timestamp="1655958362085" />
+    <state x="551" y="261" width="567" height="522" key="find.popup/0.25.1440.780@0.25.1440.780" timestamp="1655958897477" />
     <state x="980" y="424" width="600" height="522" key="find.popup/0.25.2560.1320@0.25.2560.1320" timestamp="1655777715320" />
     <state x="945" y="326" width="670" height="676" key="search.everywhere.popup" timestamp="1655357645509">
       <screen x="0" y="25" width="2560" height="1320" />
