@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/web/public/css/theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/guest-layout/GuestLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/guest-layout/GuestLayout.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContextProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/VesnaTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,7 @@
       <workItem from="1655413606827" duration="26484000" />
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
-      <workItem from="1655957585690" duration="6338000" />
+      <workItem from="1655957585690" duration="9934000" />
     </task>
     <servers />
   </component>

@@ -1,14 +1,12 @@
-import React, {useState} from 'react';
-import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
-import {Box, Button, Drawer, Typography, useTheme} from '@mui/material';
-import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
 import {SiteLogo} from '../site-logo/SiteLogo';
+import React, {useContext, useEffect} from 'react';
+import {themeContext} from '@vesna-task-manager/web';
+import {Box, Button, Drawer, useTheme} from '@mui/material';
+import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 import {SidebarNavigation} from './sidebar-navigation/SidebarNavigation';
+import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
 
 export function SiteSidebar() {
-  const theme = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
-
   const drawerWidthOpen = 240;
   const paddingIconButton = 10;
   const marginIconButton = 14;
@@ -16,9 +14,13 @@ export function SiteSidebar() {
   const drawerWidthClose =
     (paddingIconButton + marginIconButton) * 2 + iconFontSize;
 
-  const toggleSidebar = () => {
-    setIsOpen(_ => !_);
-  };
+  const theme = useTheme();
+  const {setSidebarWidth, toggleSidebar, isSidebarOpen} =
+    useContext(themeContext);
+
+  useEffect(() => {
+    setSidebarWidth(isSidebarOpen ? drawerWidthClose : drawerWidthOpen);
+  }, [isSidebarOpen]);
 
   const drawerContent = (
     <>
@@ -38,7 +40,7 @@ export function SiteSidebar() {
         <Box
           sx={{
             flexShrink: 0,
-            display: isOpen ? 'none' : {xs: 'none', sm: 'initial'},
+            display: isSidebarOpen ? 'none' : {xs: 'none', sm: 'initial'},
             marginBottom: '-5px',
           }}
         >
@@ -52,7 +54,7 @@ export function SiteSidebar() {
             padding: '10px',
             color: 'gray',
             borderRadius: '8px',
-            backgroundColor: isOpen,
+            backgroundColor: isSidebarOpen,
             '&:hover': {
               backgroundColor: '#26284687',
             },
@@ -72,32 +74,20 @@ export function SiteSidebar() {
   return (
     <Drawer
       variant="permanent"
-      open={isOpen}
+      open={isSidebarOpen}
       sx={{
-        width: isOpen
+        width: isSidebarOpen
           ? {xs: '0px', sm: drawerWidthClose}
           : {xs: drawerWidthClose, sm: drawerWidthOpen},
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: isOpen
-            ? theme.transitions.duration.leavingScreen
-            : theme.transitions.duration.enteringScreen,
-        }),
         '& .MuiDrawer-paper': {
           justifyContent: 'space-between',
           overflowX: 'hidden',
-          width: isOpen
+          width: isSidebarOpen
             ? {xs: '0px', sm: drawerWidthClose}
             : {xs: drawerWidthClose, sm: drawerWidthOpen},
           borderRight: '0px',
           boxShadow: theme.shadows[8],
-          backgroundColor: isOpen ? '#11101D' : '#11101D',
-          transition: theme.transitions.create('width', {
-            easing: theme.transitions.easing.sharp,
-            duration: isOpen
-              ? theme.transitions.duration.leavingScreen
-              : theme.transitions.duration.enteringScreen,
-          }),
+          backgroundColor: isSidebarOpen ? '#11101D' : '#11101D',
         },
       }}
     >
