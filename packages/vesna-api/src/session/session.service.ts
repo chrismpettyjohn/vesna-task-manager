@@ -1,13 +1,13 @@
-import DayJS from 'dayjs';
+import Moment from 'moment';
 import {HashService} from '../common/hash.service';
 import {ErrorCode} from '@vesna-task-manager/types';
-import {getTimestamp} from '../common/get-timestamp';
+import {BearerTokenService} from './bearer-token.service';
 import {JWT_EXPIRATION_IN_HOURS} from '../common/config.const';
 import {Injectable, BadRequestException} from '@nestjs/common';
 import {UserRepository} from '../database/user/user.repository';
 import {SessionEntity} from '../database/session/session.entity';
 import {SessionRepository} from '../database/session/session.repository';
-import {BearerTokenService} from './bearer-token.service';
+import {getTimestamp} from '../common/get-timestamp';
 
 @Injectable()
 export class SessionService {
@@ -40,9 +40,9 @@ export class SessionService {
       throw new BadRequestException(ErrorCode.SessionLoginAuthenticationError);
     }
 
-    const sessionCreated = DayJS().toISOString();
+    const sessionCreated = getTimestamp();
 
-    const sessionExpiration = DayJS()
+    const sessionExpiration = Moment(sessionCreated)
       .add(JWT_EXPIRATION_IN_HOURS, 'hours')
       .toISOString();
 

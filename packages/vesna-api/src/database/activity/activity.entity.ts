@@ -1,4 +1,5 @@
 import {UserEntity} from '../user/user.entity';
+import {SessionEntity} from '../session/session.entity';
 import {ActivityResource, Timestamp} from '@vesna-task-manager/types';
 import {
   Entity,
@@ -7,7 +8,6 @@ import {
   PrimaryGeneratedColumn,
   ManyToOne,
 } from 'typeorm';
-import {SessionEntity} from '../session/session.entity';
 
 @Entity('activity')
 export class ActivityEntity {
