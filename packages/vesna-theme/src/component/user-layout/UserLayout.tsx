@@ -8,13 +8,13 @@ import {SiteSidebar} from '../site-sidebar/SiteSidebar';
 export function UserLayout({children}: UserLayoutProps) {
   return (
     <UserGuard>
+      <SiteHeader />
       <Container maxWidth={false} disableGutters>
         <Grid container spacing={0}>
           <Grid item>
             <SiteSidebar />
           </Grid>
           <Grid item xs={12} md={10}>
-            <SiteHeader />
             <Container maxWidth={false}>{children}</Container>
           </Grid>
         </Grid>

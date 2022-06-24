@@ -1,26 +1,20 @@
-import React, {useContext} from 'react';
-import {themeContext} from '@vesna-task-manager/web';
-import {AppBar, Toolbar, IconButton, Typography} from '@mui/material';
+import React from 'react';
+import {AppBar, Toolbar} from '@mui/material';
+import {SiteLogo} from '../site-logo/SiteLogo';
+
+export const headerHeight = 75;
 
 export function SiteHeader() {
-  const {sidebarWidth} = useContext(themeContext);
-  console.log(sidebarWidth);
   return (
     <AppBar
       position="fixed"
       sx={{
-        width: `calc(100% - ${sidebarWidth}px)`,
-        ml: `${sidebarWidth}px`,
-        height: 60,
+        zIndex: 10000,
+        height: headerHeight,
       }}
     >
       <Toolbar variant="dense">
-        <IconButton edge="start" color="inherit" aria-label="menu" sx={{mr: 2}}>
-          <i className="fa fa-clock" />
-        </IconButton>
-        <Typography variant="h6" color="inherit" component="div">
-          Photos
-        </Typography>
+        <SiteLogo style={{marginTop: 10}} />
       </Toolbar>
     </AppBar>
   );

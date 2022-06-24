@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContextProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.types.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContext.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/theme/ThemeContextProvider.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +53,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/vesna-theme/src/component" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -85,7 +84,7 @@
       <workItem from="1655413606827" duration="26484000" />
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
-      <workItem from="1655957585690" duration="9934000" />
+      <workItem from="1655957585690" duration="12693000" />
     </task>
     <servers />
   </component>
@@ -109,6 +108,10 @@
       <screen x="0" y="25" width="2560" height="1320" />
     </state>
     <state x="984" y="487" key="#com.intellij.fileTypes.FileTypeChooser/0.25.2560.1320@0.25.2560.1320" timestamp="1655408292235" />
+    <state x="789" y="321" key="SettingsEditor" timestamp="1656041276022">
+      <screen x="0" y="25" width="2560" height="1320" />
+    </state>
+    <state x="789" y="321" key="SettingsEditor/0.25.2560.1320@0.25.2560.1320" timestamp="1656041276022" />
     <state x="551" y="261" width="567" height="522" key="find.popup" timestamp="1655958897477">
       <screen x="0" y="25" width="1440" height="780" />
     </state>
