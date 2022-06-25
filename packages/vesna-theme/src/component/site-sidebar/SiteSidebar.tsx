@@ -44,6 +44,7 @@ export function SiteSidebar() {
           boxShadow: theme.shadows[8],
           backgroundColor: isOpen ? '#11101D' : '#11101D',
         },
+        zIndex: 100,
       }}
     >
       {drawerContent}

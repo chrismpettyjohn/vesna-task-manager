@@ -14,8 +14,7 @@
   },
   "dependencies": {
     "react-select": "5.3.2",
-    "react-color": "2.19.3",
-    "react-countup": "6.3.0"
+    "react-color": "2.19.3"
   },
   "devDependencies": {
     "dayjs": "1.11.3",
