@@ -1,12 +1,14 @@
 import {TeamPipe} from './team.pipe';
-import {ErrorCode, TeamPermissions, TeamWire} from '@vesna-task-manager/types';
+import {TeamService} from './team.service';
 import {teamWire} from '../database/team/team.wire';
 import {TeamEntity} from '../database/team/team.entity';
-import {HasSession} from '../session/has-session.decorator';
-import {TeamRepository} from '../database/team/team.repository';
 import {CreateTeamDTO, UpdateTeamDTO} from './team.dto';
+import {HasSession} from '../session/has-session.decorator';
 import {GetSession} from '../session/get-session.decorator';
+import {TeamRepository} from '../database/team/team.repository';
 import {SessionEntity} from '../database/session/session.entity';
+import {TeamPermissions, TeamWire} from '@vesna-task-manager/types';
+import {TeamUserRepository} from '../database/team/team-user.repository';
 import {
   Body,
   Controller,
@@ -15,15 +17,14 @@ import {
   Param,
   Patch,
   Post,
-  UnauthorizedException,
 } from '@nestjs/common';
-import {TeamUserRepository} from '../database/team/team-user.repository';
 
 @Controller('teams')
 @HasSession()
 export class TeamController {
   constructor(
     private readonly teamRepo: TeamRepository,
+    private readonly teamService: TeamService,
     private readonly teamUserRepo: TeamUserRepository
   ) {}
 
@@ -52,11 +53,7 @@ export class TeamController {
     @Param('teamID', TeamPipe) team: TeamEntity,
     @GetSession() session: SessionEntity
   ): TeamWire {
-    const isTeamMember = team.users!.find(_ => _.userID === session.userID);
-
-    if (!isTeamMember) {
-      throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
-    }
+    this.teamService.isTeamUser(team, session.userID);
 
     return teamWire(team);
   }
@@ -67,16 +64,11 @@ export class TeamController {
     @Param('teamID', TeamPipe) team: TeamEntity,
     @GetSession() session: SessionEntity
   ) {
-    const isTeamAdmin = team.users!.find(
-      _ =>
-        _.userID === session.userID &&
-        _.permissionLevel === TeamPermissions.Admin
+    this.teamService.hasTeamPermission(
+      team,
+      session.userID,
+      TeamPermissions.Admin
     );
-
-    if (!isTeamAdmin) {
-      throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
-    }
-
     await this.teamRepo.update({id: team.id!}, updateTeamDTO);
   }
 
@@ -85,16 +77,11 @@ export class TeamController {
     @Param('teamID', TeamPipe) team: TeamEntity,
     @GetSession() session: SessionEntity
   ) {
-    const isTeamAdmin = team.users!.find(
-      _ =>
-        _.userID === session.userID &&
-        _.permissionLevel === TeamPermissions.Admin
+    this.teamService.hasTeamPermission(
+      team,
+      session.userID,
+      TeamPermissions.Admin
     );
-
-    if (!isTeamAdmin) {
-      throw new UnauthorizedException(ErrorCode.ResourceAccessDenied);
-    }
-
     await this.teamRepo.delete({id: team.id!});
   }
 }

@@ -3,6 +3,7 @@ export enum ErrorCode {
   UserWireMissingRoleRelation = 100,
   UserCreationUsernameIsTaken = 200,
   UserCreationEmailIsTaken = 201,
+  UserDoesNotExist = 202,
   SessionLoginUserDoesNotExist = 300,
   SessionLoginAuthenticationError = 301,
   TaskLabelWireMissingTaskRelations = 400,
