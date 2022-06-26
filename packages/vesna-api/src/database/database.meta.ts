@@ -13,6 +13,10 @@ import {TaskTimeSpentEntity} from './task/task-time-spent.entity';
 import {ActivityRepository} from './activity/activity.repository';
 import {TaskLabelRepository} from './task-label/task-label.repository';
 import {TaskTimeSpentRepository} from './task/task-time-spent.repository';
+import {TeamEntity} from './team/team.entity';
+import {TeamRepository} from './team/team.repository';
+import {TeamUserRepository} from './team/team-user.repository';
+import {TeamUserEntity} from './team/team-user.entity';
 
 export const databaseEntities: Function[] = [
   ActivityEntity,
@@ -22,6 +26,8 @@ export const databaseEntities: Function[] = [
   TaskEntity,
   TaskLabelEntity,
   TaskTimeSpentEntity,
+  TeamEntity,
+  TeamUserEntity,
 ];
 
 export const databaseProviders: Provider[] = [
@@ -32,4 +38,6 @@ export const databaseProviders: Provider[] = [
   TaskRepository,
   TaskLabelRepository,
   TaskTimeSpentRepository,
+  TeamRepository,
+  TeamUserRepository,
 ];

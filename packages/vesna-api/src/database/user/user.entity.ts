@@ -1,6 +1,7 @@
 import {RoleEntity} from '../role/role.entity';
 import {TaskEntity} from '../task/task.entity';
 import {SessionEntity} from '../session/session.entity';
+import {TeamUserEntity} from '../team/team-user.entity';
 import {ActivityEntity} from '../activity/activity.entity';
 import {TaskLabelEntity} from '../task-label/task-label.entity';
 import {
@@ -50,4 +51,7 @@ export class UserEntity {
 
   @OneToMany(() => ActivityEntity, activity => activity.user)
   activity?: ActivityEntity[];
+
+  @OneToMany(() => TeamUserEntity, teamUser => teamUser.user)
+  teams?: TeamUserEntity[];
 }
