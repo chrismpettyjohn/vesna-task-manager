@@ -42,7 +42,7 @@ export function TaskLabelDialogEditor({
   const resetState = () => {
     setIsOpen(false);
     setIsLoading(false);
-    setTaskLabelIcon(defaultTaskLabel?.icon ?? '');
+    setTaskLabelIcon(defaultTaskLabel?.icon ?? 'fa fa-tasks');
     setTaskLabelName(defaultTaskLabel?.name ?? '');
     setTaskLabelDesc(defaultTaskLabel?.desc ?? '');
     setTaskLabelColor(defaultTaskLabel?.color ?? '');
@@ -109,23 +109,27 @@ export function TaskLabelDialogEditor({
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <TextField
-                  id="name"
                   label="Name"
                   type="text"
                   fullWidth
+                  margin="dense"
+                  variant="standard"
                   value={taskLabelName}
                   onChange={e => setTaskLabelName(e?.target?.value ?? '')}
+                  InputLabelProps={{shrink: true}}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  id="name"
                   label="Desc"
                   fullWidth
+                  margin="dense"
+                  variant="standard"
                   multiline
                   rows={4}
                   value={taskLabelDesc}
                   onChange={e => setTaskLabelDesc(e?.target?.value ?? '')}
+                  InputLabelProps={{shrink: true}}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -137,7 +141,6 @@ export function TaskLabelDialogEditor({
                 />
               </Grid>
               <Grid item xs={12}>
-                <b>Icon</b>
                 <IconSelector
                   icon={taskLabelIcon}
                   onChange={setTaskLabelIcon}

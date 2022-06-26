@@ -90,6 +90,7 @@ export function TaskDialogEditor({
                   margin="dense"
                   variant="standard"
                   onChange={e => setTaskName(e?.target?.value ?? '')}
+                  InputLabelProps={{shrink: true}}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -104,6 +105,7 @@ export function TaskDialogEditor({
                   margin="dense"
                   variant="standard"
                   onChange={e => setTaskContent(e?.target?.value ?? '')}
+                  InputLabelProps={{shrink: true}}
                 />
               </Grid>
               {!hideTaskLabel && (

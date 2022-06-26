@@ -22,6 +22,7 @@ export function TaskLabelSelector({
           fullWidth
           margin="dense"
           variant="standard"
+          InputLabelProps={{shrink: true}}
         />
       )}
       value={taskLabelOptions?.find(_ => _.value === taskLabelID)}

@@ -18,6 +18,7 @@ export function VesnaTheme({children}: VesnaThemeProps) {
       MuiDialog: {
         styleOverrides: {
           root: {
+            color: 'white',
             '.MuiDialog-paper': {
               background: '#11101D',
               color: 'white',
