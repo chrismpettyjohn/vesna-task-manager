@@ -99,14 +99,11 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
     taskTimeSpent: TaskTimeSpentWire
   ) => {
     setTasks(_ => {
-      const newTasks = [..._];
+      const newTasks = [..._!];
       const affectedTaskIndex = newTasks.findIndex(_ => _.id === taskID)!;
       newTasks[affectedTaskIndex] = {
         ...newTasks[affectedTaskIndex],
-        timeSpent: {
-          ...newTasks[affectedTaskIndex].timeSpent,
-          taskTimeSpent,
-        },
+        timeSpent: [...newTasks[affectedTaskIndex].timeSpent, taskTimeSpent],
       };
       return newTasks;
     });

@@ -16,7 +16,7 @@ export function TaskTimeSpentContextProvider({
         ..._,
         {
           taskID: undefined,
-          notes: undefined,
+          notes: '',
           startedAt: undefined,
         },
       ];
