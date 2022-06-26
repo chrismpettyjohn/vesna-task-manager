@@ -10,6 +10,11 @@ import {
 } from '@vesna-task-manager/types';
 
 export class TeamService {
+  async getAll(): Promise<TeamWire[]> {
+    const response: AxiosResponse<TeamWire[]> = await backendAPI.get('teams');
+    return response.data;
+  }
+
   async create(createTeamDTO: CreateTeamDTOWire): Promise<TeamWire> {
     const response: AxiosResponse<TeamWire> = await backendAPI.post(
       'teams',

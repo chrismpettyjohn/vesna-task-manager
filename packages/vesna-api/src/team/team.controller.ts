@@ -1,3 +1,4 @@
+import {In} from 'typeorm';
 import {TeamPipe} from './team.pipe';
 import {TeamService} from './team.service';
 import {teamWire} from '../database/team/team.wire';
@@ -27,6 +28,23 @@ export class TeamController {
     private readonly teamService: TeamService,
     private readonly teamUserRepo: TeamUserRepository
   ) {}
+
+  @Get()
+  async getAllTeams(@GetSession() session: SessionEntity): Promise<TeamWire[]> {
+    const teamsUserIsApartOf = await this.teamUserRepo.find({
+      userID: session.userID,
+    });
+
+    if (teamsUserIsApartOf.length === 0) {
+      return [];
+    }
+
+    const teams = await this.teamRepo.find({
+      id: In(teamsUserIsApartOf.map(_ => _.id)),
+    });
+
+    return teams.map(_ => teamWire(_));
+  }
 
   @Post()
   async createTeam(

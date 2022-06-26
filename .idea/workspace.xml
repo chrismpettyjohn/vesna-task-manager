@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/team.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/team/team.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/team/team.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/team.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/team.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="17318000" />
+      <workItem from="1656124643919" duration="17567000" />
     </task>
     <servers />
   </component>
