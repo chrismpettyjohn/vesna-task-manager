@@ -1,6 +1,6 @@
 import React from 'react';
+import {Drawer, useTheme} from '@mui/material';
 import {headerHeight} from '../site-header/SiteHeader';
-import {Drawer, useTheme, Typography} from '@mui/material';
 import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 import {SidebarNavigation} from './sidebar-navigation/SidebarNavigation';
 import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
@@ -24,18 +24,6 @@ export function SiteSidebar() {
         <SidebarTaskLabels />
       </div>
       <SidebarUserInfo />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          textAlign: 'center',
-          width: '100%',
-        }}
-      >
-        <Typography style={{color: 'white'}}>
-          &copy; Impending Success LLC
-        </Typography>
-      </div>
     </>
   );
 

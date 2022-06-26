@@ -20,7 +20,6 @@ export function SidebarUserInfo() {
         margin: '14px 14px',
         padding: '12px 4px',
         borderTop: '1px solid lightgray',
-        marginBottom: 4,
       }}
     >
       <Box

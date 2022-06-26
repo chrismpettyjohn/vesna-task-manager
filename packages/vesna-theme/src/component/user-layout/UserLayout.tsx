@@ -2,6 +2,7 @@ import React from 'react';
 import {Container} from '@mui/material';
 import {UserGuard} from '@vesna-task-manager/web';
 import {UserLayoutProps} from './UserLayout.types';
+import {SiteFooter} from '../site-footer/SiteFooter';
 import {SiteHeader} from '../site-header/SiteHeader';
 import {drawerWidthOpen, SiteSidebar} from '../site-sidebar/SiteSidebar';
 
@@ -16,6 +17,7 @@ export function UserLayout({children}: UserLayoutProps) {
       >
         {children}
       </Container>
+      <SiteFooter />
     </UserGuard>
   );
 }
