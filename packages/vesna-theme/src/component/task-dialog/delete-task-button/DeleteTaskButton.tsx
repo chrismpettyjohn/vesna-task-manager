@@ -1,14 +1,16 @@
-import React from 'react';
 import {toast} from 'react-toastify';
-import {taskService} from '@vesna-task-manager/web';
+import React, {useContext} from 'react';
 import {DeleteButton} from '../../delete-button/DeleteButton';
 import {DeleteTaskButtonProps} from './DeleteTaskButton.types';
+import {taskContext, taskService} from '@vesna-task-manager/web';
 
-export function DeleteTaskButton({task, onDeletion}: DeleteTaskButtonProps) {
+export function DeleteTaskButton({task}: DeleteTaskButtonProps) {
+  const {deleteTaskByID} = useContext(taskContext);
+
   const onDeleteTask = async () => {
     try {
       await taskService.deleteByID(task.id);
-      onDeletion();
+      deleteTaskByID(task.id);
       toast.warn(`Task #${task.id} has been deleted successfully`);
     } catch {
       toast.error(

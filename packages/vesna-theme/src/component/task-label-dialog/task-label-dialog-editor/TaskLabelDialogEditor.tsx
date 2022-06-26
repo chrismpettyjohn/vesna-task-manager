@@ -109,25 +109,21 @@ export function TaskLabelDialogEditor({
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <TextField
-                  margin="dense"
                   id="name"
                   label="Name"
                   type="text"
                   fullWidth
-                  variant="filled"
                   value={taskLabelName}
                   onChange={e => setTaskLabelName(e?.target?.value ?? '')}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  margin="dense"
                   id="name"
                   label="Desc"
                   fullWidth
                   multiline
                   rows={4}
-                  variant="filled"
                   value={taskLabelDesc}
                   onChange={e => setTaskLabelDesc(e?.target?.value ?? '')}
                 />

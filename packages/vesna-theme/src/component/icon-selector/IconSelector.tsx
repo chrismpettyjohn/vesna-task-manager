@@ -15,10 +15,10 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
           disablePortal
           id="task-label-selector"
           options={iconOptions as any}
-          sx={{width: '100%'}}
           renderInput={params => <TextField {...params} label="Task Label" />}
           value={iconOptions?.find((_: any) => _.value === icon) ?? null}
           onChange={(e: any, target: any) => onChange(target?.value)}
+          fullWidth
         />
       </Grid>
     </Grid>

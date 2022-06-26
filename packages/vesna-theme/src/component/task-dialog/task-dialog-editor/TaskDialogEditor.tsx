@@ -82,12 +82,10 @@ export function TaskDialogEditor({
           <DialogContent style={{width: dialogMaxWidth}}>
             <div style={{marginBottom: 10}}>
               <TextField
-                margin="dense"
                 id="name"
                 label="Name"
                 type="text"
                 fullWidth
-                variant="filled"
                 value={taskName}
                 onChange={e => setTaskName(e?.target?.value ?? '')}
               />
@@ -99,7 +97,6 @@ export function TaskDialogEditor({
                 multiline
                 rows={4}
                 fullWidth
-                variant="filled"
                 value={taskContent}
                 onChange={e => setTaskContent(e?.target?.value ?? '')}
               />
