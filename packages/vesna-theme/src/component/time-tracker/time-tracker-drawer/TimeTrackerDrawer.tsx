@@ -54,9 +54,8 @@ export function TimeTrackerDrawer() {
           {taskTimeSpent.map(timeTracker => (
             <TimeTrackerItem
               key={`time_tracker_${timeTracker}`}
-              onCancel={() => deleteTaskTimeSpent(_)}
-              onFinish={() => deleteTaskTimeSpent(_)}
-              {...timeTracker}
+              onCancel={() => deleteTaskTimeSpent(timeTracker)}
+              onFinish={() => deleteTaskTimeSpent(timeTracker)}
             />
           ))}
           <List dense sx={{color: 'white'}}>
