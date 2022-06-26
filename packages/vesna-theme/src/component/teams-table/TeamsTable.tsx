@@ -10,7 +10,7 @@ import {
   TableHead,
 } from '@mui/material';
 
-export function TeamsTable({teams}: TeamsTableProps) {
+export function TeamsTable({teams, onChanges}: TeamsTableProps) {
   return (
     <TableContainer sx={{maxHeight: 440}}>
       <Table stickyHeader aria-label="sticky table">
@@ -19,11 +19,16 @@ export function TeamsTable({teams}: TeamsTableProps) {
             <TableCell key="team">Team</TableCell>
             <TableCell key="users">Users</TableCell>
             <TableCell key="createdAt">Created At</TableCell>
+            <TableCell key="actions">Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {teams.map(_ => (
-            <TeamsTableItem key={`teams_table_item_${_.id}`} team={_} />
+            <TeamsTableItem
+              key={`teams_table_item_${_.id}`}
+              team={_}
+              onChanges={onChanges}
+            />
           ))}
         </TableBody>
       </Table>

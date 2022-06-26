@@ -9,6 +9,7 @@ export function LoadingBackdrop({children}: LoadingBackdropProps) {
       open
     >
       <i className="fa fa-spinner fa-spin fa-5x" />
+      <br />
       {children && <Typography variant="subtitle1">{children}</Typography>}
     </Backdrop>
   );
