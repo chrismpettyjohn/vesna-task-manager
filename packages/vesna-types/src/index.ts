@@ -1,4 +1,5 @@
 export * from './activity/Activity';
+export * from './media/Media';
 export * from './session/Session';
 export * from './session/CreateSessionDTO';
 export * from './task/Task';

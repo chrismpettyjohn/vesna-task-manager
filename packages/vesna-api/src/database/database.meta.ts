@@ -17,12 +17,15 @@ import {TeamEntity} from './team/team.entity';
 import {TeamRepository} from './team/team.repository';
 import {TeamUserRepository} from './team/team-user.repository';
 import {TeamUserEntity} from './team/team-user.entity';
+import {MediaEntity} from './media/media.entity';
+import {MediaRepository} from './media/media.repository';
 
 export const databaseEntities: Function[] = [
   ActivityEntity,
   UserEntity,
   RoleEntity,
   SessionEntity,
+  MediaEntity,
   TaskEntity,
   TaskLabelEntity,
   TaskTimeSpentEntity,
@@ -35,6 +38,7 @@ export const databaseProviders: Provider[] = [
   UserRepository,
   RoleRepository,
   SessionRepository,
+  MediaRepository,
   TaskRepository,
   TaskLabelRepository,
   TaskTimeSpentRepository,

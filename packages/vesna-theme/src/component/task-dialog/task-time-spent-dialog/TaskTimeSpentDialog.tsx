@@ -33,7 +33,10 @@ export function TaskTimeSpentDialog({task}: TaskTimeSpentDialogProps) {
               Total Time Spent:{' '}
               <span style={{fontSize: '2rem'}}>{totalTimeSpent}s</span>
             </Typography>
-            <TimeSpentTable color="white" timeSpent={task.timeSpent.reverse()} />
+            <TimeSpentTable
+              color="white"
+              timeSpent={task.timeSpent.reverse()}
+            />
           </DialogContent>
         </Dialog>
       )}
