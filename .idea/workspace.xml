@@ -20,22 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/loading-backdrop/LoadingBackdrop.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/loading-backdrop/LoadingBackdrop.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/TeamsTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/TeamsTable.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/teams-table-item/TeamsTableItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/teams-table-item/TeamsTableItem.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/teams-overview-screen/TeamsOverviewScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/use-fetch-hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/team/team.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/team/team.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/team/team.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/team/team.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-navigation/SidebarNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-navigation/SidebarNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/TimeSpentTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/TimeSpentTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/load-screens.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/load-screens.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/team/Team.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/team/Team.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/hook/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/activity-overview-screen/ActivityOverviewScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/activity-overview-screen/ActivityOverviewScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +78,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="19334000" />
+      <workItem from="1656124643919" duration="19631000" />
     </task>
     <servers />
   </component>
