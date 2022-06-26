@@ -8,4 +8,5 @@ export enum ErrorCode {
   TaskLabelWireMissingTaskRelations = 400,
   TaskLabelDoesNotExist = 401,
   TaskDoesNotExist = 500,
+  TeamDoesNotExist = 600,
 }
