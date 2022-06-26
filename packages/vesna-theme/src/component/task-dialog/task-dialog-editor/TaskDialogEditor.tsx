@@ -28,9 +28,9 @@ export function TaskDialogEditor({
   const [taskContent, setTaskContent] = useState(defaultTask?.content ?? '');
 
   const resetState = () => {
-    setTaskLabelID(undefined);
-    setTaskName('');
-    setTaskContent('');
+    setTaskLabelID(defaultTask?.labelID);
+    setTaskName(defaultTask?.name ?? '');
+    setTaskContent(defaultTask?.content ?? '');
     setIsOpen(false);
     setIsLoading(false);
   };
