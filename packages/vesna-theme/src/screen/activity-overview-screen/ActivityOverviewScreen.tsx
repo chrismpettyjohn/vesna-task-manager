@@ -5,6 +5,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {activityService, sessionContext} from '@vesna-task-manager/web';
 import {ActivityTable} from '../../component/activity-table/ActivityTable';
+import {AnalyticalHighlights} from '../../component/analytical-highlights/AnalyticalHighlights';
 
 export function ActivityOverviewScreen() {
   const {session} = useContext(sessionContext);
@@ -40,6 +41,16 @@ export function ActivityOverviewScreen() {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <Typography variant="h4">User Activity</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <AnalyticalHighlights
+            highlights={[
+              {
+                label: 'Total Actions',
+                value: userActivity?.length ?? 0,
+              },
+            ]}
+          />
         </Grid>
         <Grid item xs={12}>
           {!isLoading ? (
