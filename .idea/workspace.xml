@@ -20,8 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/TimeSpentTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/TimeSpentTable.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/time-spent-table-item/TimeSpentTableItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-spent-table/time-spent-table-item/TimeSpentTableItem.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/utility/get-duration-in-seconds.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/task/task-time-spent.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/task/TaskTimeSpentDTO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +94,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="10071000" />
+      <workItem from="1656124643919" duration="11921000" />
     </task>
     <servers />
   </component>

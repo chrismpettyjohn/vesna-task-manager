@@ -1,4 +1,3 @@
-import Moment from 'moment';
 import {TaskPipe} from './task.pipe';
 import {taskWire} from '../database/task/task.wire';
 import {TaskEntity} from '../database/task/task.entity';
@@ -34,17 +33,13 @@ export class TaskTimeSpentController {
     @GetSession() session: SessionEntity,
     @Param('taskID', TaskPipe) task: TaskEntity
   ): Promise<TaskTimeSpentWire> {
-    const taskStartedAt = Moment(createTimeSpentDTO.startedAt);
-    const taskEndedAt = Moment();
     const taskTimeSpent = await this.taskTimeSpentRepo.create({
       taskID: task.id!,
       userID: session.userID,
       startedAt: createTimeSpentDTO.startedAt,
       endedAt: createTimeSpentDTO.endedAt,
       notes: createTimeSpentDTO.notes,
-      durationInSeconds: Moment.duration(
-        taskEndedAt.diff(taskStartedAt)
-      ).asHours(),
+      durationInSeconds: createTimeSpentDTO.durationInSeconds,
     });
 
     await this.activityService.recordAction(

@@ -2,8 +2,8 @@ import {Link} from 'wouter';
 import {toast} from 'react-toastify';
 import React, {useContext} from 'react';
 import {TaskWire} from '@vesna-task-manager/types';
-import {taskContext, taskService} from '@vesna-task-manager/web';
 import {TaskListItemProps} from './TaskListItem.types';
+import {taskContext, taskService} from '@vesna-task-manager/web';
 import {Chip, Checkbox, TableRow, TableCell} from '@mui/material';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
 import {DeleteTaskDialog} from '../../task-dialog/delete-task-dialog/DeleteTaskDialog';
@@ -56,13 +56,13 @@ export function TaskListItem({task}: TaskListItemProps) {
           />
         </TableCell>
       </Link>
+      <TableCell key="timeSpent">
+        <TaskTimeSpentDialog task={task} />
+      </TableCell>
       <TableCell key="taskActions">
         <div style={{display: 'flex'}}>
           <div style={{marginRight: 10}}>
             <EditTaskDialog task={task} onSave={onUpdateTask} />
-          </div>
-          <div style={{marginRight: 10}}>
-            <TaskTimeSpentDialog task={task} />
           </div>
           <div style={{marginRight: 10}}>
             <DeleteTaskDialog

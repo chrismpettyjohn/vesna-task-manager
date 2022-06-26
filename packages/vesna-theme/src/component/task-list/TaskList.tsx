@@ -19,6 +19,7 @@ export function TaskList({tasks}: TaskListProps) {
             <TableCell key="endedAt">&nbsp;</TableCell>
             <TableCell key="task">Task</TableCell>
             <TableCell key="taskGroup">Group</TableCell>
+            <TableCell key="timeSpent">Time Spent</TableCell>
             <TableCell key="taskActions">Actions</TableCell>
           </TableRow>
         </TableHead>

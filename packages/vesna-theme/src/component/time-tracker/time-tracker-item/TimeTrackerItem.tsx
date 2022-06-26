@@ -1,9 +1,9 @@
-import DayJS from 'dayjs';
 import {toast} from 'react-toastify';
 import React, {useContext} from 'react';
 import {TimeTrackerItemProps} from './TimeTrackerItem.types';
 import {TaskSelector} from '../../task-selector/TaskSelector';
 import {Button, Grid, Typography, TextField} from '@mui/material';
+import {getDurationInSeconds} from '@vesna-task-manager/web/src/utility/get-duration-in-seconds';
 import {
   taskContext,
   taskService,
@@ -18,9 +18,9 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
 
   const taskTimeSpentRecord = taskTimeSpent[timeSpentIndex];
 
-  const startedAt = DayJS(taskTimeSpentRecord?.startedAt);
-  const endedAt = DayJS();
-  const defaultStartTime = endedAt.diff(startedAt, 'second');
+  const startedAt = taskTimeSpentRecord?.startedAt ?? new Date().toISOString();
+  const endedAt = new Date().toISOString();
+  const defaultStartTime = getDurationInSeconds(startedAt, endedAt);
 
   const {timer, isActive, handleStart, handlePause} = useTimer(
     defaultStartTime,
@@ -44,11 +44,16 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
   const onStop = async () => {
     try {
       handlePause();
+      const taskTimeSpentEndedAt = new Date().toISOString();
       const taskTimeSpentWire = await taskService.recordTimeSpentByID(
         taskTimeSpentRecord.taskID!,
         {
           startedAt: taskTimeSpentRecord.startedAt!,
-          endedAt: new Date().toISOString(),
+          endedAt: taskTimeSpentEndedAt,
+          durationInSeconds: getDurationInSeconds(
+            taskTimeSpentRecord.startedAt!,
+            taskTimeSpentEndedAt
+          ),
           notes: taskTimeSpentRecord.notes!,
         }
       );

@@ -17,6 +17,7 @@
     "@vesna-task-manager/web":  "*",
     "@vesna-task-manager/theme":  "*",
     "dayjs": "1.11.3",
+    "lodash": "4.17.21",
     "react-toastify": "9.0.3"
   },
   "devDependencies": {
