@@ -39,7 +39,7 @@ export function TimeOverviewScreen() {
           />
         </Grid>
         <Grid item xs={12}>
-          <TimeSpentTable color="black" timeSpent={allTimeSpent} />
+          <TimeSpentTable color="black" timeSpent={allTimeSpent.reverse()} />
         </Grid>
       </Grid>
     </UserLayout>
