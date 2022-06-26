@@ -10,7 +10,7 @@ import {
   TableHead,
 } from '@mui/material';
 
-export function TimeSpentTable({timeSpent}: TimeSpentTableProps) {
+export function TimeSpentTable({timeSpent, color}: TimeSpentTableProps) {
   return (
     <TableContainer sx={{maxHeight: 440}}>
       <Table stickyHeader aria-label="sticky table">
@@ -25,7 +25,11 @@ export function TimeSpentTable({timeSpent}: TimeSpentTableProps) {
         </TableHead>
         <TableBody>
           {timeSpent.map(_ => (
-            <TimeSpentTableItem key={`time_spent_item_${_.id}`} timeSpent={_} />
+            <TimeSpentTableItem
+              color={color}
+              key={`time_spent_item_${_.id}`}
+              timeSpent={_}
+            />
           ))}
         </TableBody>
       </Table>
