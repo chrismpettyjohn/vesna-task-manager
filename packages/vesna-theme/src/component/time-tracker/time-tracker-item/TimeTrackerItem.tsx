@@ -118,9 +118,10 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
         label="Notes"
         fullWidth
         margin="dense"
-        variant="outlined"
+        variant="standard"
         value={taskTimeSpentRecord.notes}
         multiline
+        InputLabelProps={{shrink: true}}
         rows={2}
         onChange={(e: any) =>
           updateTaskTimeSpent(timeSpentIndex, {notes: e?.target?.value ?? ''})

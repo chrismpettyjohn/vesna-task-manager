@@ -89,26 +89,26 @@ export function TeamDialogEditor({
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <TextField
-                  margin="dense"
-                  id="name"
                   label="Name"
                   type="text"
                   fullWidth
-                  variant="filled"
+                  margin="dense"
+                  variant="standard"
+                  InputLabelProps={{shrink: true}}
                   value={teamName}
                   onChange={e => setTeamName(e?.target?.value ?? '')}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  margin="dense"
-                  id="name"
                   label="Desc"
-                  fullWidth
                   multiline
                   rows={4}
-                  variant="filled"
+                  fullWidth
+                  margin="dense"
+                  variant="standard"
                   value={teamDesc}
+                  InputLabelProps={{shrink: true}}
                   onChange={e => setTeamDesc(e?.target?.value ?? '')}
                 />
               </Grid>

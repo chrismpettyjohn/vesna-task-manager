@@ -21,7 +21,8 @@ export function TaskSelector({taskID, onChange}: TaskSelectorProps) {
           label="Task"
           fullWidth
           margin="dense"
-          variant="outlined"
+          variant="standard"
+          InputLabelProps={{shrink: true}}
         />
       )}
       value={taskOptions?.find(_ => _.value === taskID) ?? undefined}

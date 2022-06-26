@@ -80,9 +80,16 @@ export function VesnaTheme({children}: VesnaThemeProps) {
       MuiAutocomplete: {
         styleOverrides: {
           root: {
+            '& .MuiTextField-root': {
+              minWidth: '100%',
+            },
+            '& .MuiAutocomplete-inputRoot': {
+              paddingRight: '0 !important',
+            },
             '& .MuiAutocomplete-endAdornment': {
               background: '#2c387e',
               color: 'white',
+              display: 'none',
               marginTop: -7,
               height: 'calc(100% - 1px)',
             },
