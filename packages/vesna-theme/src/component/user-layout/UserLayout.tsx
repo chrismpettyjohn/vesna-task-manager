@@ -15,7 +15,9 @@ export function UserLayout({children}: UserLayoutProps) {
             <SiteSidebar />
           </Grid>
           <Grid item xs={12} md={10}>
-            <Container maxWidth={false}>{children}</Container>
+            <Container maxWidth={false} sx={{mt: 10, ml: 30}}>
+              {children}
+            </Container>
           </Grid>
         </Grid>
       </Container>
