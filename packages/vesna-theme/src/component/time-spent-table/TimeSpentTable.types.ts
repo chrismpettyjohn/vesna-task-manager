@@ -1,5 +1,6 @@
-import {TaskWire} from '@vesna-task-manager/types';
+import {TaskTimeSpentWire} from '@vesna-task-manager/types';
 
 export interface TimeSpentTableProps {
-  task: TaskWire;
+  color: string;
+  timeSpent: TaskTimeSpentWire[];
 }
