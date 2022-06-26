@@ -1,24 +1,16 @@
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
-import {Typography, TextField} from '@mui/material';
 import {TimeTrackerItemProps} from './TimeTrackerItem.types';
 import {taskService, useTimer} from '@vesna-task-manager/web';
 import {TaskSelector} from '../../task-selector/TaskSelector';
+import {Button, Grid, Typography, TextField} from '@mui/material';
 
-export function TimeTrackerItem({onFinish}: TimeTrackerItemProps) {
+export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
   const [note, setNote] = useState('');
   const [task, setTask] = useState<number>();
   const [timerStartedAt, setTimerStartedAt] = useState<string>();
 
-  const {
-    timer,
-    isActive,
-    isPaused,
-    handleStart,
-    handlePause,
-    handleResume,
-    handleReset,
-  } = useTimer(0);
+  const {timer, isActive, handleStart, handlePause} = useTimer(0);
 
   const onStart = () => {
     if (task !== undefined) {
@@ -34,7 +26,7 @@ export function TimeTrackerItem({onFinish}: TimeTrackerItemProps) {
     try {
       handlePause();
       const taskTimeSpent = await taskService.recordTimeSpentByID(task!, {
-        startedAt: timerStartedAt,
+        startedAt: timerStartedAt!,
         endedAt: new Date().toISOString(),
         notes: note,
       });
@@ -49,13 +41,22 @@ export function TimeTrackerItem({onFinish}: TimeTrackerItemProps) {
     const icon = isActive ? 'stop-circle' : 'play-circle';
     const action = isActive ? onStop : onStart;
     return (
-      <>
-        <i
-          className={`fas fa-${icon}`}
-          onClick={action}
-          style={{cursor: task ? 'pointer' : 'disabled'}}
-        />
-      </>
+      <Grid container>
+        <Grid item xs={6}>
+          <Typography>
+            <i
+              className={`fas fa-${icon}`}
+              onClick={action}
+              style={{cursor: task ? 'pointer' : 'disabled'}}
+            />
+
+            <span style={{marginLeft: 4}}>{timer}s</span>
+          </Typography>
+        </Grid>
+        <Grid item xs={6} style={{textAlign: 'right'}}>
+          {timerStartedAt ? <Button onClick={onCancel}>Cancel</Button> : ''}
+        </Grid>
+      </Grid>
     );
   };
 
@@ -80,10 +81,7 @@ export function TimeTrackerItem({onFinish}: TimeTrackerItemProps) {
         rows={2}
         onChange={(e: any) => setNote(e?.target?.value ?? '')}
       />
-      <Typography>
-        {getControlButton()}
-        <span style={{marginLeft: 4}}>{timer}s</span>
-      </Typography>
+      {getControlButton()}
     </div>
   );
 }

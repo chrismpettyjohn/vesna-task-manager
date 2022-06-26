@@ -24,7 +24,6 @@ export function TimeTrackerDrawer() {
   };
 
   const onFinished = (taskTimeSpent: TaskTimeSpentWire, timerIndex: number) => {
-    console.log(taskTimeSpent);
     removeTimeTracker(timerIndex);
   };
 
@@ -32,6 +31,7 @@ export function TimeTrackerDrawer() {
     setTimeTrackers(_ => {
       const newTimeTrackers = [..._];
       newTimeTrackers.push({
+        onCancel: () => removeTimeTracker(newTimeTrackers.length),
         onFinish: (taskTimeSpent: TaskTimeSpentWire) =>
           onFinished(taskTimeSpent, newTimeTrackers.length),
       });
@@ -78,7 +78,7 @@ export function TimeTrackerDrawer() {
           {timeTrackers.map((timeTracker, timeTrackerIndex) => (
             <TimeTrackerItem
               key={`time_tracker_${timeTrackerIndex}`}
-              onFinish={timeTracker.onFinish}
+              {...timeTracker}
             />
           ))}
           <List dense sx={{color: 'white'}}>

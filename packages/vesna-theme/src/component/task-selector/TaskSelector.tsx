@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {Autocomplete, TextField} from '@mui/material';
 import {TaskSelectorProps} from './TaskSelector.types';
+import React, {SyntheticEvent, useContext} from 'react';
 
 export function TaskSelector({taskID, onChange}: TaskSelectorProps) {
   const {tasks} = useContext(taskContext);
@@ -20,8 +20,10 @@ export function TaskSelector({taskID, onChange}: TaskSelectorProps) {
       renderInput={(params: any) => (
         <TextField {...params} label="Task" fullWidth />
       )}
-      value={taskOptions?.find(_ => _.value === taskID)}
-      onChange={(e: any) => onChange(e.value)}
+      value={taskOptions?.find(_ => _.value === taskID) ?? null}
+      onChange={(event: SyntheticEvent, newInputValue: any) => {
+        onChange(newInputValue.value);
+      }}
     />
   );
 }
