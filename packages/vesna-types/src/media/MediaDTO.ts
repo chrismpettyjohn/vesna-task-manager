@@ -1,6 +1,5 @@
 export interface CreateMediaDTOWire {
   fileLabel: string;
-  fileName: string;
   fileDesc: string;
 }
 

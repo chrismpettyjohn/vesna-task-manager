@@ -1,6 +1,8 @@
 import {MediaPipe} from './media.pipe';
 import {MediaService} from './media.service';
-import {ErrorCode, MediaType, MediaWire} from '@vesna-task-manager/types';
+import {AWSS3Service} from '../aws/aws-s3.service';
+import {getTimestamp} from '../common/get-timestamp';
+import {mediaWire} from '../database/media/media.wire';
 import {FileInterceptor} from '@nestjs/platform-express';
 import {CreateMediaDTO, UpdateMediaDTO} from './media.dto';
 import {MediaEntity} from '../database/media/media.entity';
@@ -8,6 +10,7 @@ import {HasSession} from '../session/has-session.decorator';
 import {GetSession} from '../session/get-session.decorator';
 import {SessionEntity} from '../database/session/session.entity';
 import {MediaRepository} from '../database/media/media.repository';
+import {ErrorCode, MediaType, MediaWire} from '@vesna-task-manager/types';
 import {
   BadRequestException,
   Body,
@@ -20,9 +23,6 @@ import {
   UploadedFile,
   UseInterceptors,
 } from '@nestjs/common';
-import {getTimestamp} from '../common/get-timestamp';
-import {AWSS3Service} from '../aws/aws-s3.service';
-import {mediaWire} from '../database/media/media.wire';
 
 @Controller('media')
 @HasSession()
@@ -33,12 +33,28 @@ export class MediaController {
     private readonly awsS3Service: AWSS3Service
   ) {}
 
+  @Get()
+  async getAllMedia(
+    @GetSession() session: SessionEntity
+  ): Promise<MediaWire[]> {
+    const allMedia = await this.mediaRepo.find({userID: session.userID});
+
+    const mediaWires: MediaWire[] = [];
+
+    for (const media of allMedia) {
+      const mediaURL = await this.awsS3Service.getObjectURL(media.s3Key);
+      mediaWires.push(mediaWire(media, mediaURL));
+    }
+
+    return mediaWires;
+  }
+
   @Post()
   @UseInterceptors(FileInterceptor('file'))
   async uploadNewMedia(
     @Body() createMediaDTO: CreateMediaDTO,
     @GetSession() session: SessionEntity,
-    @UploadedFile() file: {key: string; mimetype: string}
+    @UploadedFile() file: {filename: string; key: string; mimetype: string}
   ): Promise<MediaWire> {
     const isImage = file.mimetype.includes('image');
     const isVideo = file.mimetype.includes('video');
@@ -50,7 +66,7 @@ export class MediaController {
     const newMedia = await this.mediaRepo.create({
       userID: session.userID,
       fileLabel: createMediaDTO.fileLabel,
-      fileName: createMediaDTO.fileName,
+      fileName: file.filename,
       fileDesc: createMediaDTO.fileDesc,
       fileType: isImage ? MediaType.Photo : MediaType.Video,
       s3Key: file.key,

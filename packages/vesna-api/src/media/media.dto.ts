@@ -9,9 +9,6 @@ export class CreateMediaDTO implements CreateMediaDTOWire {
   fileLabel!: string;
 
   @IsString()
-  fileName!: string;
-
-  @IsString()
   fileDesc!: string;
 }
 
@@ -19,10 +16,6 @@ export class UpdateMediaDTO implements UpdateMediaDTOWire {
   @IsString()
   @IsOptional()
   fileLabel?: string;
-
-  @IsString()
-  @IsOptional()
-  fileName?: string;
 
   @IsString()
   @IsOptional()

@@ -20,25 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/aws/aws-s3.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/aws/aws.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media-multer.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.pipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-types/src/media/MediaDTO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/api/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/demo/api/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/common/config.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/common/config.const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/database/team/team.wire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/database/team/team.wire.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/vesna.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/vesna.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/utility/ErrorCode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/media/media-multer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media-multer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/media/media.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-api/src/media/media.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-api/src/media/media.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-types/src/media/MediaDTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-types/src/media/MediaDTO.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +82,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="33430000" />
+      <workItem from="1656124643919" duration="34277000" />
     </task>
     <servers />
   </component>
