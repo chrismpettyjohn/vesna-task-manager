@@ -16,14 +16,14 @@ export function IconSelector({icon, onChange}: IconSelectorProps) {
       <Grid item xs={10}>
         <Autocomplete
           options={iconOptions as any}
-          renderOption={(props: any) => {
+          renderOption={(props: any, icon: any) => {
             return (
               <Box component="li" style={{color: 'black'}} {...props}>
                 <i
-                  className={`fa fa-${props.key}`}
+                  className={icon.value}
                   style={{color: 'black', marginRight: 4}}
                 />
-                {props.key}
+                {icon.label}
               </Box>
             );
           }}

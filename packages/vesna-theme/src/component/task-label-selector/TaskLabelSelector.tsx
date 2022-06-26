@@ -1,6 +1,6 @@
-import React, {SyntheticEvent, useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
-import {Autocomplete, TextField} from '@mui/material';
+import React, {SyntheticEvent, useContext} from 'react';
+import {Autocomplete, Box, TextField} from '@mui/material';
 import {TaskLabelSelectorProps} from './TaskLabelSelector.types';
 
 export function TaskLabelSelector({
@@ -10,11 +10,23 @@ export function TaskLabelSelector({
   const {taskLabels} = useContext(taskContext);
   const taskLabelOptions = taskLabels?.map(_ => ({
     label: _.name,
+    icon: _.icon,
     value: _.id as any,
   }));
   return (
     <Autocomplete
       options={taskLabelOptions as any}
+      renderOption={(props: any, taskLabel: any) => {
+        return (
+          <Box component="li" style={{color: 'black'}} {...props}>
+            <i
+              className={`fa fa-${taskLabel.icon}`}
+              style={{color: 'black', marginRight: 4}}
+            />
+            {taskLabel.label}
+          </Box>
+        );
+      }}
       renderInput={params => (
         <TextField
           {...params}
