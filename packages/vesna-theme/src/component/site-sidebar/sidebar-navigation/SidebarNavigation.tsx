@@ -13,6 +13,9 @@ export function SidebarNavigation() {
         <SidebarMenuItem link="/activity-overview" icon="fa fa-chart-line">
           My Activity
         </SidebarMenuItem>
+        <SidebarMenuItem link="/time-overview" icon="fa fa-clock">
+          Time Spent
+        </SidebarMenuItem>
       </List>
     </UserGuard>
   );
