@@ -92,11 +92,7 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
           </Typography>
         </Grid>
         <Grid item xs={6} style={{textAlign: 'right'}}>
-          {taskTimeSpentRecord.startedAt ? (
-            <Button onClick={onCancel}>Cancel</Button>
-          ) : (
-            ''
-          )}
+          <Button onClick={onCancel}>Cancel</Button>
         </Grid>
       </Grid>
     );
