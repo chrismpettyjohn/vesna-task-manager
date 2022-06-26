@@ -23,7 +23,7 @@ export function TaskLabelDialogEditor({
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [taskLabelIcon, setTaskLabelIcon] = useState(
-    defaultTaskLabel?.icon ?? ''
+    defaultTaskLabel?.icon ?? 'fas fa-tasks'
   );
   const [taskLabelName, setTaskLabelName] = useState(
     defaultTaskLabel?.name ?? ''
@@ -42,7 +42,7 @@ export function TaskLabelDialogEditor({
   const resetState = () => {
     setIsOpen(false);
     setIsLoading(false);
-    setTaskLabelIcon(defaultTaskLabel?.icon ?? 'fa fa-tasks');
+    setTaskLabelIcon(defaultTaskLabel?.icon ?? 'fas fa-tasks');
     setTaskLabelName(defaultTaskLabel?.name ?? '');
     setTaskLabelDesc(defaultTaskLabel?.desc ?? '');
     setTaskLabelColor(defaultTaskLabel?.color ?? '');
