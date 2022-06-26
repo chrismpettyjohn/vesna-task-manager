@@ -1,11 +1,17 @@
-import {useState, useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 
-export function useTimer(startTime = 0) {
+export function useTimer(startTime = 0, defaultIsActive = false) {
   const [timer, setTimer] = useState(startTime);
   const countRef = useRef<any>(null);
 
-  const [isActive, setIsActive] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isActive, setIsActive] = useState(defaultIsActive);
+  const [isPaused, setIsPaused] = useState(!defaultIsActive);
+
+  useEffect(() => {
+    if (defaultIsActive) {
+      handleStart();
+    }
+  }, []);
 
   const handleStart = () => {
     setIsActive(true);

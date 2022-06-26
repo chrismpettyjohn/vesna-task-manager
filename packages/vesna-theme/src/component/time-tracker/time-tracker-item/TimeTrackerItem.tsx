@@ -22,8 +22,10 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
   const endedAt = DayJS();
   const defaultStartTime = endedAt.diff(startedAt, 'second');
 
-  const {timer, isActive, handleStart, handlePause} =
-    useTimer(defaultStartTime);
+  const {timer, isActive, handleStart, handlePause} = useTimer(
+    defaultStartTime,
+    !!taskTimeSpentRecord?.startedAt
+  );
 
   if (!taskTimeSpentRecord) {
     return null;
