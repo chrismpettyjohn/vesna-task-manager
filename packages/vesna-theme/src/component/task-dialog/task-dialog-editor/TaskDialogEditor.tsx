@@ -80,34 +80,32 @@ export function TaskDialogEditor({
         <Dialog open onClose={onToggleDialog} maxWidth="lg">
           <DialogTitle>Task</DialogTitle>
           <DialogContent style={{width: dialogMaxWidth}}>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="name"
-                label="Name"
-                type="text"
-                fullWidth
-                value={taskName}
-                onChange={e => setTaskName(e?.target?.value ?? '')}
-              />
-            </div>
-            <div style={{marginBottom: 10}}>
-              <TextField
-                id="content"
-                label="Content"
-                multiline
-                rows={4}
-                fullWidth
-                value={taskContent}
-                onChange={e => setTaskContent(e?.target?.value ?? '')}
-              />
-            </div>
+            <TextField
+              label="Name"
+              type="text"
+              fullWidth
+              value={taskName}
+              margin="dense"
+              variant="filled"
+              onChange={e => setTaskName(e?.target?.value ?? '')}
+            />
+            <TextField
+              label="Content"
+              type="text"
+              fullWidth
+              multiline
+              minRows={2}
+              maxRows={4}
+              value={taskContent}
+              margin="dense"
+              variant="filled"
+              onChange={e => setTaskContent(e?.target?.value ?? '')}
+            />
             {!hideTaskLabel && (
-              <div style={{marginBottom: 10}}>
-                <TaskLabelSelector
-                  taskLabelID={taskLabelID}
-                  onChange={setTaskLabelID}
-                />
-              </div>
+              <TaskLabelSelector
+                taskLabelID={taskLabelID}
+                onChange={setTaskLabelID}
+              />
             )}
             <Grid container style={{marginTop: '5%'}}>
               <Grid item xs={12}>

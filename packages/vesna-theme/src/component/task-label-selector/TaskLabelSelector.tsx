@@ -14,13 +14,19 @@ export function TaskLabelSelector({
   }));
   return (
     <Autocomplete
-      disablePortal
-      id="task-label-selector"
       options={taskLabelOptions as any}
-      renderInput={params => <TextField {...params} label="Task Label" />}
+      renderInput={params => (
+        <TextField
+          {...params}
+          label="Task Label"
+          fullWidth
+          margin="dense"
+          variant="filled"
+        />
+      )}
       value={taskLabelOptions?.find(_ => _.value === taskLabelID)}
       onChange={(e: any) => onChange(e.value)}
-      fullWidth
+      sx={{width: '100%'}}
     />
   );
 }
