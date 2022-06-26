@@ -13,7 +13,7 @@ export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
   const {timer, isActive, handleStart, handlePause} = useTimer(0);
 
   const onStart = () => {
-    if (task !== undefined) {
+    if (task === undefined) {
       toast.error('You must select a task before starting the timer!');
       return;
     }
@@ -30,6 +30,9 @@ export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
         endedAt: new Date().toISOString(),
         notes: note,
       });
+      toast.success(
+        `Your time spent working on task #${task} has been saved successfully`
+      );
       onFinish(taskTimeSpent);
     } catch (e: any) {
       toast.error("Your time couldn't be saved due to an unexpected error");
