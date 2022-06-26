@@ -21,17 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-dialog/DeleteTaskDialog.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-table/TaskTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/TaskList.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-table/TaskTable.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-table/task-table-item/TaskTableItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-list/task-list-item/TaskListItem.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-table/task-table-item/TaskTableItem.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/team-dialog/team-dialog-editor/TeamDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/team-dialog/team-dialog-editor/TeamDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/dashboard-screen/DashboardScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/tasks-by-label-screen/TasksByLabelScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/tasks-by-label-screen/TasksByLabelScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/edit-task-dialog/EditTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/edit-task-dialog/EditTaskDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/teams-table-item/TeamsTableItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/teams-table/teams-table-item/TeamsTableItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +79,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="22142000" />
+      <workItem from="1656124643919" duration="22238000" />
     </task>
     <servers />
   </component>

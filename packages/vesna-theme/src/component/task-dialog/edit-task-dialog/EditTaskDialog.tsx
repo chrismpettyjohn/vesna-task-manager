@@ -1,5 +1,6 @@
 import React from 'react';
 import {toast} from 'react-toastify';
+import {Button} from '@mui/material';
 import {taskService} from '@vesna-task-manager/web';
 import {EditTaskDialogProps} from './EditTaskDialog.types';
 import {CreateTaskDTOWire} from '@vesna-task-manager/types';
@@ -16,7 +17,10 @@ export function EditTaskDialog({task, onSave}: EditTaskDialogProps) {
 
   return (
     <TaskDialogEditor defaultTask={task} onSave={onUpdateTask}>
-      <i className="fa fa-pencil" />
+      <Button>
+        <i className="fa fa-pencil" style={{marginRight: 4}} />
+        Edit
+      </Button>
     </TaskDialogEditor>
   );
 }
