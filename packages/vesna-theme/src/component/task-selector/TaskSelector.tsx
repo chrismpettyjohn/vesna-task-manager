@@ -13,17 +13,22 @@ export function TaskSelector({taskID, onChange}: TaskSelectorProps) {
 
   return (
     <Autocomplete
-      disablePortal
-      id="task-label-selector"
       options={taskOptions as any}
       sx={{width: '100%'}}
       renderInput={(params: any) => (
-        <TextField {...params} label="Task" fullWidth />
+        <TextField
+          {...params}
+          label="Task"
+          fullWidth
+          margin="dense"
+          variant="outlined"
+        />
       )}
-      value={taskOptions?.find(_ => _.value === taskID) ?? null}
+      value={taskOptions?.find(_ => _.value === taskID) ?? undefined}
       onChange={(event: SyntheticEvent, newInputValue: any) => {
         onChange(newInputValue.value);
       }}
+      disableClearable
     />
   );
 }

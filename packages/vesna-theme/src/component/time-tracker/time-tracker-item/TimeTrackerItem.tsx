@@ -77,7 +77,7 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
     const icon = isActive ? 'stop-circle' : 'play-circle';
     const action = isActive ? onStop : onStart;
     return (
-      <Grid container>
+      <Grid container sx={{mt: '2%'}}>
         <Grid item xs={6}>
           <Typography>
             <i
@@ -102,12 +102,12 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
     <div
       style={{
         background: '#6573c3',
-        padding: 8,
+        padding: '4%',
         overflow: 'hidden',
         borderRadius: 8,
         width: '95%',
         margin: '0 auto',
-        marginBottom: 10,
+        marginBottom: '4%',
       }}
     >
       <TaskSelector
@@ -117,6 +117,8 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
       <TextField
         label="Notes"
         fullWidth
+        margin="dense"
+        variant="outlined"
         value={taskTimeSpentRecord.notes}
         multiline
         rows={2}
