@@ -6,6 +6,7 @@ import {SessionModule} from './session/session.module';
 import {ActivityModule} from './activity/activity.module';
 import {DatabaseModule} from './database/database.module';
 import {TaskLabelModule} from './task-label/task-label.module';
+import {TeamModule} from './team/team.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import {TaskLabelModule} from './task-label/task-label.module';
     UserModule,
     TaskModule,
     TaskLabelModule,
+    TeamModule,
   ],
   exports: [
     ActivityModule,
@@ -25,6 +27,7 @@ import {TaskLabelModule} from './task-label/task-label.module';
     UserModule,
     TaskModule,
     TaskLabelModule,
+    TeamModule,
   ],
 })
 export class VesnaModule {}

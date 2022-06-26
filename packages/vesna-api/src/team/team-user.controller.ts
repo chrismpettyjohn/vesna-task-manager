@@ -3,6 +3,7 @@ import {TeamService} from './team.service';
 import {UserPipe} from '../user/user.pipe';
 import {TeamEntity} from '../database/team/team.entity';
 import {UserEntity} from '../database/user/user.entity';
+import {HasSession} from '../session/has-session.decorator';
 import {GetSession} from '../session/get-session.decorator';
 import {teamUserWire} from '../database/team/team-user.wire';
 import {SessionEntity} from '../database/session/session.entity';
@@ -12,6 +13,7 @@ import {TeamUserRepository} from '../database/team/team-user.repository';
 import {Body, Controller, Delete, Param, Patch, Post} from '@nestjs/common';
 
 @Controller('teams/:teamID/users')
+@HasSession()
 export class TeamUserController {
   constructor(
     private readonly teamService: TeamService,

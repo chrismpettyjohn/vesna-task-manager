@@ -28,6 +28,6 @@ export class TeamUserEntity {
   @JoinColumn({name: 'team_id'})
   team?: UserEntity[];
 
-  @Column()
+  @Column({name: 'permission_level'})
   permissionLevel!: TeamPermissions;
 }

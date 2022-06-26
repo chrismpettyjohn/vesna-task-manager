@@ -7,6 +7,6 @@ import {BaseRepository} from '../base.repository';
 @Injectable()
 export class TeamRepository extends BaseRepository<TeamEntity> {
   constructor(@InjectRepository(TeamEntity) teamRepo: Repository<TeamEntity>) {
-    super(teamRepo, ['users', 'users.user']);
+    super(teamRepo, ['users', 'users.user', 'users.user.role']);
   }
 }

@@ -40,7 +40,7 @@ export class TeamController {
     }
 
     const teams = await this.teamRepo.find({
-      id: In(teamsUserIsApartOf.map(_ => _.id)),
+      id: In(teamsUserIsApartOf.map(_ => _.teamID)),
     });
 
     return teams.map(_ => teamWire(_));

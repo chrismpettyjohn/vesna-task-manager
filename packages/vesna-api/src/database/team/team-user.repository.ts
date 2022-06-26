@@ -9,6 +9,6 @@ export class TeamUserRepository extends BaseRepository<TeamUserEntity> {
   constructor(
     @InjectRepository(TeamUserEntity) teamUserRepo: Repository<TeamUserEntity>
   ) {
-    super(teamUserRepo, ['user']);
+    super(teamUserRepo, ['user', 'user.role']);
   }
 }
