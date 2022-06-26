@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from '@mui/material';
 import {toast} from 'react-toastify';
 import {taskService} from '@vesna-task-manager/web';
 import {CreateTaskDTOWire} from '@vesna-task-manager/types';
@@ -21,7 +22,10 @@ export function CreateTaskDialog({
       onSave={onCreateTask}
       hideTaskLabel={!!taskLabelID}
     >
-      <i className="fa fa-plus-circle" style={{paddingRight: 4}} />
+      <Button>
+        <i className="fa fa-plus-circle" style={{marginRight: 4}} />
+        New Task
+      </Button>
     </TaskDialogEditor>
   );
 }

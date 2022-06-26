@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/icon-selector/IconSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/delete-task-button/DeleteTaskButton.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-selector/TaskLabelSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-selector/TaskLabelSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +77,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="22636000" />
+      <workItem from="1656124643919" duration="23098000" />
     </task>
     <servers />
   </component>
