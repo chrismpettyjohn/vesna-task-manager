@@ -43,9 +43,13 @@ export function VesnaTheme({children}: VesnaThemeProps) {
             color: 'white',
             input: {
               color: 'white',
+              padding: 4,
+              fontSize: '1.4rem',
             },
             '& label': {
               color: 'white',
+              fontSize: '1.8rem',
+              top: -10,
             },
             '& .Mui-focused': {
               color: 'white',
@@ -69,6 +73,29 @@ export function VesnaTheme({children}: VesnaThemeProps) {
           root: {
             textTransform: 'initial',
             fontSize: '1rem',
+          },
+        },
+      },
+      MuiAutocomplete: {
+        styleOverrides: {
+          root: {
+            '& .MuiAutocomplete-endAdornment': {
+              background: '#2c387e',
+              color: 'white',
+              marginTop: -7,
+              height: 'calc(100% - 1px)',
+            },
+            '& .MuiAutocomplete-clearIndicator': {
+              background: '#2c387e',
+              color: 'white',
+            },
+          },
+        },
+      },
+      MuiSvgIcon: {
+        styleOverrides: {
+          root: {
+            color: 'white',
           },
         },
       },

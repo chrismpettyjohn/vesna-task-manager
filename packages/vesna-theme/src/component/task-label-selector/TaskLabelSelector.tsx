@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {SyntheticEvent, useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {Autocomplete, TextField} from '@mui/material';
 import {TaskLabelSelectorProps} from './TaskLabelSelector.types';
@@ -21,12 +21,15 @@ export function TaskLabelSelector({
           label="Task Label"
           fullWidth
           margin="dense"
-          variant="filled"
+          variant="standard"
         />
       )}
       value={taskLabelOptions?.find(_ => _.value === taskLabelID)}
-      onChange={(e: any) => onChange(e.value)}
+      onChange={(e: SyntheticEvent, result: {label: string; value: number}) =>
+        onChange(result.value)
+      }
       sx={{width: '100%'}}
+      disableClearable
     />
   );
 }

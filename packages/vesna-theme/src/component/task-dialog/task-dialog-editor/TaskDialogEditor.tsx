@@ -80,33 +80,41 @@ export function TaskDialogEditor({
         <Dialog open onClose={onToggleDialog} maxWidth="lg">
           <DialogTitle>Task</DialogTitle>
           <DialogContent style={{width: dialogMaxWidth}}>
-            <TextField
-              label="Name"
-              type="text"
-              fullWidth
-              value={taskName}
-              margin="dense"
-              variant="filled"
-              onChange={e => setTaskName(e?.target?.value ?? '')}
-            />
-            <TextField
-              label="Content"
-              type="text"
-              fullWidth
-              multiline
-              minRows={2}
-              maxRows={4}
-              value={taskContent}
-              margin="dense"
-              variant="filled"
-              onChange={e => setTaskContent(e?.target?.value ?? '')}
-            />
-            {!hideTaskLabel && (
-              <TaskLabelSelector
-                taskLabelID={taskLabelID}
-                onChange={setTaskLabelID}
-              />
-            )}
+            <Grid container>
+              <Grid item xs={12}>
+                <TextField
+                  label="Name"
+                  type="text"
+                  value={taskName}
+                  fullWidth
+                  margin="dense"
+                  variant="standard"
+                  onChange={e => setTaskName(e?.target?.value ?? '')}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Content"
+                  type="text"
+                  multiline
+                  minRows={2}
+                  maxRows={4}
+                  value={taskContent}
+                  fullWidth
+                  margin="dense"
+                  variant="standard"
+                  onChange={e => setTaskContent(e?.target?.value ?? '')}
+                />
+              </Grid>
+              {!hideTaskLabel && (
+                <Grid item xs={12}>
+                  <TaskLabelSelector
+                    taskLabelID={taskLabelID}
+                    onChange={setTaskLabelID}
+                  />
+                </Grid>
+              )}
+            </Grid>
             <Grid container style={{marginTop: '5%'}}>
               <Grid item xs={12}>
                 <hr />
