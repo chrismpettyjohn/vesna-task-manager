@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-layout/SiteLayout.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-drawer/TimeTrackerDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-drawer/TimeTrackerDrawer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContext.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContext.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +86,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="6968000" />
+      <workItem from="1656124643919" duration="8599000" />
     </task>
     <servers />
   </component>

@@ -1,43 +1,69 @@
+import DayJS from 'dayjs';
 import {toast} from 'react-toastify';
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import {TimeTrackerItemProps} from './TimeTrackerItem.types';
-import {taskService, useTimer} from '@vesna-task-manager/web';
 import {TaskSelector} from '../../task-selector/TaskSelector';
 import {Button, Grid, Typography, TextField} from '@mui/material';
+import {
+  taskContext,
+  taskService,
+  taskTimeSpentContext,
+  useTimer,
+} from '@vesna-task-manager/web';
 
-export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
-  const [note, setNote] = useState('');
-  const [task, setTask] = useState<number>();
-  const [timerStartedAt, setTimerStartedAt] = useState<string>();
+export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
+  const {addTimeSpentByID} = useContext(taskContext);
+  const {taskTimeSpent, updateTaskTimeSpent, deleteTaskTimeSpent} =
+    useContext(taskTimeSpentContext);
 
-  const {timer, isActive, handleStart, handlePause} = useTimer(0);
+  const taskTimeSpentRecord = taskTimeSpent[timeSpentIndex];
+
+  const startedAt = DayJS(taskTimeSpentRecord?.startedAt);
+  const endedAt = DayJS();
+  const defaultStartTime = endedAt.diff(startedAt, 'second');
+
+  const {timer, isActive, handleStart, handlePause} =
+    useTimer(defaultStartTime);
+
+  if (!taskTimeSpentRecord) {
+    return null;
+  }
 
   const onStart = () => {
-    if (task === undefined) {
+    if (taskTimeSpentRecord.taskID === undefined) {
       toast.error('You must select a task before starting the timer!');
       return;
     }
 
-    setTimerStartedAt(new Date().toISOString());
+    updateTaskTimeSpent(timeSpentIndex, {startedAt: new Date().toISOString()});
     handleStart();
   };
 
   const onStop = async () => {
     try {
       handlePause();
-      const taskTimeSpent = await taskService.recordTimeSpentByID(task!, {
-        startedAt: timerStartedAt!,
-        endedAt: new Date().toISOString(),
-        notes: note,
-      });
-      toast.success(
-        `Your time spent working on task #${task} has been saved successfully`
+      const taskTimeSpentWire = await taskService.recordTimeSpentByID(
+        taskTimeSpentRecord.taskID!,
+        {
+          startedAt: taskTimeSpentRecord.startedAt!,
+          endedAt: new Date().toISOString(),
+          notes: taskTimeSpentRecord.notes!,
+        }
       );
-      onFinish(taskTimeSpent);
+      toast.success(
+        `Your time spent working on task #${taskTimeSpentRecord.taskID!} has been saved successfully`
+      );
+      deleteTaskTimeSpent(timeSpentIndex);
+      addTimeSpentByID(taskTimeSpentRecord.taskID!, taskTimeSpentWire);
     } catch (e: any) {
       toast.error("Your time couldn't be saved due to an unexpected error");
       throw e;
     }
+  };
+
+  const onCancel = () => {
+    toast.success('Timer canceled');
+    deleteTaskTimeSpent(timeSpentIndex);
   };
 
   const getControlButton = () => {
@@ -50,14 +76,20 @@ export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
             <i
               className={`fas fa-${icon}`}
               onClick={action}
-              style={{cursor: task ? 'pointer' : 'disabled'}}
+              style={{
+                cursor: taskTimeSpentRecord?.taskID ? 'pointer' : 'disabled',
+              }}
             />
 
             <span style={{marginLeft: 4}}>{timer}s</span>
           </Typography>
         </Grid>
         <Grid item xs={6} style={{textAlign: 'right'}}>
-          {timerStartedAt ? <Button onClick={onCancel}>Cancel</Button> : ''}
+          {taskTimeSpentRecord.startedAt ? (
+            <Button onClick={onCancel}>Cancel</Button>
+          ) : (
+            ''
+          )}
         </Grid>
       </Grid>
     );
@@ -75,14 +107,19 @@ export function TimeTrackerItem({onCancel, onFinish}: TimeTrackerItemProps) {
         marginBottom: 10,
       }}
     >
-      <TaskSelector onChange={setTask} taskID={task} />
+      <TaskSelector
+        onChange={taskID => updateTaskTimeSpent(timeSpentIndex, {taskID})}
+        taskID={taskTimeSpentRecord.taskID}
+      />
       <TextField
         label="Notes"
         fullWidth
-        value={note}
+        value={taskTimeSpentRecord.notes}
         multiline
         rows={2}
-        onChange={(e: any) => setNote(e?.target?.value ?? '')}
+        onChange={(e: any) =>
+          updateTaskTimeSpent(timeSpentIndex, {notes: e?.target?.value ?? ''})
+        }
       />
       {getControlButton()}
     </div>

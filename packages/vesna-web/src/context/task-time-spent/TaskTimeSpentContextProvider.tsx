@@ -1,15 +1,39 @@
 import React, {useState} from 'react';
 import {taskTimeSpentContext} from './TaskTimeSpentContext';
-import {TaskTimeSpentContextProviderProps} from './TaskTimeSpentContext.types';
+import {
+  TaskTimeSpentContextProviderProps,
+  TaskTimeSpentRecord,
+} from './TaskTimeSpentContext.types';
 
 export function TaskTimeSpentContextProvider({
   children,
 }: TaskTimeSpentContextProviderProps) {
-  const [taskTimeSpent, setTaskTimeSpent] = useState<number[]>([]);
+  const [taskTimeSpent, setTaskTimeSpent] = useState<TaskTimeSpentRecord[]>([]);
 
   const addTaskTimeSpent = () => {
     setTaskTimeSpent(_ => {
-      return [..._, _.length];
+      return [
+        ..._,
+        {
+          taskID: undefined,
+          notes: undefined,
+          startedAt: undefined,
+        },
+      ];
+    });
+  };
+
+  const updateTaskTimeSpent = (
+    taskIndex: number,
+    changes: Partial<TaskTimeSpentRecord>
+  ) => {
+    setTaskTimeSpent(_ => {
+      const newTaskTimeSpent = [..._];
+      newTaskTimeSpent[taskIndex] = {
+        ...newTaskTimeSpent[taskIndex],
+        ...changes,
+      };
+      return newTaskTimeSpent;
     });
   };
 
@@ -23,7 +47,12 @@ export function TaskTimeSpentContextProvider({
 
   return (
     <taskTimeSpentContext.Provider
-      value={{taskTimeSpent, addTaskTimeSpent, deleteTaskTimeSpent}}
+      value={{
+        taskTimeSpent,
+        addTaskTimeSpent,
+        updateTaskTimeSpent,
+        deleteTaskTimeSpent,
+      }}
     >
       {children}
     </taskTimeSpentContext.Provider>

@@ -2,7 +2,11 @@ import {taskContext} from './TaskContext';
 import {taskService} from '../../service/task.service';
 import {sessionContext} from '../session/SessionContext';
 import React, {useContext, useEffect, useState} from 'react';
-import {TaskWire, TaskLabelWire} from '@vesna-task-manager/types';
+import {
+  TaskWire,
+  TaskLabelWire,
+  TaskTimeSpentWire,
+} from '@vesna-task-manager/types';
 import {taskLabelService} from '../../service/task-label.service';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
 
@@ -90,6 +94,24 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
     });
   };
 
+  const addTimeSpentByID = (
+    taskID: number,
+    taskTimeSpent: TaskTimeSpentWire
+  ) => {
+    setTasks(_ => {
+      const newTasks = [..._];
+      const affectedTaskIndex = newTasks.findIndex(_ => _.id === taskID)!;
+      newTasks[affectedTaskIndex] = {
+        ...newTasks[affectedTaskIndex],
+        timeSpent: {
+          ...newTasks[affectedTaskIndex].timeSpent,
+          taskTimeSpent,
+        },
+      };
+      return newTasks;
+    });
+  };
+
   const isValidLoadingState = session && loading;
 
   return (
@@ -103,6 +125,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
         addTaskLabel,
         updateTaskLabelByID,
         deleteTaskLabelByID,
+        addTimeSpentByID,
       }}
     >
       {isValidLoadingState ? '' : children}
