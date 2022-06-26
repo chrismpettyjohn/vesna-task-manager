@@ -10,4 +10,6 @@ export enum ErrorCode {
   TaskLabelDoesNotExist = 401,
   TaskDoesNotExist = 500,
   TeamDoesNotExist = 600,
+  MediaDoesNotExist = 700,
+  MediaInvalidFileType = 701,
 }

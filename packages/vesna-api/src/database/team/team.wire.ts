@@ -9,5 +9,6 @@ export function teamWire(teamEntity: TeamEntity): TeamWire {
     desc: teamEntity.desc,
     icon: teamEntity.icon,
     users: teamEntity.users!.map(_ => teamUserWire(_)),
+    createdAt: teamEntity.createdAt,
   };
 }

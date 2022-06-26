@@ -17,3 +17,6 @@ export const DATABASE_NAME: string = getEnvOrFail('DATABASE_NAME');
 // Authentication
 export const JWT_SECRET: string = getEnvOrFail('JWT_SECRET');
 export const JWT_EXPIRATION_IN_HOURS = Number(getEnvOrFail('JWT_EXPIRES'));
+
+// AWS
+export const S3_BUCKET = getEnvOrFail('S3_BUCKET');
