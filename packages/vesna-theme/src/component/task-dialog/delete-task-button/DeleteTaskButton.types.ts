@@ -1,5 +1,6 @@
 import {TaskWire} from '@vesna-task-manager/types';
 
-export interface TaskListItemProps {
+export interface DeleteTaskButtonProps {
   task: TaskWire;
+  onDeletion(): void;
 }

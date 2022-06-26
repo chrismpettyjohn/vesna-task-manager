@@ -168,6 +168,7 @@ export function TaskLabelDialogEditor({
                     color="success"
                     onClick={onSaveTaskLabel}
                     variant="contained"
+                    type="submit"
                   >
                     {isLoading ? (
                       <>

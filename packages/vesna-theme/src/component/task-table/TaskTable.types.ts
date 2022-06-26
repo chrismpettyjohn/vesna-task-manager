@@ -1,5 +1,5 @@
 import {TaskWire} from '@vesna-task-manager/types';
 
-export interface TaskListProps {
+export interface TaskTableProps {
   tasks: TaskWire[];
 }

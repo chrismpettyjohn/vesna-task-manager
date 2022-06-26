@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {useRoute, useLocation, Redirect} from 'wouter';
 import {TaskLabelWire} from '@vesna-task-manager/types';
-import {TaskList} from '../../component/task-list/TaskList';
+import {TaskTable} from '../../component/task-table/TaskTable';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {SiteHeader} from '../../component/site-header/SiteHeader';
 import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
@@ -72,7 +72,7 @@ export function TasksByLabelScreen() {
       </div>
       <div className="row">
         <div className="col-12">
-          <TaskList tasks={tasksUnderTaskLabel ?? []} />
+          <TaskTable tasks={tasksUnderTaskLabel ?? []} />
         </div>
       </div>
     </UserLayout>

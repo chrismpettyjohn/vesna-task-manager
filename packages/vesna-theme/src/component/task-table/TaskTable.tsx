@@ -7,10 +7,10 @@ import {
   TableCell,
   TableBody,
 } from '@mui/material';
-import {TaskListProps} from './TaskList.types';
-import {TaskListItem} from './task-list-item/TaskListItem';
+import {TaskTableProps} from './TaskTable.types';
+import {TaskTableItem} from './task-table-item/TaskTableItem';
 
-export function TaskList({tasks}: TaskListProps) {
+export function TaskTable({tasks}: TaskTableProps) {
   return (
     <TableContainer sx={{maxHeight: 440}}>
       <Table stickyHeader aria-label="sticky table">
@@ -25,7 +25,7 @@ export function TaskList({tasks}: TaskListProps) {
         </TableHead>
         <TableBody>
           {tasks?.map(_ => (
-            <TaskListItem key={`task_${_.id}`} task={_} />
+            <TaskTableItem key={`task_${_.id}`} task={_} />
           ))}
         </TableBody>
       </Table>

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Grid, Typography} from '@mui/material';
-import {TaskList} from '../../component/task-list/TaskList';
+import {TaskTable} from '../../component/task-table/TaskTable';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {sessionContext, taskContext} from '@vesna-task-manager/web';
 import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
@@ -27,7 +27,7 @@ export function DashboardScreen() {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <TaskList tasks={tasks!} />
+          <TaskTable tasks={tasks!} />
         </Grid>
       </Grid>
     </UserLayout>

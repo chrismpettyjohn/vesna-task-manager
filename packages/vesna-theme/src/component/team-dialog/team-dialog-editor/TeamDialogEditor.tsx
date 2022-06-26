@@ -137,6 +137,7 @@ export function TeamDialogEditor({
                     color="success"
                     onClick={onSaveTeam}
                     variant="contained"
+                    type="submit"
                   >
                     {isLoading ? (
                       <>

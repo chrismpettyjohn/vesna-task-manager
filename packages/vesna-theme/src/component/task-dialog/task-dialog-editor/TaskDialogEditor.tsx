@@ -2,13 +2,14 @@ import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {dialogMaxWidth} from '../../../utility/theme.const';
 import {TaskDialogEditorProps} from './TaskDialogEditor.types';
+import {DeleteTaskButton} from '../delete-task-button/DeleteTaskButton';
 import {TaskLabelSelector} from '../../task-label-selector/TaskLabelSelector';
 import {
   Button,
   Dialog,
   DialogContent,
-  DialogActions,
   DialogTitle,
+  Grid,
   TextField,
   IconButton,
 } from '@mui/material';
@@ -39,7 +40,7 @@ export function TaskDialogEditor({
     setIsOpen(_ => !_);
   };
 
-  const onSaveTaskLabel = async () => {
+  const onSaveTask = async () => {
     setIsLoading(true);
     try {
       if (!taskName) {
@@ -111,29 +112,39 @@ export function TaskDialogEditor({
                 />
               </div>
             )}
+            <Grid container style={{marginTop: '5%'}}>
+              <Grid item xs={12}>
+                <hr />
+              </Grid>
+              <Grid item xs={6}>
+                <div style={{float: 'left'}}>
+                  {defaultTask?.id && <DeleteTaskButton task={defaultTask} />}
+                </div>
+              </Grid>
+              <Grid item xs={6}>
+                <div style={{float: 'right'}}>
+                  <Button
+                    color="success"
+                    onClick={onSaveTask}
+                    variant="contained"
+                    type="submit"
+                  >
+                    {isLoading ? (
+                      <>
+                        <i
+                          className="fa fa-spinner fa-spin"
+                          style={{marginRight: 4}}
+                        />{' '}
+                        Saving...
+                      </>
+                    ) : (
+                      'Save'
+                    )}
+                  </Button>
+                </div>
+              </Grid>
+            </Grid>
           </DialogContent>
-          <DialogActions>
-            <Button color="error" onClick={onToggleDialog} variant="text">
-              Cancel
-            </Button>
-            <Button
-              color="success"
-              onClick={onSaveTaskLabel}
-              variant="contained"
-            >
-              {isLoading ? (
-                <>
-                  <i
-                    className="fa fa-spinner fa-spin"
-                    style={{marginRight: 4}}
-                  />{' '}
-                  Saving...
-                </>
-              ) : (
-                'Save'
-              )}
-            </Button>
-          </DialogActions>
         </Dialog>
       )}
     </>
