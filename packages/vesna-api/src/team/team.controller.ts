@@ -19,6 +19,7 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import {getTimestamp} from '../common/get-timestamp';
 
 @Controller('teams')
 @HasSession()
@@ -55,6 +56,7 @@ export class TeamController {
       name: createTeamDTO.name,
       desc: createTeamDTO.desc,
       icon: createTeamDTO.icon,
+      createdAt: getTimestamp(),
     });
 
     const newTeamUser = await this.teamUserRepo.create({

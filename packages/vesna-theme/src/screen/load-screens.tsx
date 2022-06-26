@@ -7,6 +7,7 @@ import {DashboardScreen} from './dashboard-screen/DashboardScreen';
 import {RegistrationScreen} from './registration-screen/RegistrationScreen';
 import {TimeOverviewScreen} from './time-overview-screen/TimeOverviewScreen';
 import {TasksByLabelScreen} from './tasks-by-label-screen/TasksByLabelScreen';
+import {TeamsOverviewScreen} from './teams-overview-screen/TeamsOverviewScreen';
 import {ActivityOverviewScreen} from './activity-overview-screen/ActivityOverviewScreen';
 
 export function loadScreens() {
@@ -18,4 +19,5 @@ export function loadScreens() {
   setURL('tasks-list/:taskListID', <TasksByLabelScreen />);
   setURL('activity-overview', <ActivityOverviewScreen />);
   setURL('time-overview', <TimeOverviewScreen />);
+  setURL('teams', <TeamsOverviewScreen />);
 }

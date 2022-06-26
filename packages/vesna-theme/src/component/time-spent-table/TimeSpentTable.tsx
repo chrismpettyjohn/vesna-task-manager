@@ -1,5 +1,6 @@
 import React from 'react';
 import {TimeSpentTableProps} from './TimeSpentTable.types';
+import {TimeSpentTableItem} from './time-spent-table-item/TimeSpentTableItem';
 import {
   Table,
   TableContainer,
@@ -8,7 +9,6 @@ import {
   TableBody,
   TableHead,
 } from '@mui/material';
-import {TimeSpentTableItem} from './time-spent-table-item/TimeSpentTableItem';
 
 export function TimeSpentTable({timeSpent}: TimeSpentTableProps) {
   return (

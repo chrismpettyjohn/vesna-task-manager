@@ -1,4 +1,5 @@
 import {TeamUserWire} from './TeamUser';
+import {Timestamp} from '../utility/Timestamp';
 
 export interface TeamWire {
   id: number;
@@ -6,6 +7,7 @@ export interface TeamWire {
   desc: string;
   icon: string;
   users: TeamUserWire[];
+  createdAt: Timestamp;
 }
 
 export const exampleTeamWire: TeamWire = {
@@ -14,4 +16,5 @@ export const exampleTeamWire: TeamWire = {
   desc: 'Test Team',
   icon: 'fa fa-home',
   users: [],
+  createdAt: '',
 };
