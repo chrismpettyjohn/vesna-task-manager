@@ -9,7 +9,7 @@ export function UserLayout({children}: UserLayoutProps) {
   return (
     <UserGuard>
       <SiteHeader />
-      <Container maxWidth={false} disableGutters>
+      <Container maxWidth={false}>
         <Grid container spacing={0}>
           <Grid item>
             <SiteSidebar />

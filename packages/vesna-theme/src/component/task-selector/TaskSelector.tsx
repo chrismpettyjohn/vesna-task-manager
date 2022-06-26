@@ -17,7 +17,9 @@ export function TaskSelector({taskID, onChange}: TaskSelectorProps) {
       id="task-label-selector"
       options={taskOptions as any}
       sx={{width: '100%'}}
-      renderInput={(params: any) => <TextField {...params} label="Task" />}
+      renderInput={(params: any) => (
+        <TextField {...params} label="Task" fullWidth />
+      )}
       value={taskOptions?.find(_ => _.value === taskID)}
       onChange={(e: any) => onChange(e.value)}
     />

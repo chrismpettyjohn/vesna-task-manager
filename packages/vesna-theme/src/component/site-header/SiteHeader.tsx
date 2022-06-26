@@ -10,14 +10,14 @@ export function SiteHeader() {
     <AppBar
       position="fixed"
       sx={{
-        zIndex: 200,
+        zIndex: 1300,
         height: headerHeight,
       }}
     >
-      <Toolbar variant="dense">
+      <Toolbar variant="dense" style={{marginTop: 10}}>
         <Grid container>
           <Grid item xs={6}>
-            <SiteLogo style={{marginTop: 10}} />
+            <SiteLogo />
           </Grid>
           <Grid item xs={6} style={{textAlign: 'right'}}>
             <TimeTrackerDrawer />

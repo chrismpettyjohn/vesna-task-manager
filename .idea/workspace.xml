@@ -20,23 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-selector/TaskSelector.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-selector/TaskSelector.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-drawer/TimeTrackerDrawer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/use-timer.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-header/SiteHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/SiteSidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/VesnaWeb.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContext.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-selector/TaskSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-selector/TaskSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-drawer/TimeTrackerDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-drawer/TimeTrackerDrawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/time-tracker/time-tracker-item/TimeTrackerItem.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/user-layout/UserLayout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +84,7 @@
       <workItem from="1655772517080" duration="20768000" />
       <workItem from="1655848093819" duration="7097000" />
       <workItem from="1655957585690" duration="15828000" />
-      <workItem from="1656124643919" duration="842000" />
+      <workItem from="1656124643919" duration="4715000" />
     </task>
     <servers />
   </component>

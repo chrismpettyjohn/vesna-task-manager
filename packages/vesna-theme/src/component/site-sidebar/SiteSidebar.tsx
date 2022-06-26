@@ -5,8 +5,9 @@ import {SidebarUserInfo} from './sidebar-user-info/SidebarUserInfo';
 import {SidebarTaskLabels} from './sidebar-task-labels/SidebarTaskLabels';
 import {SidebarNavigation} from './sidebar-navigation/SidebarNavigation';
 
+export const drawerWidthOpen = 240;
+
 export function SiteSidebar() {
-  const drawerWidthOpen = 240;
   const paddingIconButton = 10;
   const marginIconButton = 14;
   const iconFontSize = 20;
@@ -44,7 +45,6 @@ export function SiteSidebar() {
           boxShadow: theme.shadows[8],
           backgroundColor: isOpen ? '#11101D' : '#11101D',
         },
-        zIndex: 100,
       }}
     >
       {drawerContent}
