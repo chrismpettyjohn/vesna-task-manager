@@ -26,8 +26,9 @@ export function EditTaskLabelDialog({
       onSave={onEditTaskLabel}
       onDelete={onDelete}
     >
-      <Button color="secondary" size="large">
-        <i className="fa fa-pencil" />
+      <Button size="large">
+        <i className="fa fa-pencil" style={{marginRight: 4}} />
+        Edit Label
       </Button>
     </TaskLabelDialogEditor>
   );
