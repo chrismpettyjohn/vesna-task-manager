@@ -46,6 +46,12 @@ export function TaskTableItem({task}: TaskTableItemProps) {
       <Link to={`/tasks-list/${taskLabel.id}`}>
         <TableCell key="taskGroup">
           <Chip
+            avatar={
+              <i
+                className={taskLabel.icon}
+                style={{color: 'white', fontSize: '1.2rem', marginTop: 4}}
+              />
+            }
             style={{
               background: taskLabel!.color,
               cursor: 'pointer',
