@@ -1,9 +1,11 @@
 import {toast} from 'react-toastify';
 import React, {useState} from 'react';
 import {CirclePicker} from 'react-color';
+import {useModalHook} from '@vesna-task-manager/web';
 import {dialogMaxWidth} from '../../../utility/theme.const';
 import {IconSelector} from '../../icon-selector/IconSelector';
 import {TaskLabelDialogEditorProps} from './TaskLabelDialogEditor.types';
+import {DeleteTaskLabelButton} from '../delete-task-label-button/DeleteTaskLabelButton';
 import {
   Button,
   Grid,
@@ -12,7 +14,6 @@ import {
   DialogTitle,
   TextField,
 } from '@mui/material';
-import {DeleteTaskLabelButton} from '../delete-task-label-button/DeleteTaskLabelButton';
 
 export function TaskLabelDialogEditor({
   children,
@@ -20,7 +21,7 @@ export function TaskLabelDialogEditor({
   onSave,
   onDelete = () => {},
 }: TaskLabelDialogEditorProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, onToggle} = useModalHook();
   const [isLoading, setIsLoading] = useState(false);
   const [taskLabelIcon, setTaskLabelIcon] = useState(
     defaultTaskLabel?.icon ?? 'fas fa-tasks'
@@ -35,12 +36,8 @@ export function TaskLabelDialogEditor({
     defaultTaskLabel?.color ?? ''
   );
 
-  const toggleIsOpen = () => {
-    setIsOpen(_ => !_);
-  };
-
   const resetState = () => {
-    setIsOpen(false);
+    onToggle();
     setIsLoading(false);
     setTaskLabelIcon(defaultTaskLabel?.icon ?? 'fas fa-tasks');
     setTaskLabelName(defaultTaskLabel?.name ?? '');
@@ -101,9 +98,9 @@ export function TaskLabelDialogEditor({
 
   return (
     <>
-      <span onClick={toggleIsOpen}> {children}</span>
+      <span onClick={onToggle}> {children}</span>
       {isOpen && (
-        <Dialog open onClose={toggleIsOpen} maxWidth="lg">
+        <Dialog open onClose={onToggle} maxWidth="lg">
           <DialogTitle>Task Label</DialogTitle>
           <DialogContent style={{width: dialogMaxWidth}}>
             <Grid container spacing={4}>

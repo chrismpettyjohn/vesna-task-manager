@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useModalHook} from '@vesna-task-manager/web';
 import {dialogMaxWidth} from '../../utility/theme.const';
 import {ToggleableDialogProps} from './ToggleableDialog.types';
 import {Dialog, DialogContent, DialogTitle} from '@mui/material';
@@ -8,11 +9,7 @@ export function ToggleableDialog({
   children,
   header,
 }: ToggleableDialogProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onToggle = () => {
-    setIsOpen(_ => !_);
-  };
+  const {isOpen, onToggle} = useModalHook();
 
   return (
     <>

@@ -54,7 +54,9 @@ export function LoginScreen() {
         id="email"
         label="Email"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={email}
         onChange={e => setEmail(e?.target?.value ?? '')}
       />
@@ -62,7 +64,9 @@ export function LoginScreen() {
         id="password"
         label="Password"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={password}
         type="password"
         onChange={e => setPassword(e?.target?.value ?? '')}

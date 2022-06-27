@@ -13,6 +13,7 @@ import {
   TextField,
   IconButton,
 } from '@mui/material';
+import {useModalHook} from '@vesna-task-manager/web';
 
 export function TaskDialogEditor({
   children,
@@ -20,7 +21,7 @@ export function TaskDialogEditor({
   onSave,
   hideTaskLabel = false,
 }: TaskDialogEditorProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, onToggle} = useModalHook();
   const [isLoading, setIsLoading] = useState(false);
   const [taskLabelID, setTaskLabelID] = useState<number | undefined>(
     defaultTask?.labelID
@@ -32,12 +33,8 @@ export function TaskDialogEditor({
     setTaskLabelID(defaultTask?.labelID);
     setTaskName(defaultTask?.name ?? '');
     setTaskContent(defaultTask?.content ?? '');
-    setIsOpen(false);
+    onToggle();
     setIsLoading(false);
-  };
-
-  const onToggleDialog = () => {
-    setIsOpen(_ => !_);
   };
 
   const onSaveTask = async () => {
@@ -73,11 +70,11 @@ export function TaskDialogEditor({
 
   return (
     <>
-      <IconButton color="secondary" edge="end" onClick={onToggleDialog}>
+      <IconButton color="secondary" edge="end" onClick={onToggle}>
         {children}
       </IconButton>
       {isOpen && (
-        <Dialog open onClose={onToggleDialog} maxWidth="lg">
+        <Dialog open onClose={onToggle} maxWidth="lg">
           <DialogTitle>Task</DialogTitle>
           <DialogContent style={{width: dialogMaxWidth}}>
             <Grid container>

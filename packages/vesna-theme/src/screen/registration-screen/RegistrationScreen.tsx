@@ -74,7 +74,9 @@ export function RegistrationScreen() {
         id="email"
         label="Email"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={newUserDTO.email}
         onChange={e => updateNewUserDTO({email: e?.target?.value ?? ''})}
       />
@@ -82,7 +84,9 @@ export function RegistrationScreen() {
         id="username"
         label="Username"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={newUserDTO.username}
         onChange={e => updateNewUserDTO({username: e?.target?.value ?? ''})}
       />
@@ -90,7 +94,9 @@ export function RegistrationScreen() {
         id="password"
         label="Password"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={newUserDTO.password}
         type="password"
         onChange={e => updateNewUserDTO({password: e?.target?.value ?? ''})}
@@ -99,7 +105,9 @@ export function RegistrationScreen() {
         id="firstName"
         label="First Name"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={newUserDTO.firstName}
         onChange={e => updateNewUserDTO({firstName: e?.target?.value ?? ''})}
       />
@@ -107,7 +115,9 @@ export function RegistrationScreen() {
         id="lastName"
         label="Last Name"
         fullWidth
-        variant="filled"
+        margin="dense"
+        variant="standard"
+        InputLabelProps={{shrink: true}}
         value={newUserDTO.lastName}
         onChange={e => updateNewUserDTO({lastName: e?.target?.value ?? ''})}
       />

@@ -20,20 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/dropzone/Dropzone.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/dropzone/Dropzone.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/profile-picture/ProfilePicture.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/profile-picture/profile-picture-actions/ProfilePictureActions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/profile-picture/update-profile-picture-dialog/UpdateProfilePictureDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/profile-picture/update-profile-picture-dialog/UpdateProfilePictureDialog.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/togglable-dialog/ToggleableDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/togglable-dialog/ToggleableDialog.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/media.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/use-modal.hook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-user-info/SidebarUserInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/site-sidebar/sidebar-user-info/SidebarUserInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-dialog-editor/TaskDialogEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/task-time-spent-dialog/TaskTimeSpentDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-label-dialog/task-label-dialog-editor/TaskLabelDialogEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/team-dialog/team-dialog-editor/TeamDialogEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/team-dialog/team-dialog-editor/TeamDialogEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/togglable-dialog/ToggleableDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/togglable-dialog/ToggleableDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/login-screen/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/registration-screen/RegistrationScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/hook/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/hook/use-fetch-hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/hook/use-fetch.hook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

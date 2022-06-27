@@ -12,6 +12,7 @@ import {
   Button,
   TextField,
 } from '@mui/material';
+import {useModalHook} from '@vesna-task-manager/web';
 
 export function TeamDialogEditor({
   children,
@@ -19,18 +20,14 @@ export function TeamDialogEditor({
   onSave,
   onDelete = () => {},
 }: TeamDialogEditorProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, onToggle} = useModalHook();
   const [isLoading, setIsLoading] = useState(false);
   const [teamName, setTeamName] = useState(defaultTeam?.name ?? '');
   const [teamDesc, setTeamDesc] = useState(defaultTeam?.desc ?? '');
   const [teamIcon, setTeamIcon] = useState(defaultTeam?.icon ?? '');
 
-  const toggleIsOpen = () => {
-    setIsOpen(_ => !_);
-  };
-
   const resetState = () => {
-    setIsOpen(false);
+    onToggle();
     setIsLoading(false);
     setTeamName(defaultTeam?.name ?? '');
     setTeamDesc(defaultTeam?.desc ?? '');
@@ -81,9 +78,9 @@ export function TeamDialogEditor({
 
   return (
     <>
-      <span onClick={toggleIsOpen}> {children}</span>
+      <span onClick={onToggle}> {children}</span>
       {isOpen && (
-        <Dialog open onClose={toggleIsOpen} maxWidth="lg">
+        <Dialog open onClose={onToggle} maxWidth="lg">
           <DialogTitle>Team</DialogTitle>
           <DialogContent style={{width: dialogMaxWidth}}>
             <Grid container spacing={4}>
