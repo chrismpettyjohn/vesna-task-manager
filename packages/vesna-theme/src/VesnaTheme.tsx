@@ -2,7 +2,12 @@ import React from 'react';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {VesnaThemeProps} from './VesnaTheme.types';
-import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
+import {
+  CssBaseline,
+  ThemeProvider,
+  createTheme,
+  checkboxClasses,
+} from '@mui/material';
 
 export function VesnaTheme({children}: VesnaThemeProps) {
   const theme = createTheme({

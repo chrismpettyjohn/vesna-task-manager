@@ -32,7 +32,7 @@ export function TeamsOverviewScreen() {
         </Grid>
         <Grid item xs={12}>
           {teams !== undefined ? (
-            <TeamsTable teams={teams} />
+            <TeamsTable teams={teams} onChanges={onChanges} />
           ) : (
             <LoadingBackdrop>Fetching Teams...</LoadingBackdrop>
           )}

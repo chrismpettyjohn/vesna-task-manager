@@ -14,7 +14,11 @@ export function TeamsTableItem({team, onChanges}: TeamsTableItemProps) {
       <TableCell key="users">{team.users.length} users</TableCell>
       <TableCell key="createdAt">{formatTimestamp(team.createdAt)}</TableCell>
       <TableCell key="actions">
-        <EditTeamDialog team={team} onChanges={onChanges} />
+        <EditTeamDialog
+          team={team}
+          onChanges={onChanges}
+          onDelete={onChanges}
+        />
       </TableCell>
     </TableRow>
   );
