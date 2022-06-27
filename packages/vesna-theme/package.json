@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react-select": "5.3.2",
-    "react-color": "2.19.3"
+    "react-color": "2.19.3",
+    "react-dropzone": "14.2.1"
   },
   "devDependencies": {
     "lodash": "4.17.21",

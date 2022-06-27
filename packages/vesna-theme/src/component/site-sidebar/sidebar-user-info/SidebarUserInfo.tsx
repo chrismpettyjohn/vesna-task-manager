@@ -2,6 +2,7 @@ import {Link} from 'wouter';
 import React, {useContext} from 'react';
 import {sessionContext} from '@vesna-task-manager/web';
 import {Avatar, Box, IconButton, Typography} from '@mui/material';
+import {ProfilePicture} from '../../profile-picture/ProfilePicture';
 
 export function SidebarUserInfo() {
   const {session} = useContext(sessionContext);
@@ -22,17 +23,7 @@ export function SidebarUserInfo() {
         borderTop: '1px solid lightgray',
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          marginRight: '18px',
-          paddingLeft: '0px',
-          alignItems: 'center',
-          alignContent: 'center',
-        }}
-      >
-        <Avatar src="https://cdn.devbest.com/data/avatars/o/37/37998.jpg?1655773183" />
-      </Box>
+      <ProfilePicture />
       <Box sx={{display: 'flex', flexDirection: 'column', flexGrow: 1}}>
         <Typography
           component="span"
