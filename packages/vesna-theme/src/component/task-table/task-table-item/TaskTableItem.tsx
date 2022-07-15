@@ -5,6 +5,7 @@ import {TaskWire} from '@vesna-task-manager/types';
 import {TaskTableItemProps} from './TaskTableItem.types';
 import {taskContext, taskService} from '@vesna-task-manager/web';
 import {Chip, Checkbox, TableRow, TableCell} from '@mui/material';
+import {formatTimestamp} from '../../../utility/format-timestamp';
 import {EditTaskDialog} from '../../task-dialog/edit-task-dialog/EditTaskDialog';
 import {TaskTimeSpentDialog} from '../../task-dialog/task-time-spent-dialog/TaskTimeSpentDialog';
 
@@ -65,6 +66,7 @@ export function TaskTableItem({task}: TaskTableItemProps) {
       <TableCell key="timeSpent">
         <TaskTimeSpentDialog task={task} />
       </TableCell>
+      <TableCell key="createdAt">{formatTimestamp(task.createdAt)}</TableCell>
       <TableCell key="taskActions">
         <EditTaskDialog task={task} onSave={onUpdateTask} />
       </TableCell>

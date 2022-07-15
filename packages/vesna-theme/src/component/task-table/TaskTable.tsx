@@ -20,6 +20,7 @@ export function TaskTable({tasks}: TaskTableProps) {
             <TableCell key="task">Task</TableCell>
             <TableCell key="taskGroup">Group</TableCell>
             <TableCell key="timeSpent">Time Spent</TableCell>
+            <TableCell key="createdAt">Created At</TableCell>
             <TableCell key="taskActions">Actions</TableCell>
           </TableRow>
         </TableHead>
