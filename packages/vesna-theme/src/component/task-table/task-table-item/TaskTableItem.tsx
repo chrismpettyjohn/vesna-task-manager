@@ -40,6 +40,7 @@ export function TaskTableItem({task}: TaskTableItemProps) {
           tabIndex={-1}
           disableRipple
           onClick={onUpdateTaskClosed}
+          sx={{'& .MuiSvgIcon-root': {color: 'red'}}}
         />
       </TableCell>
       <TableCell key="task">{task.name}</TableCell>
