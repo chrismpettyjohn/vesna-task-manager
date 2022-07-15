@@ -4,12 +4,16 @@ import {Grid, Typography} from '@mui/material';
 import {taskContext} from '@vesna-task-manager/web';
 import {UserLayout} from '../../component/user-layout/UserLayout';
 import {TimeSpentTable} from '../../component/time-spent-table/TimeSpentTable';
+import {convertSecondsToHhMmSS} from '../../utility/convert-seconds-to-hh-mm-ss';
 import {AnalyticalHighlights} from '../../component/analytical-highlights/AnalyticalHighlights';
 
 export function TimeOverviewScreen() {
   const {tasks} = useContext(taskContext);
 
   const allTimeSpent = tasks?.map(_ => _.timeSpent)?.flat() ?? [];
+  const currentTime = convertSecondsToHhMmSS(
+    sumBy(allTimeSpent, 'durationInSeconds')
+  );
 
   return (
     <UserLayout>
@@ -25,7 +29,13 @@ export function TimeOverviewScreen() {
             highlights={[
               {
                 label: 'Time Spent',
-                value: `${sumBy(allTimeSpent, 'durationInSeconds')}s`,
+                value: (
+                  <>
+                    {' '}
+                    {currentTime.hours}:{currentTime.minutes}:
+                    {currentTime.seconds}
+                  </>
+                ),
               },
               {
                 label: 'Completed Tasks',
