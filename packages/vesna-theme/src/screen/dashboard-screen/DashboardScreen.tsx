@@ -19,8 +19,6 @@ export function DashboardScreen() {
   const filteredTasks =
     tasks?.filter(task => (taskFilter ? taskFilter.value(task) : true)) ?? [];
 
-  console.log(taskFilter);
-
   return (
     <UserLayout>
       <Grid container spacing={4}>

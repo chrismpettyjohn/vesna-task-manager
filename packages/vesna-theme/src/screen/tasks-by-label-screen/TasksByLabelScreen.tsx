@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
 import {Grid, Typography} from '@mui/material';
+import React, {useContext, useState} from 'react';
 import {taskContext} from '@vesna-task-manager/web';
 import {useRoute, useLocation, Redirect} from 'wouter';
-import {TaskLabelWire} from '@vesna-task-manager/types';
 import {TaskTable} from '../../component/task-table/TaskTable';
+import {TaskLabelWire, TaskWire} from '@vesna-task-manager/types';
 import {UserLayout} from '../../component/user-layout/UserLayout';
+import {TaskFilters} from '../../component/task-filters/TaskFilters';
+import {TaskFilter} from '../../component/task-filters/TaskFilters.types';
 import {CreateTaskDialog} from '../../component/task-dialog/create-task-dialog/CreateTaskDialog';
 import {EditTaskLabelDialog} from '../../component/task-label-dialog/edit-task-label-dialog/EditTaskLabelDialog';
 
@@ -16,6 +18,11 @@ export function TasksByLabelScreen() {
   const {addTask, tasks, taskLabels, updateTaskLabelByID, deleteTaskLabelByID} =
     useContext(taskContext);
 
+  const [taskFilter, setTaskFilter] = useState<TaskFilter | undefined>({
+    label: 'Pending',
+    value: (task: TaskWire) => task.closedAt === null,
+  });
+
   if (!match) {
     return <Redirect to="/dashboard" />;
   }
@@ -25,6 +32,11 @@ export function TasksByLabelScreen() {
   const tasksUnderTaskLabel = tasks?.filter(
     _ => _.labelID === Number(params!.taskLabelID)
   );
+
+  const filteredTasks =
+    tasksUnderTaskLabel?.filter(task =>
+      taskFilter ? taskFilter.value(task) : true
+    ) ?? [];
 
   const onUpdateTaskLabel = (updatedTaskLabel: TaskLabelWire) => {
     updateTaskLabelByID(taskLabel!.id, updatedTaskLabel);
@@ -43,6 +55,9 @@ export function TasksByLabelScreen() {
     <UserLayout>
       <Grid item xs={12}>
         <Grid container>
+          <Grid item xs={12}>
+            <TaskFilters filter={taskFilter} onChange={setTaskFilter} />
+          </Grid>
           <Grid item xs={6}>
             <Typography variant="h4">
               <i
@@ -67,7 +82,7 @@ export function TasksByLabelScreen() {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <TaskTable tasks={tasksUnderTaskLabel ?? []} />
+          <TaskTable tasks={filteredTasks ?? []} />
         </Grid>
       </Grid>
     </UserLayout>
