@@ -10,6 +10,7 @@ import {
   taskTimeSpentContext,
   useTimer,
 } from '@vesna-task-manager/web';
+import {convertSecondsToHhMmSS} from '../../../utility/convert-seconds-to-hh-mm-ss';
 
 export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
   const {addTimeSpentByID} = useContext(taskContext);
@@ -73,6 +74,8 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
     deleteTaskTimeSpent(timeSpentIndex);
   };
 
+  const currentTime = convertSecondsToHhMmSS(timer);
+
   const getControlButton = () => {
     const icon = isActive ? 'stop-circle' : 'play-circle';
     const action = isActive ? onStop : onStart;
@@ -87,8 +90,9 @@ export function TimeTrackerItem({timeSpentIndex}: TimeTrackerItemProps) {
                 cursor: taskTimeSpentRecord?.taskID ? 'pointer' : 'disabled',
               }}
             />
-
-            <span style={{marginLeft: 4}}>{timer}s</span>
+            <span style={{marginLeft: 4}}>
+              {currentTime.hours}:{currentTime.minutes}:{currentTime.seconds}
+            </span>
           </Typography>
         </Grid>
         <Grid item xs={6} style={{textAlign: 'right'}}>
