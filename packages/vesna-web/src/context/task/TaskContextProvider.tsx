@@ -9,11 +9,16 @@ import {
 } from '@vesna-task-manager/types';
 import {taskLabelService} from '../../service/task-label.service';
 import {localStorageService} from '../../service/local-storage.service';
+import {getDurationInSeconds} from '../../utility/get-duration-in-seconds';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
 
 const TASKS_LOCAL_STORAGE_KEY = 'user-tasks';
+const TASKS_TIMESTAMP_LOCAL_STORAGE_KEY = 'user-tasks-timestamp';
 
 const TASK_LABELS_LOCAL_STORAGE_KEY = 'user-task-labels';
+const TASK_LABELS_TIMESTAMP_LOCAL_STORAGE_KEY = 'user-tasks-labels-timestamp';
+
+const TASKS_LOCAL_STORAGE_TIMEOUT = 60 * 15;
 
 export function TaskContextProvider({children}: SessionContextProviderProps) {
   const {session} = useContext(sessionContext);
@@ -22,6 +27,40 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
   const [taskLabels, setTaskLabels] = useState<TaskLabelWire[]>();
 
   useEffect(() => {
+    const cacheCheck = () => {
+      const currentTimestamp = new Date().toISOString();
+
+      const userTasksLastUpdated = localStorageService.exists(
+        TASKS_TIMESTAMP_LOCAL_STORAGE_KEY
+      )
+        ? localStorageService.get(TASKS_TIMESTAMP_LOCAL_STORAGE_KEY)
+        : null;
+
+      if (
+        userTasksLastUpdated &&
+        getDurationInSeconds(userTasksLastUpdated, currentTimestamp) >=
+          TASKS_LOCAL_STORAGE_TIMEOUT
+      ) {
+        localStorageService.delete(TASKS_LOCAL_STORAGE_KEY);
+        localStorageService.delete(TASKS_TIMESTAMP_LOCAL_STORAGE_KEY);
+      }
+
+      const userTaskLabelsLastUpdated = localStorageService.exists(
+        TASK_LABELS_TIMESTAMP_LOCAL_STORAGE_KEY
+      )
+        ? localStorageService.get(TASK_LABELS_TIMESTAMP_LOCAL_STORAGE_KEY)
+        : null;
+
+      if (
+        userTaskLabelsLastUpdated &&
+        getDurationInSeconds(userTaskLabelsLastUpdated, currentTimestamp) >=
+          TASKS_LOCAL_STORAGE_TIMEOUT
+      ) {
+        localStorageService.delete(TASK_LABELS_LOCAL_STORAGE_KEY);
+        localStorageService.delete(TASK_LABELS_TIMESTAMP_LOCAL_STORAGE_KEY);
+      }
+    };
+
     const fetchTasksForAuthenticatedUSer = async () => {
       try {
         setIsLoading(true);
@@ -49,6 +88,7 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
       }
     };
 
+    cacheCheck();
     fetchTasksForAuthenticatedUSer();
   }, []);
 
@@ -57,6 +97,10 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
       return;
     }
     localStorageService.set(TASKS_LOCAL_STORAGE_KEY, JSON.stringify(tasks));
+    localStorageService.set(
+      TASKS_TIMESTAMP_LOCAL_STORAGE_KEY,
+      new Date().toISOString()
+    );
   }, [tasks, loading]);
 
   useEffect(() => {
@@ -66,6 +110,10 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
     localStorageService.set(
       TASK_LABELS_LOCAL_STORAGE_KEY,
       JSON.stringify(taskLabels)
+    );
+    localStorageService.set(
+      TASK_LABELS_TIMESTAMP_LOCAL_STORAGE_KEY,
+      new Date().toISOString()
     );
   }, [taskLabels, loading]);
 

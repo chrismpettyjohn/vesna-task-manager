@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,7 @@
       <workItem from="1657845539302" duration="3466000" />
       <workItem from="1657854043183" duration="906000" />
       <workItem from="1657859766469" duration="717000" />
-      <workItem from="1660519879480" duration="1142000" />
+      <workItem from="1660519879480" duration="1693000" />
     </task>
     <servers />
   </component>
