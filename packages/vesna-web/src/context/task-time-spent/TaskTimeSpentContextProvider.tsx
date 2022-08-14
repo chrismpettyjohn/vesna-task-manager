@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {taskTimeSpentContext} from './TaskTimeSpentContext';
+import {localStorageService} from '../../service/local-storage.service';
 import {
   TaskTimeSpentContextProviderProps,
   TaskTimeSpentRecord,
 } from './TaskTimeSpentContext.types';
-import {localStorageService} from '@vesna-task-manager/web';
 
 const TASK_TIME_SPENT_LOCAL_STORAGE_KEY = 'user-task-time-spent';
 

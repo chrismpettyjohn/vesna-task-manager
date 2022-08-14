@@ -8,8 +8,8 @@ import {
   TaskTimeSpentWire,
 } from '@vesna-task-manager/types';
 import {taskLabelService} from '../../service/task-label.service';
+import {localStorageService} from '../../service/local-storage.service';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
-import {localStorageService} from '@vesna-task-manager/web';
 
 const TASKS_LOCAL_STORAGE_KEY = 'user-tasks';
 
