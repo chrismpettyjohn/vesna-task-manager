@@ -10,7 +10,7 @@ export function SignOutScreen() {
 
   useEffect(() => {
     setSession(undefined);
-    localStorageService.delete('SESSION');
+    localStorageService.purge();
   }, []);
 
   return <UserGuard>&nbsp;</UserGuard>;

@@ -25,6 +25,10 @@ class LocalStorageService {
   delete(index: string): void {
     localStorage.removeItem(index);
   }
+
+  purge(): void {
+    localStorage.clear();
+  }
 }
 
 export const localStorageService: LocalStorageService =

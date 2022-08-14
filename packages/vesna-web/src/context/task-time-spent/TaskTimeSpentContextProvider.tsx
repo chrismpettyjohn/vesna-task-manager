@@ -1,14 +1,37 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {taskTimeSpentContext} from './TaskTimeSpentContext';
 import {
   TaskTimeSpentContextProviderProps,
   TaskTimeSpentRecord,
 } from './TaskTimeSpentContext.types';
+import {localStorageService} from '@vesna-task-manager/web';
+
+const TASK_TIME_SPENT_LOCAL_STORAGE_KEY = 'user-task-time-spent';
 
 export function TaskTimeSpentContextProvider({
   children,
 }: TaskTimeSpentContextProviderProps) {
+  const [initialized, setInitialized] = useState(false);
   const [taskTimeSpent, setTaskTimeSpent] = useState<TaskTimeSpentRecord[]>([]);
+
+  useEffect(() => {
+    const startingTaskTimeSpent: any = localStorageService.exists(
+      TASK_TIME_SPENT_LOCAL_STORAGE_KEY
+    )
+      ? JSON.parse(localStorageService.get(TASK_TIME_SPENT_LOCAL_STORAGE_KEY))
+      : [];
+    setTaskTimeSpent(startingTaskTimeSpent);
+    setInitialized(true);
+  }, []);
+
+  useEffect(() => {
+    if (taskTimeSpent) {
+      localStorageService.set(
+        TASK_TIME_SPENT_LOCAL_STORAGE_KEY,
+        JSON.stringify(taskTimeSpent)
+      );
+    }
+  }, [taskTimeSpent]);
 
   const addTaskTimeSpent = () => {
     setTaskTimeSpent(_ => {
@@ -54,7 +77,7 @@ export function TaskTimeSpentContextProvider({
         deleteTaskTimeSpent,
       }}
     >
-      {children}
+      {initialized ? children : null}
     </taskTimeSpentContext.Provider>
   );
 }

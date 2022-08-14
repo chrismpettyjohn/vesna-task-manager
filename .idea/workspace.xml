@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7d4775b0-9c93-4f0d-88b3-a26b47280442" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/component/task-dialog/create-task-dialog/CreateTaskDialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-theme/src/screen/sign-out-screen/SignOutScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-theme/src/screen/sign-out-screen/SignOutScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task-time-spent/TaskTimeSpentContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/context/task/TaskContextProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/vesna-web/src/service/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vesna-web/src/service/local-storage.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,8 @@
       <workItem from="1656299706947" duration="2008000" />
       <workItem from="1657845539302" duration="3466000" />
       <workItem from="1657854043183" duration="906000" />
-      <workItem from="1657859766469" duration="97000" />
+      <workItem from="1657859766469" duration="717000" />
+      <workItem from="1660519879480" duration="1087000" />
     </task>
     <servers />
   </component>

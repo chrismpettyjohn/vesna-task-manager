@@ -9,6 +9,11 @@ import {
 } from '@vesna-task-manager/types';
 import {taskLabelService} from '../../service/task-label.service';
 import {SessionContextProviderProps} from '../session/SessionContext.types';
+import {localStorageService} from '@vesna-task-manager/web';
+
+const TASKS_LOCAL_STORAGE_KEY = 'user-tasks';
+
+const TASK_LABELS_LOCAL_STORAGE_KEY = 'user-task-labels';
 
 export function TaskContextProvider({children}: SessionContextProviderProps) {
   const {session} = useContext(sessionContext);
@@ -24,10 +29,16 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
         setTasks(undefined);
 
         if (session) {
-          const [userTasks, userTaskLabels] = await Promise.all([
-            taskService.getTasks(),
-            taskLabelService.getTaskLabels(),
-          ]);
+          const userTasks = localStorageService.exists(TASKS_LOCAL_STORAGE_KEY)
+            ? JSON.parse(localStorageService.get(TASKS_LOCAL_STORAGE_KEY))
+            : await taskService.getTasks();
+
+          const userTaskLabels = localStorageService.exists(
+            TASK_LABELS_LOCAL_STORAGE_KEY
+          )
+            ? JSON.parse(localStorageService.get(TASK_LABELS_LOCAL_STORAGE_KEY))
+            : await taskLabelService.getTaskLabels();
+
           setTasks(userTasks);
           setTaskLabels(userTaskLabels);
         }
@@ -40,6 +51,23 @@ export function TaskContextProvider({children}: SessionContextProviderProps) {
 
     fetchTasksForAuthenticatedUSer();
   }, []);
+
+  useEffect(() => {
+    if (loading) {
+      return;
+    }
+    localStorageService.set(TASKS_LOCAL_STORAGE_KEY, JSON.stringify(tasks));
+  }, [tasks, loading]);
+
+  useEffect(() => {
+    if (loading) {
+      return;
+    }
+    localStorageService.set(
+      TASK_LABELS_LOCAL_STORAGE_KEY,
+      JSON.stringify(taskLabels)
+    );
+  }, [taskLabels, loading]);
 
   const addTask = (task: TaskWire) => {
     setTasks(_ => [..._!, task]);
